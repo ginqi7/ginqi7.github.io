@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-08-09 二 21:27 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Using Emacs Combine Anything</title>
+<meta name="generator" content="Org Mode" />
+ <title>Hello World</title>
+      <meta name="description" content="Qiqi Jin's Blog">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="https://telegra.ph/css/core.min.css"/>
+      <link rel="stylesheet" type="text/css" href="./css/org.css"/>
+</head>
+<body>
+<div id="preamble" class="status">
+<div><a aria-current="page" class="font-effect-shadow-multiple header-title" href="/">HelloWord</a><div class="header-line"></div></div>
+</div>
+<div id="content" class="content">
+<h1 class="title">Using Emacs Combine Anything</h1>
+<p>
+I've written several Emacs tools to be more productive. As an Emacs Lisp novice, instead of writing pure Emacs Lisp programs, I used Emacs Lisp to encapsulate several console tools and use Emacs as an adhesive. Overall, it feels good to use.
+</p>
+
+<p>
+I feel using Emacs as console tools' GUI interface is a good choise. On the one hand, it can reuse a series of methods and plugins of Emacs and write some frequent operations as Emacs functions and bind them to a shortcut key. You can run some console commands easily and quickly while writing documents, On the other hand, there is no need to repeat the core logic of console tools.
+</p>
+
+<p>
+Recently wrote for 4 Emacs tools:
+</p>
+
+<ol class="org-ol">
+<li>leetcode-emacs: <a href="https://github.com/ginqi7/leetcode-emacs">https://github.com/ginqi7/leetcode-emacs</a>, an emacs plugin to write leetcode programs</li>
+<li>hbase-shell-emacs: <a href="https://github.com/ginqi7/hbase-shell-emacs">https://github.com/ginqi7/hbase-shell-emacs</a>, A Emacs Plugin for hbase shell</li>
+<li>kubectl-emacs: <a href="https://github.com/ginqi7/kubectl-emacs">https://github.com/ginqi7/kubectl-emacs</a>, This is an Emacs plugin that makes it easier and faster to manage k8s using kubectl.</li>
+<li>global-interactive-emacs: <a href="https://github.com/ginqi7/global-interactive-emacs">https://github.com/ginqi7/global-interactive-emacs</a>, Global Interactive Emacs</li>
+</ol>
+
+<p>
+These tools can be divided into two categories:
+</p>
+
+<p>
+The first 3 tools use Emacs as a GUI or interactive interface for a series of command-line tools
+</p>
+
+<p>
+The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
+</p>
+
+<div id="outline-container-org5b6b395" class="outline-2">
+<h2 id="org5b6b395"><span class="section-number-2">1.</span> Using Emacs as a GUI or interactive interface</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The idea and implementation of using Emacs as a GUI or interactive interface is very simple and intuitive.
+</p>
+
+<ul class="org-ul">
+<li>Using emacs define a interactive function for command-line tools, while you want fuzz search some options or inputs to run a complex command.</li>
+<li>Using emacs <code>ctable</code><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> to list outputs and bind some function on hotkey in it's cell, while you want review command-line tools' output, and run some frequency operations on some specific output.</li>
+</ul>
+</div>
+
+<div id="outline-container-org20fd262" class="outline-3">
+<h3 id="org20fd262"><span class="section-number-3">1.1.</span> Example</h3>
+<div class="outline-text-3" id="text-1-1">
+<p align="center"><img width="600px" src="https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif"></p>
+
+
+<p align="center"><img width="600px" src="https://github.com/ginqi7/kubectl-emacs/raw/main/images/kubect-get-interactive.gif"></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org8261231" class="outline-2">
+<h2 id="org8261231"><span class="section-number-2">2.</span> Global Interactive Emacs</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This tool is inspired by article : <a href="https://isamert.net/2022/03/16/global-interactive-emacs-functions.html">Global interactive Emacs functions</a>.It provides an idea to run Emacs functions outside of Emacs.
+</p>
+
+<p>
+So I try to use this idea to wrtie a tool like <a href="https://www.obdev.at/products/launchbar/index.html">lauchbar</a> or <a href="https://www.alfredapp.com/">Alfred</a> . It can help user to quickly lauch app or run work flow.
+</p>
+
+<p>
+I’m using it to replace the lauchbar.
+</p>
+</div>
+
+<div id="outline-container-org9101e89" class="outline-3">
+<h3 id="org9101e89"><span class="section-number-3">2.1.</span> Principle</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+the idea of <code>Global Interactive Emacs</code> is so interesting.
+</p>
+
+<p>
+On Emacs, using <code>completing-function</code> to implement interactive function, it will use minibuffer to input function parameter.
+</p>
+
+<p>
+<code>Global Interactive Emacs</code> overwrite the <code>completing-function</code>, using <code>choose</code><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> to accept parameter. So we can run Emacs interactive function withou focuse Emacs. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ba5d35" class="outline-3">
+<h3 id="org9ba5d35"><span class="section-number-3">2.2.</span> Pros and cons</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+This toole has some pros and cons, and I think if you have the following needs, you can try to use it :
+</p>
+
+<ul class="org-ul">
+<li>you don’t want pay for other tools like <a href="https://www.obdev.at/products/launchbar/index.html">lauchbar</a> or <a href="https://www.alfredapp.com/">Alfred</a> .</li>
+<li>you wish some function in Emacs could run out of Emacs.</li>
+<li>You’re familiar with Emacs, there are some plugins, and custom functions that you want to reuse.</li>
+<li>You don’t want to learn a new language or workflow of a new software</li>
+<li>…</li>
+</ul>
+</div>
+
+<div id="outline-container-org4625f0c" class="outline-4">
+<h4 id="org4625f0c"><span class="section-number-4">2.2.1.</span> Pros</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li><b>free</b>: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need <code>Emacs</code>  and some open source software that you can use for free.</li>
+<li><b>consistency</b> : You can use the same features inside or outside of Emacs and have a similar experience.</li>
+<li><b>Simple Configuration</b> : If you are familiar with Emacs, you can easily configure it with emacs-lisp without having to relearn the language and process of other tools.</li>
+<li><b>Scalability</b> : You can write your own interactive functions and plug them into the tool, or use the Emacs plugins developed by others to extract the interaction functions and plug them into the tool.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2ed8a8b" class="outline-4">
+<h4 id="org2ed8a8b"><span class="section-number-4">2.2.2.</span> Cons</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li><b>Not powerful for now</b> : Obviously, the tool is not as powerful as lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.</li>
+<li><b>Can’t perfectly support all Emacs interactive functions</b>: There are currently some Emacs interaction functions that cannot be run outside of Emacs, such as <code>execute-extended-command</code> . I don’t have the train of thought to support it yet.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbb714d6" class="outline-3">
+<h3 id="orgbb714d6"><span class="section-number-3">2.3.</span> Example</h3>
+<div class="outline-text-3" id="text-2-3">
+<p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif"></p>
+
+<p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-run-app.gif"></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://github.com/kiwanami/emacs-ctable">emacs-ctable</a> : Table Component for elisp
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://github.com/chipsenkbeil/choose">choose github</a> :Fuzzy matcher for OS X that uses both std{in,out} and a native GUI
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+ <footer> <small>&copy; Copyright 2022, Qiqi Jin</small> </footer> 
+</div>
+</body>
+</html>
