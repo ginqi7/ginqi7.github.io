@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "vscode-css-languageserver-bin": "^1.4.0",
-    "vscode-css-languageservice": "^6.0.1"
-  }
-}
