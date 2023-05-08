@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Tangerine&text=Hello%20World');
-/* @import url('https://fonts.googleapis.com/css?family=Fira+Code&text=0123456789'); */
+@import url('https://fonts.googleapis.com/css?family=Alkatra&text=Hello%20World');
 @import url('https://fonts.googleapis.com/css?family=Fira+Code');
 @font-face {
     font-family: jinkaiFont;
@@ -30,24 +29,10 @@ body {
 }
 
 .categories {
-    display: block;
+    display: inline-flex;
     margin: 1rem;
 }
 
-.categories .category-item {
-    display:inline;
-    float: left;
-    margin-right: .1rem;
-    margin-left: .1rem;
-    border: #000 1px solid;
-    border-radius: 3px;
-    padding-right: 0.2rem;
-    padding-left: 0.2rem;
-    width: auto;
-    font-size: .7rem;
-    font-weight: bold;
-    text-align: center;
-}
 
 h1,h2,h3,h4,h5,h6,strong,b {
     color: #222;
@@ -163,17 +148,14 @@ ul.blog-posts li a:visited {
 }
 
 li {
-    margin: 0.4rem 0;
     list-style: outside;
-}
-
-.title-item a {
-    float: left;
+    margin: 0.4rem 0;
 }
 
 .category-item {
-    display:inline;
-    float:right;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     margin-right: .1rem;
     margin-left: .1rem;
     border: #000 1px solid;
@@ -186,16 +168,21 @@ li {
     text-align: center;
 }
 
+.category-items {
+    display:inline-flex;
+}
+
+
 .title {
     text-align: center;
 }
 
 .header-title {
-    font-family: 'Tangerine', serif;
+    font-family: 'Alkatra', serif;
     font-size: 3rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #222;
     text-shadow: 4px 4px 4px #aaa;
 }
 
@@ -240,4 +227,27 @@ pre {
 
 b {
     color: #000;
+}
+
+.image-container {
+    display: inline;
+    position: relative;
+}
+
+.image-container a {
+    text-decoration: none;                
+}
+
+.image-text {
+    display: none;
+}
+
+.image-container:hover .image-text {
+    display: inline;
+}
+
+.page-item {
+    align-items: center;
+    justify-content:space-between;
+    display:flex;
 }

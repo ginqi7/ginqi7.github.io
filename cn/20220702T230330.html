@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-03-11 六 12:42 -->
+<!-- 2023-05-08 一 13:30 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Story Ending</title>
 <meta name="generator" content="Org Mode" />
-<title>undefined</title>
+<title>Hello World</title>
 <meta name="description" content="undefined"/>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="/css/org.css" />
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.css" />
 
 <script
   defer="defer"
   src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"
   onload="document.addEventListener('DOMContentLoaded', () => {pangu.autoSpacingPage();});"
 ></script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.js"
+  defer="defer"
+  onload="var elements=document.getElementsByClassName('viewImage');var arr = Array.from(elements);
+  for (var i = 0; i < arr.length; i++) {var element = arr[i]; var viewer = new Viewer(element, {
+
+  title: 0,
+  navbar: 0,
+  toolbar: 0,
+  scalable: false
+  });}"
+>
+</script>
+
+<script
+>
+ document.addEventListener('DOMContentLoaded', function() {
+   var x = document.getElementsByClassName("org-src-container");
+   len = x.length;
+   for(i = 0; i < len; i++) {
+     var codeElements = x[i].getElementsByTagName("pre");
+     if(codeElements.length != 1) {continue}
+     var codeClasses = codeElements[0].classList;
+     var srcName;
+     if (codeClasses.length == 1) {
+       srcName = codeClasses[0]
+     } else if (codeClasses.length == 2) {
+       srcName = codeClasses[1]       
+     }
+     var code = x[i].outerHTML;
+     var fold = document.createElement("details");
+     fold.innerHTML = `<summary>Code Source(${srcName}): </summary>` + code; 
+     var fa = x[i].parentNode; 
+     fa.replaceChild(fold, x[i]); 
+   }
+ });
+
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -25,8 +65,8 @@
   <a
     aria-current="page"
     class="font-effect-shadow-multiple header-title"
-    href=/cn
-    > Hello world </a
+    href="/cn"
+    > Hello World </a
   >
   <div class="header-line"></div>
 </div>

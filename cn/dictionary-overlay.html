@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-03-11 六 12:42 -->
+<!-- 2023-05-08 一 13:30 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>dictionary-overlay</title>
 <meta name="generator" content="Org Mode" />
-<title>undefined</title>
+<title>Hello World</title>
 <meta name="description" content="undefined"/>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="/css/org.css" />
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.css" />
 
 <script
   defer="defer"
   src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"
   onload="document.addEventListener('DOMContentLoaded', () => {pangu.autoSpacingPage();});"
 ></script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.js"
+  defer="defer"
+  onload="var elements=document.getElementsByClassName('viewImage');var arr = Array.from(elements);
+  for (var i = 0; i < arr.length; i++) {var element = arr[i]; var viewer = new Viewer(element, {
+
+  title: 0,
+  navbar: 0,
+  toolbar: 0,
+  scalable: false
+  });}"
+>
+</script>
+
+<script
+>
+ document.addEventListener('DOMContentLoaded', function() {
+   var x = document.getElementsByClassName("org-src-container");
+   len = x.length;
+   for(i = 0; i < len; i++) {
+     var codeElements = x[i].getElementsByTagName("pre");
+     if(codeElements.length != 1) {continue}
+     var codeClasses = codeElements[0].classList;
+     var srcName;
+     if (codeClasses.length == 1) {
+       srcName = codeClasses[0]
+     } else if (codeClasses.length == 2) {
+       srcName = codeClasses[1]       
+     }
+     var code = x[i].outerHTML;
+     var fold = document.createElement("details");
+     fold.innerHTML = `<summary>Code Source(${srcName}): </summary>` + code; 
+     var fa = x[i].parentNode; 
+     fa.replaceChild(fold, x[i]); 
+   }
+ });
+
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -25,8 +65,8 @@
   <a
     aria-current="page"
     class="font-effect-shadow-multiple header-title"
-    href=/cn
-    > Hello world </a
+    href="/cn"
+    > Hello World </a
   >
   <div class="header-line"></div>
 </div>
@@ -37,35 +77,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org73b28b0">1. 目标</a></li>
-<li><a href="#org0ae5b01">2. 安装</a>
+<li><a href="#orga9db688">1. 目标</a></li>
+<li><a href="#org3ecc0ff">2. 安装</a>
 <ul>
-<li><a href="#org4607af9">2.1. websocket-bridge</a></li>
-<li><a href="#org85a38f4">2.2. Python 相关包</a></li>
-<li><a href="#org9767348">2.3. 网络翻译</a></li>
-<li><a href="#org534b524">2.4. 下载 dictionary-overlay</a></li>
-<li><a href="#org1339057">2.5. 添加下面配置到 ~/.emacs</a></li>
+<li><a href="#orge9f2745">2.1. websocket-bridge</a></li>
+<li><a href="#org00d6a54">2.2. Python 相关包</a></li>
+<li><a href="#org4c97f89">2.3. 网络翻译</a></li>
+<li><a href="#org1eba466">2.4. 下载 dictionary-overlay</a></li>
+<li><a href="#org4b5682d">2.5. 添加下面配置到 ~/.emacs</a></li>
 </ul>
 </li>
-<li><a href="#orgf892248">3. 命令</a></li>
-<li><a href="#org4be0f04">4. 选项</a>
+<li><a href="#org9c6e005">3. 命令</a></li>
+<li><a href="#orgbd46ab3">4. 选项</a>
 <ul>
-<li><a href="#org82924a7">4.1. face</a></li>
+<li><a href="#org1c1de74">4.1. face</a></li>
 </ul>
 </li>
-<li><a href="#orgff5de4d">5. 使用方法探讨</a></li>
-<li><a href="#org8ff534b">6. 翻译逻辑</a></li>
-<li><a href="#org5ae4479">7. 词干提取+词形还原</a>
+<li><a href="#org25ab7bd">5. 使用方法探讨</a></li>
+<li><a href="#orgc3552bd">6. 翻译逻辑</a></li>
+<li><a href="#orgb6106a9">7. 词干提取+词形还原</a>
 <ul>
-<li><a href="#org6c0a74c">7.1. SnowballStemmer</a></li>
+<li><a href="#orge11b2eb">7.1. SnowballStemmer</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org73b28b0" class="outline-2">
-<h2 id="org73b28b0"><span class="section-number-2">1.</span> 目标</h2>
+<div id="outline-container-orga9db688" class="outline-2">
+<h2 id="orga9db688"><span class="section-number-2">1.</span> 目标</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 辅助英文较弱的 Emacser 进行英文阅读。提供了两种能力：
@@ -76,8 +116,8 @@
 </ol>
 
 
-<div id="org0235868" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACagAAAPICAMAAAABxH7EAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+<div id="orga5588d4" class="figure">
+<p><div class='viewImage'> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACagAAAPICAMAAAABxH7EAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAALBUExURf714VNwdW2DhI6dmrzBt2N8gPXv3FJvde7n06Ktp5qmopeloXeLi7O5sf30
 4NnYyvvy322Chffw3aixq/Pt2n6Pj2mBgoaWlbW7s/zz31dzePzz4F95fV54fIGTkVRxdo2dmsPH
 vLm+tYCSkJejoJikoPDq2HqMjFVxd/rx3oCSkcnLv/bv3FVyd/ny3tPTxoycmVZyeFNwdn2PjtfX
@@ -2324,27 +2364,27 @@ gJI/pMEMAAAAAAi1kGQRH1N7Jfye/Ge+BjUxEkYAAAAAQKiFKI/26QTUb+0sZBK1Hmm/AQAAAAi1
 AAAAAIQaAAAAAACAUAMAAAAAABBqAAAAAAAQagAAAAAAAEINAAAAAABCDQAAAAAAQKgBAAAAAAAI
 NQAAAAAACDUAAAAAAAChBgAAAAAAoQYAAAAAACDUAAAAAAAg1AAAAAAAAIQaAAAAAACAUAMAAAAA
 gFADAAAAAAAQagAAAAAAEGoAAAAAAABCDQAAAAAAQKgBAAAAAPwfCbX/AUn2++ufDwsiAAAAAElF
-TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
+TkSuQmCC"2022-11-19_15-12-24_screenshot.png /> </div>
 </p>
 <p><span class="figure-number">Figure 1: </span>Example</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org0ae5b01" class="outline-2">
-<h2 id="org0ae5b01"><span class="section-number-2">2.</span> 安装</h2>
+<div id="outline-container-org3ecc0ff" class="outline-2">
+<h2 id="org3ecc0ff"><span class="section-number-2">2.</span> 安装</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org4607af9" class="outline-3">
-<h3 id="org4607af9"><span class="section-number-3">2.1.</span> <a href="https://github.com/ginqi7/websocket-bridge">websocket-bridge</a></h3>
+<div id="outline-container-orge9f2745" class="outline-3">
+<h3 id="orge9f2745"><span class="section-number-3">2.1.</span> <a href="https://github.com/ginqi7/websocket-bridge">websocket-bridge</a></h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 用于 Emacs 与外部应用进行 websocket 通信
 </p>
 </div>
 </div>
-<div id="outline-container-org85a38f4" class="outline-3">
-<h3 id="org85a38f4"><span class="section-number-3">2.2.</span> Python 相关包</h3>
+<div id="outline-container-org00d6a54" class="outline-3">
+<h3 id="org00d6a54"><span class="section-number-3">2.2.</span> Python 相关包</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 插件通过 python 编写，需要安装 python3
@@ -2364,8 +2404,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </div>
 </div>
 
-<div id="outline-container-org9767348" class="outline-3">
-<h3 id="org9767348"><span class="section-number-3">2.3.</span> 网络翻译</h3>
+<div id="outline-container-org4c97f89" class="outline-3">
+<h3 id="org4c97f89"><span class="section-number-3">2.3.</span> 网络翻译</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 默认会使用 sdcv 本地词典翻译。当单词在本地词典未找到时，会使用网络翻译，目前支持：
@@ -2381,8 +2421,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </div>
 </div>
 
-<div id="outline-container-org534b524" class="outline-3">
-<h3 id="org534b524"><span class="section-number-3">2.4.</span> 下载 dictionary-overlay</h3>
+<div id="outline-container-org1eba466" class="outline-3">
+<h3 id="org1eba466"><span class="section-number-3">2.4.</span> 下载 dictionary-overlay</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
 <pre class="src src-shell">git clone --depth=1 -b main https://github.com/ginqi7/dictionary-overlay ~/.emacs.d/site-lisp/dictionary-overlay/
@@ -2391,8 +2431,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </div>
 </div>
 
-<div id="outline-container-org1339057" class="outline-3">
-<h3 id="org1339057"><span class="section-number-3">2.5.</span> 添加下面配置到 ~/.emacs</h3>
+<div id="outline-container-org4b5682d" class="outline-3">
+<h3 id="org4b5682d"><span class="section-number-3">2.5.</span> 添加下面配置到 ~/.emacs</h3>
 <div class="outline-text-3" id="text-2-5">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="font-style: italic;">"~/.emacs.d/site-lisp/dictionary-overlay/"</span>)
@@ -2403,8 +2443,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </div>
 </div>
 
-<div id="outline-container-orgf892248" class="outline-2">
-<h2 id="orgf892248"><span class="section-number-2">3.</span> 命令</h2>
+<div id="outline-container-org9c6e005" class="outline-2">
+<h2 id="org9c6e005"><span class="section-number-2">3.</span> 命令</h2>
 <div class="outline-text-2" id="text-3">
 <table>
 
@@ -2490,8 +2530,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </div>
 </div>
 
-<div id="outline-container-org4be0f04" class="outline-2">
-<h2 id="org4be0f04"><span class="section-number-2">4.</span> 选项</h2>
+<div id="outline-container-orgbd46ab3" class="outline-2">
+<h2 id="orgbd46ab3"><span class="section-number-2">4.</span> 选项</h2>
 <div class="outline-text-2" id="text-4">
 <table>
 
@@ -2535,8 +2575,8 @@ TkSuQmCC"2022-11-19_15-12-24_screenshot.png />
 </table>
 </div>
 
-<div id="outline-container-org82924a7" class="outline-3">
-<h3 id="org82924a7"><span class="section-number-3">4.1.</span> face</h3>
+<div id="outline-container-org1c1de74" class="outline-3">
+<h3 id="org1c1de74"><span class="section-number-3">4.1.</span> face</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 用于控制生词的展示, 为了不影响阅读默认为空，不对原始face 做任何修改。如果希望能通过face 对生词进行显示增加可以参考
@@ -2568,8 +2608,8 @@ face `dictionary-overlay-unknownword` 如果用户不自行定义，那么不会
 </div>
 
 
-<div id="org3f4aded" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACboAAAOyCAMAAACIJgG2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+<div id="org2dfd91c" class="figure">
+<p><div class='viewImage'> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACboAAAOyCAMAAACIJgG2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAMAUExURfz14vTv3XGChFlvdKStp73Bt2h7f1hudWxxw4KTlZGdmvv04XuKi5qloYOR
 kdnYyrS5spymovbw3llwdoGPj/ny4frz4YmWlfLt26qxq7q/tfTu3HGBhFtxd8XHvPrz4ISSkdfX
 yufj026Agra7tO/r2ZmjoN7czmZ6f4GEyGR4fZqkoJCcmtHSxX2LjKauqWN3e6mxq9XVyHqJim+A
@@ -4970,7 +5010,7 @@ vkNisRtzgqZdRxNtipVsO6WpDnjswgRbzqLdwlTi5oWaXUorqAllFCz3KoNvxNWrGm4SuHN+Nkwg
 AAAAAPQqS07ozqqgj/jS+gkalq9VbnfFf3nMMkhYlXIrpg8AAAAAepkuYne7gJHQrdzIObdyHIUH
 AAAAQO+TyAbscGAg9FLJil1HPkYCAAAAAH1AhYumf8Dmn37iS5QP6wEAAAAA9DBV33jSMQoGuFWy
 EIMAAAAAgL7CBldJY8BGCQAAAAAAAAAAAAAAAAAAAAAAAAAAwCPCv6G7RQQLDmvRAAAAAElFTkSu
-QmCC"dictionary-overlay-face.png />
+QmCC"dictionary-overlay-face.png /> </div>
 </p>
 <p><span class="figure-number">Figure 2: </span>dictionary-overlay with face</p>
 </div>
@@ -4978,8 +5018,8 @@ QmCC"dictionary-overlay-face.png />
 </div>
 </div>
 
-<div id="outline-container-orgff5de4d" class="outline-2">
-<h2 id="orgff5de4d"><span class="section-number-2">5.</span> 使用方法探讨</h2>
+<div id="outline-container-org25ab7bd" class="outline-2">
+<h2 id="org25ab7bd"><span class="section-number-2">5.</span> 使用方法探讨</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 默认使用“生词本”模式，阅读英文文章时，需要手动添加生词（ <code>dictionary-overlay-mark-word-unknown</code> ）。可以和你的“查询单词”的快捷键保持在一起。那么你下次遇到生词时，会自动展示出生词。
@@ -5003,8 +5043,8 @@ QmCC"dictionary-overlay-face.png />
 </div>
 </div>
 
-<div id="outline-container-org8ff534b" class="outline-2">
-<h2 id="org8ff534b"><span class="section-number-2">6.</span> 翻译逻辑</h2>
+<div id="outline-container-orgc3552bd" class="outline-2">
+<h2 id="orgc3552bd"><span class="section-number-2">6.</span> 翻译逻辑</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 当前当前翻译的逻辑是：
@@ -5017,8 +5057,8 @@ QmCC"dictionary-overlay-face.png />
 </p>
 
 
-<div id="org8e397e6" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACUgAAAIiCAMAAAAnjkDlAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+<div id="org695bbbc" class="figure">
+<p><div class='viewImage'> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACUgAAAIiCAMAAAAnjkDlAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAIHUExURfz14kKV0vTw4CmL0VhuddsyMJG82e3n1H9/fyaK0fr04U+b0/v04bLN3Hmv
 112h1fjy4Wmn1bHM3CyM0V1yeNPe3mOk1U6a03Ot15nA2m6AgVlvdoi32PXx4uzs4V90evjx35C7
 2Z6no0mY0/Lv4eLn34W12D2S0mZ6fu7t4ZagnY2Yl3SDhnGAhMzb336y2KjI232Ljdzay/Ls24KQ
@@ -5268,7 +5308,7 @@ AQBgpAAAjBQAgJECADBSAABGCgAAIwUAYKQAAIwUAICRAgAwUkYKAMBIAQAYKQAAIwUAYKQAADBS
 AABGCgDASAEAGCkAACMFAICRAgAwUgAARgoAwEgBABgpIwUAYKQAAIwUAICRAgAwUgAAGCkAACMF
 AGCkAACMFACAkQIAwEgBABgpAAAjBQBgpAAAjJSRAgAwUgAARgoAwEgBABgpAACMFACAkQIAMFIA
 AEYKAMBIAQBgpAAAjBQAgJECADBSAABGykgBABgpAAAjBQBgpAAAjBQAAEYKAMBIAQAYKQAAIwUA
-YKQAADBSAABGCgDASAEAGCkAACOlCgDACeyFQliqtIizAAAAAElFTkSuQmCC"2022-11-20_12-23-09_screenshot.png />
+YKQAADBSAABGCgDASAEAGCkAACOlCgDACeyFQliqtIizAAAAAElFTkSuQmCC"2022-11-20_12-23-09_screenshot.png /> </div>
 </p>
 <p><span class="figure-number">Figure 3: </span>dictionary-overlay-modify-translation</p>
 </div></li>
@@ -5277,8 +5317,8 @@ YKQAADBSAABGCgDASAEAGCkAACOlCgDACeyFQliqtIizAAAAAElFTkSuQmCC"2022-11-20_12-23-09
 </div>
 
 
-<div id="outline-container-org5ae4479" class="outline-2">
-<h2 id="org5ae4479"><span class="section-number-2">7.</span> 词干提取+词形还原</h2>
+<div id="outline-container-orgb6106a9" class="outline-2">
+<h2 id="orgb6106a9"><span class="section-number-2">7.</span> 词干提取+词形还原</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 在自然语言处理领域，对单词有两种处理方式：
@@ -5301,8 +5341,8 @@ YKQAADBSAABGCgDASAEAGCkAACOlCgDACeyFQliqtIizAAAAAElFTkSuQmCC"2022-11-20_12-23-09
 </p>
 
 
-<div id="orgc5fa5e6" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdQAAAJcCAMAAADHK9b0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+<div id="org8f99de0" class="figure">
+<p><div class='viewImage'> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdQAAAJcCAMAAADHK9b0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAMAUExURdXn1AAAAPf4+YCyZvfNy/T09Nnn+/7+/uDU5v7xy5VzpbdUUNW1VmZmZmyN
 vjMzM4qly9Df9vL0+IKgywsLC39/f+/v7/Lz876+v4mTpCcpKD8/QNPm0szezIyNjSMlI9/g4CAg
 IBUUFJCQkBMTEujo6SwtLLa3t77OvU5STjU5N9HS05mZmR4eHRcYGLTDs6mqqmJqYVtcXDQzNNbW
@@ -5665,7 +5705,7 @@ F+NuCk3fjY6+AAlEfb6fRNXrpve9QIAEoj6fxzju+Fy9HMeYe30ASUS92asfdPoMTHFgnw6kE/X5
 vUGMg85mvWienXk6kE7U5+erUYyjcZH3OzWHKft5MW6embOMQFpRn79U1fvZbhpU7jkCUot6M4Sp
 dgejbvV8NNitDF6ANKMOgKgDIOoAiDqAqAMg6gCIOgCiDoCoA4g6AKIOgKgDIOoAog6AqAMg6gCI
 OgCiDiDqAIg6AKIOgKgDIOoAog6AqAMg6gCIOgCiDiDqAIg6AKIOgKgDiDoAog6AqAMg6gCIOoCo
-AyDqAIg6AKIOgKgDdM3/AWFLfJ8AaLOuAAAAAElFTkSuQmCC"2022-11-17_22-06-22_screenshot.png />
+AyDqAIg6AKIOgKgDdM3/AWFLfJ8AaLOuAAAAAElFTkSuQmCC"2022-11-17_22-06-22_screenshot.png /> </div>
 </p>
 <p><span class="figure-number">Figure 4: </span>add stem of word in to unknown list</p>
 </div>
@@ -5679,8 +5719,8 @@ AyDqAIg6AKIOgKgDdM3/AWFLfJ8AaLOuAAAAAElFTkSuQmCC"2022-11-17_22-06-22_screenshot.
 </p>
 
 
-<div id="org0f29cf1" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACcIAAANKCAMAAACUeV+uAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+<div id="orgcaf814a" class="figure">
+<p><div class='viewImage'> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACcIAAANKCAMAAACUeV+uAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
 AK7OHOkAAAKOUExURVhudWl7gFlvdZqkoaWsqPXv3XKBhPz14u3n1CaK0YCOj5Kcm3uJi77AuPv0
 4fny4LS5sb3BuPbw3qqxrHGAhbq+tufj011yeLa7s8rLwIORkt7cz4KQkZymolpwdm6AgomVlaeu
 qcTGvPrz4e7p2Prz4GN4fdbVyWt+gNTUx15zeZmjoOrl1fjx31txd4ORka+1r7O4senk1Ftwd8/P
@@ -7047,14 +7087,14 @@ IMIR4QAAAIhwAAAAIMIBAACACAcAAECEAwAAABEOAAAARDgAAAAiHAAAAIhwAAAAIMIBAAAQ4QAA
 AECEAwAAABEOAACACEeEAwAAIMIBAACACAcAAECEI8IBAAAQ4QAAAECEAwAAABEOAACACAcAAAAi
 HAAAAIhwAAAARDgAAAAQ4QAAAECEAwAAIMIBAACACAcAAAAiHAAAABGOCAcAAECEAwAAABEOAACA
 CEeEAwAAIMIBAACACAcAAAAiHAAAABEOAAAARDgAAAAQ4QAAAIhwAAAAWGp/AI1vrBr8moHUAAAA
-AElFTkSuQmCC"2022-11-17_22-05-07_screenshot.png />
+AElFTkSuQmCC"2022-11-17_22-05-07_screenshot.png /> </div>
 </p>
 <p><span class="figure-number">Figure 5: </span>stem render</p>
 </div>
 </div>
 
-<div id="outline-container-org6c0a74c" class="outline-3">
-<h3 id="org6c0a74c"><span class="section-number-3">7.1.</span> SnowballStemmer</h3>
+<div id="outline-container-orge11b2eb" class="outline-3">
+<h3 id="orge11b2eb"><span class="section-number-3">7.1.</span> SnowballStemmer</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Snowball 是一种很常用的词干提取算法。python 中有一个专门的实现 Snowball 算法的包snowballstemmer, 它比 nltk 包轻量。当前版本不需要 nltk 的复杂功能，因此直接使用 snowballstemmer 包。

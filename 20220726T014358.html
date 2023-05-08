@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-03-11 六 12:42 -->
+<!-- 2023-05-08 一 13:30 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Using Emacs Combine Anything</title>
 <meta name="generator" content="Org Mode" />
-<title>undefined</title>
+<title>Hello World</title>
 <meta name="description" content="undefined"/>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="/css/org.css" />
-
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.css" />
 
 <script
   defer="defer"
   src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"
   onload="document.addEventListener('DOMContentLoaded', () => {pangu.autoSpacingPage();});"
 ></script>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.js"
+  defer="defer"
+  onload="var elements=document.getElementsByClassName('viewImage');var arr = Array.from(elements);
+  for (var i = 0; i < arr.length; i++) {var element = arr[i]; var viewer = new Viewer(element, {
+
+  title: 0,
+  navbar: 0,
+  toolbar: 0,
+  scalable: false
+  });}"
+>
+</script>
+
+<script
+>
+ document.addEventListener('DOMContentLoaded', function() {
+   var x = document.getElementsByClassName("org-src-container");
+   len = x.length;
+   for(i = 0; i < len; i++) {
+     var codeElements = x[i].getElementsByTagName("pre");
+     if(codeElements.length != 1) {continue}
+     var codeClasses = codeElements[0].classList;
+     var srcName;
+     if (codeClasses.length == 1) {
+       srcName = codeClasses[0]
+     } else if (codeClasses.length == 2) {
+       srcName = codeClasses[1]       
+     }
+     var code = x[i].outerHTML;
+     var fold = document.createElement("details");
+     fold.innerHTML = `<summary>Code Source(${srcName}): </summary>` + code; 
+     var fa = x[i].parentNode; 
+     fa.replaceChild(fold, x[i]); 
+   }
+ });
+
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -25,8 +65,8 @@
   <a
     aria-current="page"
     class="font-effect-shadow-multiple header-title"
-    href=/
-    > Hello world </a
+    href="/"
+    > Hello World </a
   >
   <div class="header-line"></div>
 </div>
@@ -64,8 +104,8 @@ The first 3 tools use Emacs as a GUI or interactive interface for a series of co
 The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
 </p>
 
-<div id="outline-container-orga556555" class="outline-2">
-<h2 id="orga556555"><span class="section-number-2">1.</span> Using Emacs as a GUI or interactive interface</h2>
+<div id="outline-container-org548ae77" class="outline-2">
+<h2 id="org548ae77"><span class="section-number-2">1.</span> Using Emacs as a GUI or interactive interface</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The idea and implementation of using Emacs as a GUI or interactive interface are very simple and intuitive.
@@ -77,8 +117,8 @@ The idea and implementation of using Emacs as a GUI or interactive interface are
 </ul>
 </div>
 
-<div id="outline-container-org83b4766" class="outline-3">
-<h3 id="org83b4766"><span class="section-number-3">1.1.</span> Example</h3>
+<div id="outline-container-orgab37d64" class="outline-3">
+<h3 id="orgab37d64"><span class="section-number-3">1.1.</span> Example</h3>
 <div class="outline-text-3" id="text-1-1">
 <p align="center"><img width="600px" src="https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif"></p>
 
@@ -90,8 +130,8 @@ The idea and implementation of using Emacs as a GUI or interactive interface are
 
 
 
-<div id="outline-container-orgde0c027" class="outline-2">
-<h2 id="orgde0c027"><span class="section-number-2">2.</span> Global Interactive Emacs</h2>
+<div id="outline-container-org382af60" class="outline-2">
+<h2 id="org382af60"><span class="section-number-2">2.</span> Global Interactive Emacs</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 This tool is inspired by article : <a href="https://isamert.net/2022/03/16/global-interactive-emacs-functions.html">Global interactive Emacs functions</a>.It provides an idea to run Emacs functions outside of Emacs.
@@ -106,8 +146,8 @@ I'm using it to replace the Launchbar.
 </p>
 </div>
 
-<div id="outline-container-org1c4fb05" class="outline-3">
-<h3 id="org1c4fb05"><span class="section-number-3">2.1.</span> Principle</h3>
+<div id="outline-container-org6787a60" class="outline-3">
+<h3 id="org6787a60"><span class="section-number-3">2.1.</span> Principle</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 the idea of <code>Global Interactive Emacs</code> is so interesting.
@@ -123,8 +163,8 @@ On Emacs, using <code>completing-function</code> to implement interactive functi
 </div>
 </div>
 
-<div id="outline-container-orgc9ec922" class="outline-3">
-<h3 id="orgc9ec922"><span class="section-number-3">2.2.</span> Pros and cons</h3>
+<div id="outline-container-org1f36f75" class="outline-3">
+<h3 id="org1f36f75"><span class="section-number-3">2.2.</span> Pros and cons</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 This tool has some pros and cons, and I think if you have the following needs, you can try to use it :
@@ -139,8 +179,8 @@ This tool has some pros and cons, and I think if you have the following needs, y
 </ul>
 </div>
 
-<div id="outline-container-org16c8dae" class="outline-4">
-<h4 id="org16c8dae"><span class="section-number-4">2.2.1.</span> Pros</h4>
+<div id="outline-container-orgf92ca51" class="outline-4">
+<h4 id="orgf92ca51"><span class="section-number-4">2.2.1.</span> Pros</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <ul class="org-ul">
 <li><b>free</b>: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need <code>Emacs</code>  and some open source software that you can use for free.</li>
@@ -151,8 +191,8 @@ This tool has some pros and cons, and I think if you have the following needs, y
 </div>
 </div>
 
-<div id="outline-container-orgb1b0d6a" class="outline-4">
-<h4 id="orgb1b0d6a"><span class="section-number-4">2.2.2.</span> Cons</h4>
+<div id="outline-container-orgcf06a92" class="outline-4">
+<h4 id="orgcf06a92"><span class="section-number-4">2.2.2.</span> Cons</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <ul class="org-ul">
 <li><b>Not powerful for now</b>: Obviously, the tool is not as powerful as Lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.</li>
@@ -162,8 +202,8 @@ This tool has some pros and cons, and I think if you have the following needs, y
 </div>
 </div>
 
-<div id="outline-container-orgf70657c" class="outline-3">
-<h3 id="orgf70657c"><span class="section-number-3">2.3.</span> Example</h3>
+<div id="outline-container-orgc87e52f" class="outline-3">
+<h3 id="orgc87e52f"><span class="section-number-3">2.3.</span> Example</h3>
 <div class="outline-text-3" id="text-2-3">
 <p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif"></p>
 
