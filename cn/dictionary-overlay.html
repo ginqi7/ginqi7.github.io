@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-03-29 五 10:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>dictionary-overlay</title>
+<meta name="author" content="Qiqi Jin" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="/static/css/org.css" />
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="preamble" class="status"> <div> <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/cn"> Hello World </a> <div class="header-line"></div> </div> </div>
+</div>
+<div id="content" class="content">
+<h1 class="title">dictionary-overlay</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7a80cea">1. 目标</a></li>
+<li><a href="#orgc389dc3">2. 安装</a>
+<ul>
+<li><a href="#orgdd9eefd">2.1. websocket-bridge</a></li>
+<li><a href="#org69924f7">2.2. Python 相关包</a></li>
+<li><a href="#org8833a30">2.3. 网络翻译</a></li>
+<li><a href="#orgf9f07f1">2.4. 下载 dictionary-overlay</a></li>
+<li><a href="#org0cb61db">2.5. 添加下面配置到 ~/.emacs</a></li>
+</ul>
+</li>
+<li><a href="#org2dfb0ec">3. 命令</a></li>
+<li><a href="#org56ada5e">4. 选项</a>
+<ul>
+<li><a href="#org425e8b7">4.1. face</a></li>
+</ul>
+</li>
+<li><a href="#org0c038b2">5. 使用方法探讨</a></li>
+<li><a href="#org2aecf1a">6. 翻译逻辑</a></li>
+<li><a href="#org78d45cf">7. 词干提取+词形还原</a>
+<ul>
+<li><a href="#orgf51262f">7.1. SnowballStemmer</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a80cea" class="outline-2">
+<h2 id="org7a80cea"><span class="section-number-2">1.</span> 目标</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+辅助英文较弱的 Emacser 进行英文阅读。提供了两种能力：
+</p>
+<ol class="org-ol">
+<li>生词本提示：自定义“生词本”，阅读英文文章时，通过 overlay 给生词添加中文翻译。</li>
+<li>透析阅读法：自定义“熟词本”，阅读英文文章时，通过 overlay 翻译当前文章所有未标记为“熟词”的单词</li>
+</ol>
+
+
+<div id="org6c303ae" class="figure">
+<p><img src="images/20221109T224717--dictionary-overlay__emacs_project_cn_blog-0.png" alt="20221109T224717--dictionary-overlay__emacs_project_cn_blog-0.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Example</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc389dc3" class="outline-2">
+<h2 id="orgc389dc3"><span class="section-number-2">2.</span> 安装</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgdd9eefd" class="outline-3">
+<h3 id="orgdd9eefd"><span class="section-number-3">2.1.</span> <a href="https://github.com/ginqi7/websocket-bridge">websocket-bridge</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+用于 Emacs 与外部应用进行 websocket 通信
+</p>
+</div>
+</div>
+<div id="outline-container-org69924f7" class="outline-3">
+<h3 id="org69924f7"><span class="section-number-3">2.2.</span> Python 相关包</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+插件通过 python 编写，需要安装 python3
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/ginqi7/websocket-bridge-python">websocket-bridge-python</a> websocket-bridge 的 python 客户端</li>
+<li><a href="https://github.com/huggingface/tokenizers">tokenizers</a> python 分词工具</li>
+<li>six pystardict.py 的依赖</li>
+<li><a href="https://github.com/jd-boyd/sexpdata">sexpdata</a> 用于把 python 对象转换为 sexp</li>
+<li><a href="https://pypi.org/project/snowballstemmer/">snowballstemmer</a> 用于“词干提取”的算法包</li>
+<li><a href="https://git.ookami.one/cgit/google-translate/">google-translate</a> 用于网络翻译，非必选，可以用 crow-translate 替换</li>
+</ul>
+
+<p>
+你可以使用 <code>dictionary-overlay-install</code> 来安装相关的 python 包（不包括 google-translate）。
+</p>
+</div>
+</div>
+<div id="outline-container-org8833a30" class="outline-3">
+<h3 id="org8833a30"><span class="section-number-3">2.3.</span> 网络翻译</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+默认会使用 sdcv 本地词典翻译。当单词在本地词典未找到时，会使用网络翻译，目前支持：
+</p>
+<ol class="org-ol">
+<li><a href="https://crow-translate.github.io/">crow-translate</a></li>
+<li><a href="https://git.ookami.one/cgit/google-translate/">google-translate</a></li>
+</ol>
+
+<p>
+你可以使用： <code>dictionary-overlay-install-google-translate</code> 来安装 google-translate
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9f07f1" class="outline-3">
+<h3 id="orgf9f07f1"><span class="section-number-3">2.4.</span> 下载 dictionary-overlay</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+<pre class="src src-shell">git clone --depth=1 -b main https://github.com/ginqi7/dictionary-overlay ~/.emacs.d/site-lisp/dictionary-overlay/
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0cb61db" class="outline-3">
+<h3 id="org0cb61db"><span class="section-number-3">2.5.</span> 添加下面配置到 ~/.emacs</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-to-list 'load-path "~/.emacs.d/site-lisp/dictionary-overlay/")
+(require 'dictionary-overlay)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2dfb0ec" class="outline-2">
+<h2 id="org2dfb0ec"><span class="section-number-2">3.</span> 命令</h2>
+<div class="outline-text-2" id="text-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">命令</th>
+<th scope="col" class="org-left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">dictionary-overlay-start</td>
+<td class="org-left">启动 dictionary-overlay 应用</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-restart</td>
+<td class="org-left">重启 dictionary-overlay 应用</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-render-buffer</td>
+<td class="org-left">使用翻译渲染当前 buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-toggle</td>
+<td class="org-left">打开\关闭翻译渲染当前 buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-jump-next-unknown-word</td>
+<td class="org-left">跳转到下一个生词</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-jump-prev-unknown-word</td>
+<td class="org-left">跳转到上一个生词</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-mark-word-known</td>
+<td class="org-left">标记当前单词为“已知”</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-mark-word-unknown</td>
+<td class="org-left">标记当前单词为“生词”</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-mark-buffer</td>
+<td class="org-left">标签当前 buffer 中所有未标记为“生词”的单词全为“已知”</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-mark-buffer-unknown</td>
+<td class="org-left">标签当前 buffer 中所有未标记为“生词”的单词全为“未知”</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-install</td>
+<td class="org-left">安装 dictionary-overlay 所依赖的必选 python 包</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-install-google-translate</td>
+<td class="org-left">安装 google-translate</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-modify-translation</td>
+<td class="org-left">修改当前单词的“翻译”，可以选择词典中的翻译，也可以手动输入</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org56ada5e" class="outline-2">
+<h2 id="org56ada5e"><span class="section-number-2">4.</span> 选项</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">选项</td>
+<td class="org-left">说明</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-just-unknown-words</td>
+<td class="org-left">t 时使用“生词本”模式，nil 为“透析阅读”模式，默认为 t</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-user-data-directory</td>
+<td class="org-left">用户数据存放的目录，默认值为：“~/.emacs.d/dictionary-overlay-data”</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-translation-format</td>
+<td class="org-left">翻译展示的形式，默认是："(%s)"</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-unknownword</td>
+<td class="org-left">生词的展示形态face 默认为nil, 用户可自行修改</td>
+</tr>
+
+<tr>
+<td class="org-left">dictionary-overlay-translation</td>
+<td class="org-left">生词的翻译的展示形态 face 默认为nil, 用户可自行修改</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org425e8b7" class="outline-3">
+<h3 id="org425e8b7"><span class="section-number-3">4.1.</span> face</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+用于控制生词的展示, 为了不影响阅读默认为空，不对原始face 做任何修改。如果希望能通过face 对生词进行显示增加可以参考
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defface dictionary-overlay-translation
+  '((((class color) (min-colors 88) (background light))
+     :underline "#fb8c96" :background "#fbd8db")
+    (((class color) (min-colors 88) (background dark))
+     :underline "#C77577" :background "#7A696B")
+    (t
+     :inherit highlight))
+  "Face for dictionary-overlay unknown words.")
+</pre>
+</div>
+
+<p>
+face `dictionary-overlay-unknownword` 如果用户不自行定义，那么不会给单词加上overlay, 只会新增翻译的 overlay. 这样的好处是，当你在单词上移动时，仍旧按照字母移动，而不是按照overlay 移动。
+</p>
+
+<p>
+推荐使用的 face ：
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(copy-face 'font-lock-keyword-face 'dictionary-overlay-unknownword)
+(copy-face 'font-lock-comment-face 'dictionary-overlay-translation)
+</pre>
+</div>
+
+
+<div id="org44b6e24" class="figure">
+<p><img src="images/20221109T224717--dictionary-overlay__emacs_project_cn_blog-1.png" alt="20221109T224717--dictionary-overlay__emacs_project_cn_blog-1.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>dictionary-overlay with face</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0c038b2" class="outline-2">
+<h2 id="org0c038b2"><span class="section-number-2">5.</span> 使用方法探讨</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+默认使用“生词本”模式，阅读英文文章时，需要手动添加生词（ <code>dictionary-overlay-mark-word-unknown</code> ）。可以和你的“查询单词”的快捷键保持在一起。那么你下次遇到生词时，会自动展示出生词。
+</p>
+
+<p>
+当你开始阅读文章时，可以把当前 buffer 中所有未标记为 known 的单词标记为 unknown ( <code>dictionary-overlay-mark-buffer-unknown</code> )
+</p>
+
+<p>
+当你阅读完一篇文章以后，可以把当前 buffer 中所有未标记为 unknown 的单词标记为 known ( <code>dictionary-overlay-mark-buffer</code> )
+</p>
+
+<p>
+当一个生词反复出现，你觉得自己已经认识了它，可以标记为 known （ <code>dictionary-overlay-mark-word-known</code> ），下次不再展示翻译。
+</p>
+
+<p>
+当你阅读了足够多的文章，你应该积累了一定量的 know-words ，此时，或许你可以尝试使用"透析阅读法"（ <code>(setq dictionary-overlay-just-unknown-words nil)</code> ）将自动展示，“或许”你不认识的单词。
+</p>
+</div>
+</div>
+<div id="outline-container-org2aecf1a" class="outline-2">
+<h2 id="org2aecf1a"><span class="section-number-2">6.</span> 翻译逻辑</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+当前当前翻译的逻辑是：
+</p>
+<ol class="org-ol">
+<li>如果单词在本地的sdcv 的词库中，则选择sdcv 翻译结果中的第一条；</li>
+<li>如果单词在本地不存在，则使用网络翻译：crow-translate 或者 google-translate 进行翻译</li>
+<li><p>
+如果你对翻译结果不满意，可以使用 <code>dictionary-overlay-modify-translation</code> 来修改当前单词的“释义”。该命令，可以选择 sdcv 和网络词典的所有“释义”，也可以手动输入。
+</p>
+
+
+<div id="orgdad04fd" class="figure">
+<p><img src="images/20221109T224717--dictionary-overlay__emacs_project_cn_blog-2.png" alt="20221109T224717--dictionary-overlay__emacs_project_cn_blog-2.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>dictionary-overlay-modify-translation</p>
+</div></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org78d45cf" class="outline-2">
+<h2 id="org78d45cf"><span class="section-number-2">7.</span> 词干提取+词形还原</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+在自然语言处理领域，对单词有两种处理方式：
+</p>
+<ol class="org-ol">
+<li>词干提取 – Stemming</li>
+<li>词形还原 – Lemmatisation</li>
+</ol>
+
+<p>
+词干提取，通常会使用算法去掉或转换单词的后缀，提取单词中的主干部分。提出的过程不够精确，可能返回的不是一个有效的单词 例如apple -&gt; appl 。但它的优点是，它可以把一个单词的动词、名词、形容词抽取出一个通用的词干
+</p>
+
+<p>
+词形还原，会把一个单词还原到最基础的形态，例如 drove -&gt; drive ，但需要指定单词的词性才能准确转换。例如 drove 在词典里存在动词和名词，只有你指定它的词性为动词，才会还原成 drive
+</p>
+
+<p>
+在我们这个应用当中，可以选择使用“词干提取”，它可以把一个单词的动词、名词、形容词抽取出一个通用的词干。而通常，如果我们不认识一个单词，那么很可能它的动词，形容词都不认识。另外就是，它足够简单。不像词形还原，还需要先分析单词的词性。
+</p>
+
+
+<div id="orgbfc6e5f" class="figure">
+<p><img src="images/20221109T224717--dictionary-overlay__emacs_project_cn_blog-3.png" alt="20221109T224717--dictionary-overlay__emacs_project_cn_blog-3.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>add stem of word in to unknown list</p>
+</div>
+
+<p>
+因此，我们可以每次添加生词时，把单词与它的词干都加入到生词本当中。
+</p>
+
+<p>
+当需要渲染当前buffer 时，遇到单词或者单词词干在生词本中，就翻译它的结果。示例：
+</p>
+
+
+<div id="org6202a30" class="figure">
+<p><img src="images/20221109T224717--dictionary-overlay__emacs_project_cn_blog-4.png" alt="20221109T224717--dictionary-overlay__emacs_project_cn_blog-4.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>stem render</p>
+</div>
+</div>
+<div id="outline-container-orgf51262f" class="outline-3">
+<h3 id="orgf51262f"><span class="section-number-3">7.1.</span> SnowballStemmer</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Snowball 是一种很常用的词干提取算法。python 中有一个专门的实现 Snowball 算法的包snowballstemmer, 它比 nltk 包轻量。当前版本不需要 nltk 的复杂功能，因此直接使用 snowballstemmer 包。
+</p>
+
+<p>
+我尝试，不把 stem 的结果存放到生词本，而是判断一个单词是否在生词本时：
+</p>
+<ol class="org-ol">
+<li>判断单词是否在生词本中；</li>
+<li>对生词本中的所有单词进行stem, 判断当前单词的stem 是否在这一堆stem 当中。</li>
+</ol>
+<p>
+性能教差，因此选择当记录生词时，把单词和单词的stem 都记录到生词本里。那么做判断时只需要判断：
+</p>
+<ol class="org-ol">
+<li>单词是否在生词本里；</li>
+<li>单词的 stem 是否在生词本里。</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble" class="status"> <footer><small>© Copyright 2024, Qiqi Jin</small></footer> </div>
+</div>
+</body>
+</html>
