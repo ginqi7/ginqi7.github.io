@@ -60,42 +60,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbcdc774">Overview</a></li>
-<li><a href="#org3bd635c">Prerequisites</a>
+<li><a href="#org4f062c0">Overview</a></li>
+<li><a href="#orge70c742">Prerequisites</a>
 <ul>
-<li><a href="#orgc07a4b4">CLI</a></li>
-<li><a href="#orgb98cb5a">Require Packages</a></li>
-<li><a href="#orgdcb8efb">Install</a></li>
+<li><a href="#org3e4331c">CLI</a></li>
+<li><a href="#orgda9b734">Require Packages</a></li>
+<li><a href="#org9931442">Install</a></li>
 </ul>
 </li>
-<li><a href="#orgcbfee6e">Configuration</a>
+<li><a href="#org7d44ae4">Configuration</a>
 <ul>
-<li><a href="#org2a3b100">Variables</a></li>
-<li><a href="#org11abbf3">EWW Config</a></li>
-<li><a href="#orgc3199d0">Elfeed Config</a></li>
+<li><a href="#org43359a3">Variables</a></li>
+<li><a href="#org322baea">EWW Config</a></li>
+<li><a href="#orgd56e07a">Elfeed Config</a></li>
 </ul>
 </li>
-<li><a href="#orgf5db729">Features</a>
+<li><a href="#org9a84de9">Features</a>
 <ul>
-<li><a href="#orga817c96">Supported Link Format</a></li>
+<li><a href="#org04b1817">Supported Link Format</a></li>
 </ul>
 </li>
-<li><a href="#org0ae4ba5">Example</a></li>
-<li><a href="#orgaae5cd7">Disadvantages</a></li>
-<li><a href="#org3f9b4ef">Todo List</a></li>
-<li><a href="#orgde74a8f">Development History</a>
+<li><a href="#orgc84520e">Example</a></li>
+<li><a href="#org432a36c">Disadvantages</a></li>
+<li><a href="#orgf319a02">Todo List</a></li>
+<li><a href="#org10b19f1">Development History</a>
 <ul>
-<li><a href="#orga2dbd83">Dec 18, 2024</a></li>
-<li><a href="#orgf417c60">Dec 16, 2024</a></li>
-<li><a href="#orga225f2b">May 12, 2023</a></li>
+<li><a href="#org879ab5b">Dec 18, 2024</a></li>
+<li><a href="#org72cbb4a">Dec 16, 2024</a></li>
+<li><a href="#orgd42132d">May 12, 2023</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbcdc774" class="outline-2">
-<h2 id="orgbcdc774">Overview</h2>
-<div class="outline-text-2" id="text-orgbcdc774">
+<div id="outline-container-org4f062c0" class="outline-2">
+<h2 id="org4f062c0">Overview</h2>
+<div class="outline-text-2" id="text-org4f062c0">
 <p>
 In Emacs, displaying an image occupies one line regardless of its height. The movement over the image while navigating by lines can be quite frustrating.
 </p>
@@ -117,21 +117,21 @@ During the development process, I found <a href="https://github.com/jcfk/org-sli
 </p>
 </div>
 </div>
-<div id="outline-container-org3bd635c" class="outline-2">
-<h2 id="org3bd635c">Prerequisites</h2>
-<div class="outline-text-2" id="text-org3bd635c">
+<div id="outline-container-orge70c742" class="outline-2">
+<h2 id="orge70c742">Prerequisites</h2>
+<div class="outline-text-2" id="text-orge70c742">
 </div>
-<div id="outline-container-orgc07a4b4" class="outline-3">
-<h3 id="orgc07a4b4">CLI</h3>
-<div class="outline-text-3" id="text-orgc07a4b4">
+<div id="outline-container-org3e4331c" class="outline-3">
+<h3 id="org3e4331c">CLI</h3>
+<div class="outline-text-3" id="text-org3e4331c">
 <p>
 <b>Curl</b>: Used to download remote images.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb98cb5a" class="outline-3">
-<h3 id="orgb98cb5a">Require Packages</h3>
-<div class="outline-text-3" id="text-orgb98cb5a">
+<div id="outline-container-orgda9b734" class="outline-3">
+<h3 id="orgda9b734">Require Packages</h3>
+<div class="outline-text-3" id="text-orgda9b734">
 <ul class="org-ul">
 <li><b>org-element</b>: Used to parse the buffer to retrieve all links.</li>
 <li><b>image</b>: Used to create an image object.</li>
@@ -139,9 +139,9 @@ During the development process, I found <a href="https://github.com/jcfk/org-sli
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdcb8efb" class="outline-3">
-<h3 id="orgdcb8efb">Install</h3>
-<div class="outline-text-3" id="text-orgdcb8efb">
+<div id="outline-container-org9931442" class="outline-3">
+<h3 id="org9931442">Install</h3>
+<div class="outline-text-3" id="text-org9931442">
 <ul class="org-ul">
 <li>clone the project in your own emacs configuration files directory, like:</li>
 </ul>
@@ -154,26 +154,26 @@ During the development process, I found <a href="https://github.com/jcfk/org-sli
 <li>add the path to 'load-path'</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/d/lisp/image-slicing"))
+<pre class="src src-emacs-lisp">(<span style="color: #0000ff;">add-to-list</span> 'load-path (<span style="color: #0000ff;">expand-file-name</span> <span style="background-color: #FFEE99;">"~/.emacs.d/lisp/d/lisp/image-slicing"</span>))
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcbfee6e" class="outline-2">
-<h2 id="orgcbfee6e">Configuration</h2>
-<div class="outline-text-2" id="text-orgcbfee6e">
+<div id="outline-container-org7d44ae4" class="outline-2">
+<h2 id="org7d44ae4">Configuration</h2>
+<div class="outline-text-2" id="text-org7d44ae4">
 <p>
 Here are a few variables that can be used for configuration:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(require 'image-slicing)
+<pre class="src src-emacs-lisp">(<span style="color: #6c71c4;">require</span> '<span style="color: #381a8a;">image-slicing</span>)
 </pre>
 </div>
 </div>
-<div id="outline-container-org2a3b100" class="outline-3">
-<h3 id="org2a3b100">Variables</h3>
-<div class="outline-text-3" id="text-org2a3b100">
+<div id="outline-container-org43359a3" class="outline-3">
+<h3 id="org43359a3">Variables</h3>
+<div class="outline-text-3" id="text-org43359a3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -219,56 +219,56 @@ Here are a few variables that can be used for configuration:
 </table>
 </div>
 </div>
-<div id="outline-container-org11abbf3" class="outline-3">
-<h3 id="org11abbf3">EWW Config</h3>
-<div class="outline-text-3" id="text-org11abbf3">
+<div id="outline-container-org322baea" class="outline-3">
+<h3 id="org322baea">EWW Config</h3>
+<div class="outline-text-3" id="text-org322baea">
 <ol class="org-ol">
 <li>cancel the eww defualt image render.</li>
 </ol>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(add-to-list 'shr-external-rendering-functions
-             '(img . image-slicing-tag-img))
+<pre class="src src-emacs-lisp">(<span style="color: #0000ff;">add-to-list</span> 'shr-external-rendering-functions
+  <span style="color: #acd7b733ed05;"> </span> <span style="color: #ab71a6b299d2;"> </span> <span style="color: #ceadcb91d9c5;"> </span> <span style="color: #eb64dc88cbbe;"> </span> <span style="color: #e67fd36599d2;"> </span> <span style="color: #bdb6af2ec6d9;"> </span>'(img . <span style="color: #0000ff;">image-slicing-tag-img</span>))
 </pre>
 </div>
 <ol class="org-ol">
 <li>Add <code>image-slicing</code> to <code>eww-after-render-hook</code></li>
 </ol>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(push #'image-slicing-mode eww-after-render-hook)
+<pre class="src src-emacs-lisp">(<span style="color: #6c71c4;">push</span> #'<span style="color: #0000ff;">image-slicing-mode</span> eww-after-render-hook)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3199d0" class="outline-3">
-<h3 id="orgc3199d0">Elfeed Config</h3>
-<div class="outline-text-3" id="text-orgc3199d0">
+<div id="outline-container-orgd56e07a" class="outline-3">
+<h3 id="orgd56e07a">Elfeed Config</h3>
+<div class="outline-text-3" id="text-orgd56e07a">
 <p>
 image-slice can also work with elfeed:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">;; add to shr-external-rendering-functions (skip if alread setup for eww)
-(add-to-list 'shr-external-rendering-functions
-             '(img . image-slicing-tag-img))
-
-;; advice `elfeed-show-entry' to trigger `image-slicing-mode'
-(advice-add #'elfeed-show-entry :after #'image-slicing-mode)
+<pre class="src src-emacs-lisp"><span style="color: #c4a599; font-style: italic;">;; </span><span style="color: #c4a599; font-style: italic;">add to shr-external-rendering-functions (skip if alread setup for eww)</span>
+(<span style="color: #0000ff;">add-to-list</span> 'shr-external-rendering-functions
+  <span style="color: #acd7b733ed05;"> </span> <span style="color: #ab71a6b299d2;"> </span> <span style="color: #ceadcb91d9c5;"> </span> <span style="color: #eb64dc88cbbe;"> </span> <span style="color: #e67fd36599d2;"> </span> <span style="color: #bdb6af2ec6d9;"> </span>'(img . <span style="color: #0000ff;">image-slicing-tag-img</span>))
+             
+<span style="color: #c4a599; font-style: italic;">;; </span><span style="color: #c4a599; font-style: italic;">advice `</span><span style="color: #381a8a; font-style: italic;">elfeed-show-entry</span><span style="color: #c4a599; font-style: italic;">' to trigger `</span><span style="color: #381a8a; font-style: italic;">image-slicing-mode</span><span style="color: #c4a599; font-style: italic;">'</span>
+(<span style="color: #0000ff;">advice-add</span> #'elfeed-show-entry :after #'<span style="color: #0000ff;">image-slicing-mode</span>)
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf5db729" class="outline-2">
-<h2 id="orgf5db729">Features</h2>
-<div class="outline-text-2" id="text-orgf5db729">
+<div id="outline-container-org9a84de9" class="outline-2">
+<h2 id="org9a84de9">Features</h2>
+<div class="outline-text-2" id="text-org9a84de9">
 <ul class="org-ul">
 <li><code>image-slicing-mode</code>: Automatically finds image links in the buffer and renders them as multiline display.</li>
 <li><code>Asynchronous</code>: Asynchronous download of remote images.</li>
 <li><code>Multiple Modes</code>: Support multiple modes like org-mode, eww, elfeed.</li>
 </ul>
 </div>
-<div id="outline-container-orga817c96" class="outline-3">
-<h3 id="orga817c96">Supported Link Format</h3>
-<div class="outline-text-3" id="text-orga817c96">
+<div id="outline-container-org04b1817" class="outline-3">
+<h3 id="org04b1817">Supported Link Format</h3>
+<div class="outline-text-3" id="text-org04b1817">
 <ul class="org-ul">
 <li>Org Links
 <ul class="org-ul">
@@ -289,11 +289,11 @@ image-slice can also work with elfeed:
 </div>
 </div>
 </div>
-<div id="outline-container-org0ae4ba5" class="outline-2">
-<h2 id="org0ae4ba5">Example</h2>
-<div class="outline-text-2" id="text-org0ae4ba5">
+<div id="outline-container-orgc84520e" class="outline-2">
+<h2 id="orgc84520e">Example</h2>
+<div class="outline-text-2" id="text-orgc84520e">
 
-<div id="orgb17d538" class="figure">
+<div id="orgf409fa2" class="figure">
 <p><img src="data:image/gif;base64,R0lGODlhwAMcAoAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/gdnaWYuc2tpACH5BAQeAAAA
 LAAAAADAAxwChwAAAP////X19cXFxfPz8/7+/v3///7///b29vHx8f39/v/+/5CQj9LS0sbGxv//
 /n19fQUFBaKjourq6fX09d/f3vv///r5+QMDAuzs7LCxsPr6+v///e7u7fj+/4+Pj8bHxvz+//j5
@@ -17082,9 +17082,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </div>
 </div>
 </div>
-<div id="outline-container-orgaae5cd7" class="outline-2">
-<h2 id="orgaae5cd7">Disadvantages</h2>
-<div class="outline-text-2" id="text-orgaae5cd7">
+<div id="outline-container-org432a36c" class="outline-2">
+<h2 id="org432a36c">Disadvantages</h2>
+<div class="outline-text-2" id="text-org432a36c">
 <ul class="org-ul">
 <li>If there are many remote image links in the buffer, it will generate many temporary image files in the temporary system directory.</li>
 <li>If the URL link is too short, the number of slices of the original image will be small, and the image line height will be large.</li>
@@ -17092,21 +17092,21 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f9b4ef" class="outline-2">
-<h2 id="org3f9b4ef">Todo List</h2>
-<div class="outline-text-2" id="text-org3f9b4ef">
+<div id="outline-container-orgf319a02" class="outline-2">
+<h2 id="orgf319a02">Todo List</h2>
+<div class="outline-text-2" id="text-orgf319a02">
 <ul class="org-ul">
 <li>Adapt nov</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde74a8f" class="outline-2">
-<h2 id="orgde74a8f">Development History</h2>
-<div class="outline-text-2" id="text-orgde74a8f">
+<div id="outline-container-org10b19f1" class="outline-2">
+<h2 id="org10b19f1">Development History</h2>
+<div class="outline-text-2" id="text-org10b19f1">
 </div>
-<div id="outline-container-orga2dbd83" class="outline-3">
-<h3 id="orga2dbd83">Dec 18, 2024</h3>
-<div class="outline-text-3" id="text-orga2dbd83">
+<div id="outline-container-org879ab5b" class="outline-3">
+<h3 id="org879ab5b">Dec 18, 2024</h3>
+<div class="outline-text-3" id="text-org879ab5b">
 <p>
 I find a similar package named <a href="https://github.com/jcfk/org-sliced-images">org-sliced-images</a>, so I study some code from it to make my code simpler.
 </p>
@@ -17116,9 +17116,9 @@ In Emacs, we can display a part of an image by using ('display . (list (list 'sl
 </p>
 </div>
 </div>
-<div id="outline-container-orgf417c60" class="outline-3">
-<h3 id="orgf417c60">Dec 16, 2024</h3>
-<div class="outline-text-3" id="text-orgf417c60">
+<div id="outline-container-org72cbb4a" class="outline-3">
+<h3 id="org72cbb4a">Dec 16, 2024</h3>
+<div class="outline-text-3" id="text-org72cbb4a">
 <p>
 There have some issues in last version:
 </p>
@@ -17132,9 +17132,9 @@ So I use asynchronous processes to run ImageMagick, guaranteeing that it will no
 </p>
 </div>
 </div>
-<div id="outline-container-orga225f2b" class="outline-3">
-<h3 id="orga225f2b">May 12, 2023</h3>
-<div class="outline-text-3" id="text-orga225f2b">
+<div id="outline-container-orgd42132d" class="outline-3">
+<h3 id="orgd42132d">May 12, 2023</h3>
+<div class="outline-text-3" id="text-orgd42132d">
 <p>
 I got the idea to slice the image into many pieces, making Emacs display the pieces line by line.
 </p>

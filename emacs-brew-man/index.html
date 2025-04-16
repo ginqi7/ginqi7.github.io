@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content= Qiqi Jin >
+	<meta name="description" content="This is a blog for Qiqi Jin.">
+
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/static/css/font.css" defer>
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css" defer>
+	<link rel="stylesheet" type="text/css" href="/static/css/colors.css" defer>
+	<title>Hello World</title>
+
+    </head>
+
+    <body>
+	
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/"> Hello World </a>
+	    <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+
+
+	<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+        <link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+        <link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> Emacs Brew Manager </h1>
+
+    
+
+
+<certer>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/tags/emacs">#emacs </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/tags/project">#project </a>
+    </div>
+
+
+	</div>
+    </div>
+</certer>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb547fd5">Summary</a></li>
+<li><a href="#orgedefd3e">Features</a>
+<ul>
+<li><a href="#org1e12dc1">Display all installed Formulae and Casks.</a></li>
+<li><a href="#org14c9bc1">Display all installed Taps.</a></li>
+</ul>
+</li>
+<li><a href="#org0e68645">How it works</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb547fd5" class="outline-2">
+<h2 id="orgb547fd5">Summary</h2>
+<div class="outline-text-2" id="text-orgb547fd5">
+<p>
+A simple Homebrew manager by Emacs.
+</p>
+
+<p>
+The brew CLI is already sufficient for adding, deleting, or searching for formulae. However, when reviewing installed formulae — such as identifying unused ones or checking for version updates — a GUI is more convenient. That's why I created this Emacs package to manage installed formulae with additional features.
+</p>
+</div>
+</div>
+<div id="outline-container-orgedefd3e" class="outline-2">
+<h2 id="orgedefd3e">Features</h2>
+<div class="outline-text-2" id="text-orgedefd3e">
+</div>
+<div id="outline-container-org1e12dc1" class="outline-3">
+<h3 id="org1e12dc1">Display all installed Formulae and Casks.</h3>
+<div class="outline-text-3" id="text-org1e12dc1">
+<p>
+You can view all installed Formulae and Casks, with columns indicating the available new versions for updates and whether the Formula or Cask is used by other Formulae or Casks.
+</p>
+
+<p>
+You can use the list information to decide which formulae and casks to delete or update, making your computer system cleaner and more controllable.
+</p>
+</div>
+</div>
+<div id="outline-container-org14c9bc1" class="outline-3">
+<h3 id="org14c9bc1">Display all installed Taps.</h3>
+<div class="outline-text-3" id="text-org14c9bc1">
+<p>
+You can check the Tap to see how many Formulae and Casks are available and how many are installed.
+</p>
+
+<p>
+You can delete unnecessary taps and interactively select to install Formulae or Casks provided by a specific tap.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0e68645" class="outline-2">
+<h2 id="org0e68645">How it works</h2>
+<div class="outline-text-2" id="text-org0e68645">
+<p>
+Essentially, it is a wrapper around the brew command line, utilizing <a href="https://github.com/ginqi7/websocket-bridge-ruby">websocket-bridge-ruby</a> as a bridge. The choice of Ruby is due to its ease in handling shell outcomes.
+</p>
+</div>
+</div>
+
+</article>
+
+<div class="footer-line"></div>
+
+
+
+
+
+
+
+    <li>
+	Next: <a href="/0006-using_emacs_combine_anything/">Using Emacs Combine Anything</a>
+    </li>
+
+
+<footer>
+    <small>© Copyright 2025, Qiqi Jin
+    </small>
+</footer>
+
+
+    </body>
+</html>

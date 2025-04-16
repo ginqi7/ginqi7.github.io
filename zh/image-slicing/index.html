@@ -60,42 +60,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org138aa0d">概述</a></li>
-<li><a href="#org7ef2d5a">前提</a>
+<li><a href="#orgb321df5">概述</a></li>
+<li><a href="#orgbe483ef">前提</a>
 <ul>
-<li><a href="#orgf01e99b">CLI</a></li>
-<li><a href="#orgee92db7">需要的 Emacs 包</a></li>
-<li><a href="#orgb98b891">安装 Image-slicing</a></li>
+<li><a href="#org10e102e">CLI</a></li>
+<li><a href="#org0ec7e9f">需要的 Emacs 包</a></li>
+<li><a href="#org9423ccc">安装 Image-slicing</a></li>
 </ul>
 </li>
-<li><a href="#org42fa6c6">配置</a>
+<li><a href="#org1ab9af8">配置</a>
 <ul>
-<li><a href="#org2eafb70">变量</a></li>
-<li><a href="#orgd240fe8">Eww 配置</a></li>
-<li><a href="#org0da350c">Elfeed 配置</a></li>
+<li><a href="#org8460b81">变量</a></li>
+<li><a href="#orgddcab38">Eww 配置</a></li>
+<li><a href="#org54915db">Elfeed 配置</a></li>
 </ul>
 </li>
-<li><a href="#org779aa02">特性</a>
+<li><a href="#orgd916f27">特性</a>
 <ul>
-<li><a href="#org90c46bb">支持的链接格式</a></li>
+<li><a href="#orgef4f693">支持的链接格式</a></li>
 </ul>
 </li>
-<li><a href="#org76be5be">例子</a></li>
-<li><a href="#orga020622">缺点</a></li>
-<li><a href="#org8e4d442">Todo List</a></li>
-<li><a href="#org775a75a">开发历史</a>
+<li><a href="#org85cc03a">例子</a></li>
+<li><a href="#org441f56c">缺点</a></li>
+<li><a href="#org0353ff5">Todo List</a></li>
+<li><a href="#org269c577">开发历史</a>
 <ul>
-<li><a href="#org2ebb554">Dec 18, 2024</a></li>
-<li><a href="#orgf3a6e62">Dec 16, 2024</a></li>
-<li><a href="#orgcc527f5">May 12, 2023</a></li>
+<li><a href="#org02eb987">Dec 18, 2024</a></li>
+<li><a href="#orgfd7ee00">Dec 16, 2024</a></li>
+<li><a href="#orgbc147b6">May 12, 2023</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org138aa0d" class="outline-2">
-<h2 id="org138aa0d">概述</h2>
-<div class="outline-text-2" id="text-org138aa0d">
+<div id="outline-container-orgb321df5" class="outline-2">
+<h2 id="orgb321df5">概述</h2>
+<div class="outline-text-2" id="text-orgb321df5">
 <p>
 在 Emacs 图片的展示逻辑与文本是一样的，占用一行。如果图片很高，它会调整当前行高适配图片。这种情况导致在 Emacs 当中滚动图片的体验相当糟糕。
 </p>
@@ -113,21 +113,21 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org7ef2d5a" class="outline-2">
-<h2 id="org7ef2d5a">前提</h2>
-<div class="outline-text-2" id="text-org7ef2d5a">
+<div id="outline-container-orgbe483ef" class="outline-2">
+<h2 id="orgbe483ef">前提</h2>
+<div class="outline-text-2" id="text-orgbe483ef">
 </div>
-<div id="outline-container-orgf01e99b" class="outline-3">
-<h3 id="orgf01e99b">CLI</h3>
-<div class="outline-text-3" id="text-orgf01e99b">
+<div id="outline-container-org10e102e" class="outline-3">
+<h3 id="org10e102e">CLI</h3>
+<div class="outline-text-3" id="text-org10e102e">
 <p>
 <b>Curl</b>: 使用 Curl 异步下载 web 图片，如果没有 web 图片则不需要。
 </p>
 </div>
 </div>
-<div id="outline-container-orgee92db7" class="outline-3">
-<h3 id="orgee92db7">需要的 Emacs 包</h3>
-<div class="outline-text-3" id="text-orgee92db7">
+<div id="outline-container-org0ec7e9f" class="outline-3">
+<h3 id="org0ec7e9f">需要的 Emacs 包</h3>
+<div class="outline-text-3" id="text-org0ec7e9f">
 <ul class="org-ul">
 <li><b>org-element</b>: 用于解析 Buffer 里的所有链接。</li>
 <li><b>image</b>: 用于创建 Image 对象。</li>
@@ -135,9 +135,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb98b891" class="outline-3">
-<h3 id="orgb98b891">安装 Image-slicing</h3>
-<div class="outline-text-3" id="text-orgb98b891">
+<div id="outline-container-org9423ccc" class="outline-3">
+<h3 id="org9423ccc">安装 Image-slicing</h3>
+<div class="outline-text-3" id="text-org9423ccc">
 <ul class="org-ul">
 <li>克隆 Image-slicing 项目到你自己的 Emacs 配置目录下：</li>
 </ul>
@@ -150,23 +150,23 @@
 <li>把克隆的路径添加到 <code>load-path</code> 当中</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/d/lisp/image-slicing"))
+<pre class="src src-emacs-lisp">(<span style="color: #0000ff;">add-to-list</span> 'load-path (<span style="color: #0000ff;">expand-file-name</span> <span style="background-color: #FFEE99;">"~/.emacs.d/lisp/d/lisp/image-slicing"</span>))
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org42fa6c6" class="outline-2">
-<h2 id="org42fa6c6">配置</h2>
-<div class="outline-text-2" id="text-org42fa6c6">
+<div id="outline-container-org1ab9af8" class="outline-2">
+<h2 id="org1ab9af8">配置</h2>
+<div class="outline-text-2" id="text-org1ab9af8">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(require 'image-slicing)
+<pre class="src src-emacs-lisp">(<span style="color: #6c71c4;">require</span> '<span style="color: #381a8a;">image-slicing</span>)
 </pre>
 </div>
 </div>
-<div id="outline-container-org2eafb70" class="outline-3">
-<h3 id="org2eafb70">变量</h3>
-<div class="outline-text-3" id="text-org2eafb70">
+<div id="outline-container-org8460b81" class="outline-3">
+<h3 id="org8460b81">变量</h3>
+<div class="outline-text-3" id="text-org8460b81">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -212,53 +212,53 @@
 </table>
 </div>
 </div>
-<div id="outline-container-orgd240fe8" class="outline-3">
-<h3 id="orgd240fe8">Eww 配置</h3>
-<div class="outline-text-3" id="text-orgd240fe8">
+<div id="outline-container-orgddcab38" class="outline-3">
+<h3 id="orgddcab38">Eww 配置</h3>
+<div class="outline-text-3" id="text-orgddcab38">
 <ol class="org-ol">
 <li>取消 EWW 默认的图片渲染方法</li>
 </ol>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(add-to-list 'shr-external-rendering-functions
-             '(img . image-slicing-tag-img))
+<pre class="src src-emacs-lisp">(<span style="color: #0000ff;">add-to-list</span> 'shr-external-rendering-functions
+  <span style="color: #acd7b733ed05;"> </span> <span style="color: #ab71a6b299d2;"> </span> <span style="color: #ceadcb91d9c5;"> </span> <span style="color: #eb64dc88cbbe;"> </span> <span style="color: #e67fd36599d2;"> </span> <span style="color: #bdb6af2ec6d9;"> </span>'(img . <span style="color: #0000ff;">image-slicing-tag-img</span>))
 </pre>
 </div>
 <ol class="org-ol">
 <li>把 <code>image-slicing</code> 添加到 <code>eww-after-render-hook</code></li>
 </ol>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(push #'image-slicing-mode eww-after-render-hook)
+<pre class="src src-emacs-lisp">(<span style="color: #6c71c4;">push</span> #'<span style="color: #0000ff;">image-slicing-mode</span> eww-after-render-hook)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org0da350c" class="outline-3">
-<h3 id="org0da350c">Elfeed 配置</h3>
-<div class="outline-text-3" id="text-org0da350c">
+<div id="outline-container-org54915db" class="outline-3">
+<h3 id="org54915db">Elfeed 配置</h3>
+<div class="outline-text-3" id="text-org54915db">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">;; add to shr-external-rendering-functions (skip if alread setup for eww)
-(add-to-list 'shr-external-rendering-functions
-             '(img . image-slicing-tag-img))
-
-;; advice `elfeed-show-entry' to trigger `image-slicing-mode'
-(advice-add #'elfeed-show-entry :after #'image-slicing-mode)
+<pre class="src src-emacs-lisp"><span style="color: #c4a599; font-style: italic;">;; </span><span style="color: #c4a599; font-style: italic;">add to shr-external-rendering-functions (skip if alread setup for eww)</span>
+(<span style="color: #0000ff;">add-to-list</span> 'shr-external-rendering-functions
+  <span style="color: #acd7b733ed05;"> </span> <span style="color: #ab71a6b299d2;"> </span> <span style="color: #ceadcb91d9c5;"> </span> <span style="color: #eb64dc88cbbe;"> </span> <span style="color: #e67fd36599d2;"> </span> <span style="color: #bdb6af2ec6d9;"> </span>'(img . <span style="color: #0000ff;">image-slicing-tag-img</span>))
+             
+<span style="color: #c4a599; font-style: italic;">;; </span><span style="color: #c4a599; font-style: italic;">advice `</span><span style="color: #381a8a; font-style: italic;">elfeed-show-entry</span><span style="color: #c4a599; font-style: italic;">' to trigger `</span><span style="color: #381a8a; font-style: italic;">image-slicing-mode</span><span style="color: #c4a599; font-style: italic;">'</span>
+(<span style="color: #0000ff;">advice-add</span> #'elfeed-show-entry :after #'<span style="color: #0000ff;">image-slicing-mode</span>)
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org779aa02" class="outline-2">
-<h2 id="org779aa02">特性</h2>
-<div class="outline-text-2" id="text-org779aa02">
+<div id="outline-container-orgd916f27" class="outline-2">
+<h2 id="orgd916f27">特性</h2>
+<div class="outline-text-2" id="text-orgd916f27">
 <ul class="org-ul">
 <li><code>image-slicing-mode</code>: 自动解析 buffer 中的图片链接，并用多行的形式渲染。</li>
 <li><code>Asynchronous</code>: 异步下载 Web 图片。</li>
 <li><code>Multiple Modes</code>: 支持多种模式的 buffer 例如：org-mode, eww, elfeed.</li>
 </ul>
 </div>
-<div id="outline-container-org90c46bb" class="outline-3">
-<h3 id="org90c46bb">支持的链接格式</h3>
-<div class="outline-text-3" id="text-org90c46bb">
+<div id="outline-container-orgef4f693" class="outline-3">
+<h3 id="orgef4f693">支持的链接格式</h3>
+<div class="outline-text-3" id="text-orgef4f693">
 <ul class="org-ul">
 <li>Org 格式的链接
 <ul class="org-ul">
@@ -279,11 +279,11 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org76be5be" class="outline-2">
-<h2 id="org76be5be">例子</h2>
-<div class="outline-text-2" id="text-org76be5be">
+<div id="outline-container-org85cc03a" class="outline-2">
+<h2 id="org85cc03a">例子</h2>
+<div class="outline-text-2" id="text-org85cc03a">
 
-<div id="org8cc5db2" class="figure">
+<div id="org4af1217" class="figure">
 <p><img src="data:image/gif;base64,R0lGODlhwAMcAoAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/gdnaWYuc2tpACH5BAQeAAAA
 LAAAAADAAxwChwAAAP////X19cXFxfPz8/7+/v3///7///b29vHx8f39/v/+/5CQj9LS0sbGxv//
 /n19fQUFBaKjourq6fX09d/f3vv///r5+QMDAuzs7LCxsPr6+v///e7u7fj+/4+Pj8bHxvz+//j5
@@ -17072,9 +17072,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </div>
 </div>
 </div>
-<div id="outline-container-orga020622" class="outline-2">
-<h2 id="orga020622">缺点</h2>
-<div class="outline-text-2" id="text-orga020622">
+<div id="outline-container-org441f56c" class="outline-2">
+<h2 id="org441f56c">缺点</h2>
+<div class="outline-text-2" id="text-org441f56c">
 <ul class="org-ul">
 <li>如果有许多的网络图片，它会生成需要的临时文件，在系统的临时目录下。</li>
 <li>如果 URL 链接太短，图片的切片数目会比较少，那么单个切片的行高会比较高。</li>
@@ -17082,21 +17082,21 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e4d442" class="outline-2">
-<h2 id="org8e4d442">Todo List</h2>
-<div class="outline-text-2" id="text-org8e4d442">
+<div id="outline-container-org0353ff5" class="outline-2">
+<h2 id="org0353ff5">Todo List</h2>
+<div class="outline-text-2" id="text-org0353ff5">
 <ul class="org-ul">
 <li>适配 nov</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org775a75a" class="outline-2">
-<h2 id="org775a75a">开发历史</h2>
-<div class="outline-text-2" id="text-org775a75a">
+<div id="outline-container-org269c577" class="outline-2">
+<h2 id="org269c577">开发历史</h2>
+<div class="outline-text-2" id="text-org269c577">
 </div>
-<div id="outline-container-org2ebb554" class="outline-3">
-<h3 id="org2ebb554">Dec 18, 2024</h3>
-<div class="outline-text-3" id="text-org2ebb554">
+<div id="outline-container-org02eb987" class="outline-3">
+<h3 id="org02eb987">Dec 18, 2024</h3>
+<div class="outline-text-3" id="text-org02eb987">
 <p>
 我发现了一个类似的包 <a href="https://github.com/jcfk/org-sliced-images">org-sliced-images</a>, 我从中学习到了一些代码，使我的代码更加简洁：
 </p>
@@ -17106,9 +17106,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf3a6e62" class="outline-3">
-<h3 id="orgf3a6e62">Dec 16, 2024</h3>
-<div class="outline-text-3" id="text-orgf3a6e62">
+<div id="outline-container-orgfd7ee00" class="outline-3">
+<h3 id="orgfd7ee00">Dec 16, 2024</h3>
+<div class="outline-text-3" id="text-orgfd7ee00">
 <p>
 上一个版本存在一些问题：
 </p>
@@ -17122,9 +17122,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </p>
 </div>
 </div>
-<div id="outline-container-orgcc527f5" class="outline-3">
-<h3 id="orgcc527f5">May 12, 2023</h3>
-<div class="outline-text-3" id="text-orgcc527f5">
+<div id="outline-container-orgbc147b6" class="outline-3">
+<h3 id="orgbc147b6">May 12, 2023</h3>
+<div class="outline-text-3" id="text-orgbc147b6">
 <p>
 想到一个有趣的想法：把图片切片，通过 overlays 一行一行的展示，来提高图片滚动的体验。
 </p>
