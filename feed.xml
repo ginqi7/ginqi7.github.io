@@ -4,7 +4,7 @@
   <subtitle>Qiqi Jin&#39;s en Blog.</subtitle>
   <link href="https://qiqijin.com/feed.xml" rel="self" />
   <link href="https://qiqijin.com/" />
-  <updated>2025-04-16T01:28:51Z</updated>
+  <updated>2025-04-23T12:43:11Z</updated>
   <id>https://qiqijin.com/</id>
   <author>
     <name>Qiqi Jin</name>
@@ -13,26 +13,26 @@
   <entry>
     <title>Emacs Brew Manager</title>
     <link href="https://qiqijin.com/emacs-brew-man/" />
-    <updated>2025-04-16T01:28:51Z</updated>
+    <updated>2025-04-23T12:43:11Z</updated>
     <id>https://qiqijin.com/emacs-brew-man/</id>
     <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#orgb547fd5&quot;&gt;Summary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#orgedefd3e&quot;&gt;Features&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#orgbde7708&quot;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#orgff7207c&quot;&gt;Features&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#org1e12dc1&quot;&gt;Display all installed Formulae and Casks.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#org14c9bc1&quot;&gt;Display all installed Taps.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#orgb5498a2&quot;&gt;Display all installed Formulae and Casks.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#org1d638aa&quot;&gt;Display all installed Taps.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#org0e68645&quot;&gt;How it works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/emacs-brew-man/#org9c59bff&quot;&gt;How it works&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgb547fd5&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb547fd5&quot;&gt;Summary&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb547fd5&quot;&gt;
+&lt;div id=&quot;outline-container-orgbde7708&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbde7708&quot;&gt;Summary&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbde7708&quot;&gt;
 &lt;p&gt;
 A simple Homebrew manager by Emacs.
 &lt;/p&gt;
@@ -42,13 +42,13 @@ The brew CLI is already sufficient for adding, deleting, or searching for formul
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgedefd3e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgedefd3e&quot;&gt;Features&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgedefd3e&quot;&gt;
+&lt;div id=&quot;outline-container-orgff7207c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgff7207c&quot;&gt;Features&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgff7207c&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org1e12dc1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org1e12dc1&quot;&gt;Display all installed Formulae and Casks.&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org1e12dc1&quot;&gt;
+&lt;div id=&quot;outline-container-orgb5498a2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgb5498a2&quot;&gt;Display all installed Formulae and Casks.&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb5498a2&quot;&gt;
 &lt;p&gt;
 You can view all installed Formulae and Casks, with columns indicating the available new versions for updates and whether the Formula or Cask is used by other Formulae or Casks.
 &lt;/p&gt;
@@ -58,9 +58,9 @@ You can use the list information to decide which formulae and casks to delete or
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org14c9bc1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org14c9bc1&quot;&gt;Display all installed Taps.&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org14c9bc1&quot;&gt;
+&lt;div id=&quot;outline-container-org1d638aa&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org1d638aa&quot;&gt;Display all installed Taps.&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org1d638aa&quot;&gt;
 &lt;p&gt;
 You can check the Tap to see how many Formulae and Casks are available and how many are installed.
 &lt;/p&gt;
@@ -71,9 +71,9 @@ You can delete unnecessary taps and interactively select to install Formulae or 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org0e68645&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0e68645&quot;&gt;How it works&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0e68645&quot;&gt;
+&lt;div id=&quot;outline-container-org9c59bff&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9c59bff&quot;&gt;How it works&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9c59bff&quot;&gt;
 &lt;p&gt;
 Essentially, it is a wrapper around the brew command line, utilizing &lt;a href=&quot;https://github.com/ginqi7/websocket-bridge-ruby&quot;&gt;websocket-bridge-ruby&lt;/a&gt; as a bridge. The choice of Ruby is due to its ease in handling shell outcomes.
 &lt;/p&gt;
@@ -82,201 +82,28 @@ Essentially, it is a wrapper around the brew command line, utilizing &lt;a href=
 </content>
   </entry>
   <entry>
-    <title>Using Emacs Combine Anything</title>
-    <link href="https://qiqijin.com/0006-using_emacs_combine_anything/" />
-    <updated>2025-04-16T01:28:48Z</updated>
-    <id>https://qiqijin.com/0006-using_emacs_combine_anything/</id>
-    <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org86dd1ad&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org7442f1b&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org12d6272&quot;&gt;Global Interactive Emacs&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#orgeb48d3f&quot;&gt;Principle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#orga3ae6a8&quot;&gt;Pros and cons&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org5b58b47&quot;&gt;Pros&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#orga1fe3ad&quot;&gt;Cons&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org77cebce&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-I&#39;ve written several Emacs tools to be more productive. As an Emacs Lisp novice, instead of writing pure Emacs Lisp programs, I used Emacs Lisp to encapsulate several console tools and use Emacs as an adhesive. Overall, it feels good to use.
-&lt;/p&gt;
-
-&lt;p&gt;
-I feel using Emacs as a console tools&#39; GUI interface is a good choice. On the one hand, it can reuse a series of methods and plugins of Emacs and write some frequent operations as Emacs functions and bind them to a shortcut key. You can run some console commands easily and quickly while writing documents, On the other hand, there is no need to repeat the core logic of console tools.
-&lt;/p&gt;
-
-&lt;p&gt;
-Recently wrote for 4 Emacs tools:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;leetcode-emacs: &lt;a href=&quot;https://github.com/ginqi7/leetcode-emacs&quot;&gt;https://github.com/ginqi7/leetcode-emacs&lt;/a&gt;, an emacs plugin to write Leetcode programs&lt;/li&gt;
-&lt;li&gt;hbase-shell-emacs: &lt;a href=&quot;https://github.com/ginqi7/hbase-shell-emacs&quot;&gt;https://github.com/ginqi7/hbase-shell-emacs&lt;/a&gt;, A Emacs Plugin for Hbase shell&lt;/li&gt;
-&lt;li&gt;kubectl-emacs: &lt;a href=&quot;https://github.com/ginqi7/kubectl-emacs&quot;&gt;https://github.com/ginqi7/kubectl-emacs&lt;/a&gt;, This is an Emacs plugin that makes it easier and faster to manage k8s using kubectl.&lt;/li&gt;
-&lt;li&gt;global-interactive-emacs: &lt;a href=&quot;https://github.com/ginqi7/global-interactive-emacs&quot;&gt;https://github.com/ginqi7/global-interactive-emacs&lt;/a&gt;, Global Interactive Emacs&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-These tools can be divided into two categories:
-&lt;/p&gt;
-
-&lt;p&gt;
-The first 3 tools use Emacs as a GUI or interactive interface for a series of command-line tools
-&lt;/p&gt;
-
-&lt;p&gt;
-The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-org86dd1ad&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org86dd1ad&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org86dd1ad&quot;&gt;
-&lt;p&gt;
-The idea and implementation of using Emacs as a GUI or interactive interface are very simple and intuitive.
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;Using emacs to define an interactive function for command-line tools, while you want to fuzz search some options or inputs to run a complex command.&lt;/li&gt;
-&lt;li&gt;Using emacs &lt;code&gt;ctable&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fn.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; to list outputs and bind some function on hotkey in its cell, while you want to review command-line tools&#39; output, and run some frequency operations on some specific output.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org7442f1b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org7442f1b&quot;&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7442f1b&quot;&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif&quot;&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/kubectl-emacs/raw/main/images/kubect-get-interactive.gif&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org12d6272&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org12d6272&quot;&gt;Global Interactive Emacs&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org12d6272&quot;&gt;
-&lt;p&gt;
-This tool is inspired by article : &lt;a href=&quot;https://isamert.net/2022/03/16/global-interactive-emacs-functions.html&quot;&gt;Global interactive Emacs functions&lt;/a&gt;.It provides an idea to run Emacs functions outside of Emacs.
-&lt;/p&gt;
-
-&lt;p&gt;
-So I try to use this idea to write a tool like &lt;a href=&quot;https://www.obdev.at/products/launchbar/index.html&quot;&gt;lauchbar&lt;/a&gt; or &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt;. It can help users quickly launch apps or run workflows.
-&lt;/p&gt;
-
-&lt;p&gt;
-I&#39;m using it to replace the Launchbar.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-orgeb48d3f&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgeb48d3f&quot;&gt;Principle&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgeb48d3f&quot;&gt;
-&lt;p&gt;
-the idea of &lt;code&gt;Global Interactive Emacs&lt;/code&gt; is so interesting.
-&lt;/p&gt;
-
-&lt;p&gt;
-On Emacs, using &lt;code&gt;completing-function&lt;/code&gt; to implement interactive function, it will use minibuffer to input function parameter.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;Global Interactive Emacs&lt;/code&gt; overwrite the &lt;code&gt;completing-function&lt;/code&gt;, using &lt;code&gt;choose&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fn.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to accept parameter. So we can run Emacs interactive function without focus Emacs.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-orga3ae6a8&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orga3ae6a8&quot;&gt;Pros and cons&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orga3ae6a8&quot;&gt;
-&lt;p&gt;
-This tool has some pros and cons, and I think if you have the following needs, you can try to use it :
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;you don&#39;t want pay for other tools like &lt;a href=&quot;https://www.obdev.at/products/launchbar/index.html&quot;&gt;lauchbar&lt;/a&gt; or &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; .&lt;/li&gt;
-&lt;li&gt;you wish some function in Emacs could run out of Emacs.&lt;/li&gt;
-&lt;li&gt;You&#39;re familiar with Emacs, there are some plugins, and custom functions that you want to reuse.&lt;/li&gt;
-&lt;li&gt;You don&#39;t want to learn a new language or workflow of a new software&lt;/li&gt;
-&lt;li&gt;&amp;#x2026;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org5b58b47&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org5b58b47&quot;&gt;Pros&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org5b58b47&quot;&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;b&gt;free&lt;/b&gt;: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need &lt;code&gt;Emacs&lt;/code&gt;  and some open source software that you can use for free.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;consistency&lt;/b&gt;: You can use the same features inside or outside of Emacs and have a similar experience.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Simple Configuration&lt;/b&gt;: If you are familiar with Emacs, you can easily configure it with emacs-lisp without having to relearn the language and process of other tools.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Scalability&lt;/b&gt;: You can write your interactive functions and plug them into the tool, or use the Emacs plugins developed by others to extract the interaction functions and plug them into the tool.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-orga1fe3ad&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orga1fe3ad&quot;&gt;Cons&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga1fe3ad&quot;&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;b&gt;Not powerful for now&lt;/b&gt;: Obviously, the tool is not as powerful as Lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Can&#39;t perfectly support all Emacs interactive functions&lt;/b&gt;: There are currently some Emacs interaction functions that cannot be run outside of Emacs, such as &lt;code&gt;execute-extended-command&lt;/code&gt;. I don&#39;t have the train of thought to support it yet.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-org77cebce&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org77cebce&quot;&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org77cebce&quot;&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif&quot;&gt;&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-run-app.gif&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;footnotes&quot;&gt;
-&lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
-&lt;div id=&quot;text-footnotes&quot;&gt;
-
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fnr.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
-&lt;a href=&quot;https://github.com/kiwanami/emacs-ctable&quot;&gt;emacs-ctable&lt;/a&gt; : Table Component for elisp
-&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fnr.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
-&lt;a href=&quot;https://github.com/chipsenkbeil/choose&quot;&gt;choose github&lt;/a&gt; :Fuzzy matcher for OS X that uses both std{in,out} and a native GUI
-&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry>
     <title>Org Reminders</title>
     <link href="https://qiqijin.com/org-reminders/" />
-    <updated>2025-04-05T02:39:21Z</updated>
+    <updated>2025-04-23T12:43:11Z</updated>
     <id>https://qiqijin.com/org-reminders/</id>
     <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org3b9d5ae&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#orgacbc72a&quot;&gt;Design&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org844d34f&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org20f8542&quot;&gt;Design&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#orgb360a82&quot;&gt;Project Structure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#orgd198d0f&quot;&gt;Websocket-bridge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#orgd4350df&quot;&gt;Treesite-org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org5dad978&quot;&gt;Project Structure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org6a547f3&quot;&gt;Websocket-bridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/org-reminders/#org1ed4244&quot;&gt;Treesite-org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3b9d5ae&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3b9d5ae&quot;&gt;Overview&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3b9d5ae&quot;&gt;
+&lt;div id=&quot;outline-container-org844d34f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org844d34f&quot;&gt;Overview&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org844d34f&quot;&gt;
 &lt;p&gt;
 I use Reminders on my iPhone or iPad for daily to-dos, but Emacs org mode on my computer. This makes switching between the two applications uncomfortable.
 &lt;/p&gt;
@@ -302,13 +129,13 @@ Thanks &lt;a href=&quot;https://github.com/jdtsmith&quot;&gt;jdtsmith&lt;/a&gt; 
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgacbc72a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgacbc72a&quot;&gt;Design&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgacbc72a&quot;&gt;
+&lt;div id=&quot;outline-container-org20f8542&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org20f8542&quot;&gt;Design&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org20f8542&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgb360a82&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb360a82&quot;&gt;Project Structure&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb360a82&quot;&gt;
+&lt;div id=&quot;outline-container-org5dad978&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5dad978&quot;&gt;Project Structure&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org5dad978&quot;&gt;
 &lt;p&gt;
 There are two components:
 &lt;/p&gt;
@@ -318,7 +145,7 @@ There are two components:
 &lt;/ol&gt;
 
 
-&lt;div id=&quot;orgc4331a0&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;org9bbc546&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBEbyBub3QgZWRpdCB0
 aGlzIGZpbGUgd2l0aCBlZGl0b3JzIG90aGVyIHRoYW4gZHJhdy5pbyAtLT4KPCFET0NUWVBFIHN2
 ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3Jh
@@ -2208,17 +2035,17 @@ Y2g+PC9nPjwvZz48L2c+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==&quot; org-reminders.svg=&qu
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd198d0f&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd198d0f&quot;&gt;Websocket-bridge&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd198d0f&quot;&gt;
+&lt;div id=&quot;outline-container-org6a547f3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6a547f3&quot;&gt;Websocket-bridge&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6a547f3&quot;&gt;
 &lt;p&gt;
 Using WebSocket bridge to communicate between Emacs and a Swift program enhances message handling robustness.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd4350df&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd4350df&quot;&gt;Treesite-org&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd4350df&quot;&gt;
+&lt;div id=&quot;outline-container-org1ed4244&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org1ed4244&quot;&gt;Treesite-org&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org1ed4244&quot;&gt;
 &lt;p&gt;
 Parsing the org mode file using org-tree-sitter is remarkably efficient, processing ten thousand items in under one second.
 &lt;/p&gt;
@@ -2230,48 +2057,48 @@ Parsing the org mode file using org-tree-sitter is remarkably efficient, process
   <entry>
     <title>Image Slicing</title>
     <link href="https://qiqijin.com/image-slicing/" />
-    <updated>2025-04-05T02:39:21Z</updated>
+    <updated>2025-04-23T12:43:11Z</updated>
     <id>https://qiqijin.com/image-slicing/</id>
     <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org4f062c0&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orge70c742&quot;&gt;Prerequisites&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgc40d0f7&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgfebab75&quot;&gt;Prerequisites&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org3e4331c&quot;&gt;CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgda9b734&quot;&gt;Require Packages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org9931442&quot;&gt;Install&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org345fe6d&quot;&gt;CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orga2b49e6&quot;&gt;Require Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org58c4bcd&quot;&gt;Install&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org7d44ae4&quot;&gt;Configuration&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org52be242&quot;&gt;Configuration&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org43359a3&quot;&gt;Variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org322baea&quot;&gt;EWW Config&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgd56e07a&quot;&gt;Elfeed Config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgbbc2765&quot;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgfea84da&quot;&gt;EWW Config&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org6beab01&quot;&gt;Elfeed Config&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org9a84de9&quot;&gt;Features&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org63ad0d4&quot;&gt;Features&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org04b1817&quot;&gt;Supported Link Format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org2bfee94&quot;&gt;Supported Link Format&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgc84520e&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org432a36c&quot;&gt;Disadvantages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgf319a02&quot;&gt;Todo List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org10b19f1&quot;&gt;Development History&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org96b5d98&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgf4b8b57&quot;&gt;Disadvantages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org9c19457&quot;&gt;Todo List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org379016d&quot;&gt;Development History&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org879ab5b&quot;&gt;Dec 18, 2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org72cbb4a&quot;&gt;Dec 16, 2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgd42132d&quot;&gt;May 12, 2023&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgc7241e4&quot;&gt;Dec 18, 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#orgd2c8262&quot;&gt;Dec 16, 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/image-slicing/#org2e31d61&quot;&gt;May 12, 2023&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4f062c0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4f062c0&quot;&gt;Overview&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4f062c0&quot;&gt;
+&lt;div id=&quot;outline-container-orgc40d0f7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc40d0f7&quot;&gt;Overview&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc40d0f7&quot;&gt;
 &lt;p&gt;
 In Emacs, displaying an image occupies one line regardless of its height. The movement over the image while navigating by lines can be quite frustrating.
 &lt;/p&gt;
@@ -2293,21 +2120,21 @@ During the development process, I found &lt;a href=&quot;https://github.com/jcfk
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge70c742&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge70c742&quot;&gt;Prerequisites&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge70c742&quot;&gt;
+&lt;div id=&quot;outline-container-orgfebab75&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfebab75&quot;&gt;Prerequisites&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfebab75&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3e4331c&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3e4331c&quot;&gt;CLI&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3e4331c&quot;&gt;
+&lt;div id=&quot;outline-container-org345fe6d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org345fe6d&quot;&gt;CLI&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org345fe6d&quot;&gt;
 &lt;p&gt;
 &lt;b&gt;Curl&lt;/b&gt;: Used to download remote images.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgda9b734&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgda9b734&quot;&gt;Require Packages&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgda9b734&quot;&gt;
+&lt;div id=&quot;outline-container-orga2b49e6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orga2b49e6&quot;&gt;Require Packages&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orga2b49e6&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;b&gt;org-element&lt;/b&gt;: Used to parse the buffer to retrieve all links.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;image&lt;/b&gt;: Used to create an image object.&lt;/li&gt;
@@ -2315,9 +2142,9 @@ During the development process, I found &lt;a href=&quot;https://github.com/jcfk
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org9931442&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org9931442&quot;&gt;Install&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org9931442&quot;&gt;
+&lt;div id=&quot;outline-container-org58c4bcd&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org58c4bcd&quot;&gt;Install&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org58c4bcd&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;clone the project in your own emacs configuration files directory, like:&lt;/li&gt;
 &lt;/ul&gt;
@@ -2336,9 +2163,9 @@ During the development process, I found &lt;a href=&quot;https://github.com/jcfk
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org7d44ae4&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7d44ae4&quot;&gt;Configuration&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7d44ae4&quot;&gt;
+&lt;div id=&quot;outline-container-org52be242&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org52be242&quot;&gt;Configuration&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org52be242&quot;&gt;
 &lt;p&gt;
 Here are a few variables that can be used for configuration:
 &lt;/p&gt;
@@ -2347,9 +2174,9 @@ Here are a few variables that can be used for configuration:
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org43359a3&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org43359a3&quot;&gt;Variables&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org43359a3&quot;&gt;
+&lt;div id=&quot;outline-container-orgbbc2765&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbbc2765&quot;&gt;Variables&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbbc2765&quot;&gt;
 &lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
 
 
@@ -2395,9 +2222,9 @@ Here are a few variables that can be used for configuration:
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org322baea&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org322baea&quot;&gt;EWW Config&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org322baea&quot;&gt;
+&lt;div id=&quot;outline-container-orgfea84da&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgfea84da&quot;&gt;EWW Config&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgfea84da&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;cancel the eww defualt image render.&lt;/li&gt;
 &lt;/ol&gt;
@@ -2415,9 +2242,9 @@ Here are a few variables that can be used for configuration:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd56e07a&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd56e07a&quot;&gt;Elfeed Config&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd56e07a&quot;&gt;
+&lt;div id=&quot;outline-container-org6beab01&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6beab01&quot;&gt;Elfeed Config&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6beab01&quot;&gt;
 &lt;p&gt;
 image-slice can also work with elfeed:
 &lt;/p&gt;
@@ -2433,18 +2260,18 @@ image-slice can also work with elfeed:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org9a84de9&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org9a84de9&quot;&gt;Features&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9a84de9&quot;&gt;
+&lt;div id=&quot;outline-container-org63ad0d4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org63ad0d4&quot;&gt;Features&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org63ad0d4&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;code&gt;image-slicing-mode&lt;/code&gt;: Automatically finds image links in the buffer and renders them as multiline display.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Asynchronous&lt;/code&gt;: Asynchronous download of remote images.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Multiple Modes&lt;/code&gt;: Support multiple modes like org-mode, eww, elfeed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org04b1817&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org04b1817&quot;&gt;Supported Link Format&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org04b1817&quot;&gt;
+&lt;div id=&quot;outline-container-org2bfee94&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2bfee94&quot;&gt;Supported Link Format&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2bfee94&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Org Links
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -2465,11 +2292,11 @@ image-slice can also work with elfeed:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgc84520e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc84520e&quot;&gt;Example&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc84520e&quot;&gt;
+&lt;div id=&quot;outline-container-org96b5d98&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org96b5d98&quot;&gt;Example&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org96b5d98&quot;&gt;
 
-&lt;div id=&quot;orgf409fa2&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;orgd3ad472&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/gif;base64,R0lGODlhwAMcAoAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/gdnaWYuc2tpACH5BAQeAAAA
 LAAAAADAAxwChwAAAP////X19cXFxfPz8/7+/v3///7///b29vHx8f39/v/+/5CQj9LS0sbGxv//
 /n19fQUFBaKjourq6fX09d/f3vv///r5+QMDAuzs7LCxsPr6+v///e7u7fj+/4+Pj8bHxvz+//j5
@@ -19258,9 +19085,9 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org432a36c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org432a36c&quot;&gt;Disadvantages&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org432a36c&quot;&gt;
+&lt;div id=&quot;outline-container-orgf4b8b57&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf4b8b57&quot;&gt;Disadvantages&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf4b8b57&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;If there are many remote image links in the buffer, it will generate many temporary image files in the temporary system directory.&lt;/li&gt;
 &lt;li&gt;If the URL link is too short, the number of slices of the original image will be small, and the image line height will be large.&lt;/li&gt;
@@ -19268,21 +19095,21 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf319a02&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf319a02&quot;&gt;Todo List&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf319a02&quot;&gt;
+&lt;div id=&quot;outline-container-org9c19457&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9c19457&quot;&gt;Todo List&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9c19457&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Adapt nov&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org10b19f1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org10b19f1&quot;&gt;Development History&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org10b19f1&quot;&gt;
+&lt;div id=&quot;outline-container-org379016d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org379016d&quot;&gt;Development History&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org379016d&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org879ab5b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org879ab5b&quot;&gt;Dec 18, 2024&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org879ab5b&quot;&gt;
+&lt;div id=&quot;outline-container-orgc7241e4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgc7241e4&quot;&gt;Dec 18, 2024&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgc7241e4&quot;&gt;
 &lt;p&gt;
 I find a similar package named &lt;a href=&quot;https://github.com/jcfk/org-sliced-images&quot;&gt;org-sliced-images&lt;/a&gt;, so I study some code from it to make my code simpler.
 &lt;/p&gt;
@@ -19292,9 +19119,9 @@ In Emacs, we can display a part of an image by using (&#39;display . (list (list
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org72cbb4a&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org72cbb4a&quot;&gt;Dec 16, 2024&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org72cbb4a&quot;&gt;
+&lt;div id=&quot;outline-container-orgd2c8262&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd2c8262&quot;&gt;Dec 16, 2024&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd2c8262&quot;&gt;
 &lt;p&gt;
 There have some issues in last version:
 &lt;/p&gt;
@@ -19308,9 +19135,9 @@ So I use asynchronous processes to run ImageMagick, guaranteeing that it will no
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd42132d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd42132d&quot;&gt;May 12, 2023&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd42132d&quot;&gt;
+&lt;div id=&quot;outline-container-org2e31d61&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2e31d61&quot;&gt;May 12, 2023&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2e31d61&quot;&gt;
 &lt;p&gt;
 I got the idea to slice the image into many pieces, making Emacs display the pieces line by line.
 &lt;/p&gt;
@@ -19337,28 +19164,28 @@ I got the idea to slice the image into many pieces, making Emacs display the pie
   </entry>
   <entry>
     <title>Using Emacs Combine Anything</title>
-    <link href="https://qiqijin.com/0006/" />
-    <updated>2025-04-05T02:39:19Z</updated>
-    <id>https://qiqijin.com/0006/</id>
+    <link href="https://qiqijin.com/0006-using_emacs_combine_anything/" />
+    <updated>2025-04-23T12:43:08Z</updated>
+    <id>https://qiqijin.com/0006-using_emacs_combine_anything/</id>
     <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#orgeaf5cdb&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org0c2ecab&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org988feae&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org2bf5928&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org458b974&quot;&gt;Global Interactive Emacs&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org6ebb518&quot;&gt;Global Interactive Emacs&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org20e9261&quot;&gt;Principle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org8390575&quot;&gt;Pros and cons&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org57e3650&quot;&gt;Principle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org2539ce5&quot;&gt;Pros and cons&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#orgfb69f72&quot;&gt;Pros&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org2f4855b&quot;&gt;Cons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#orga5ad78f&quot;&gt;Pros&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#orgf2eec9e&quot;&gt;Cons&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006/#org922fb15&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#org0aa8794&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -19394,30 +19221,30 @@ The first 3 tools use Emacs as a GUI or interactive interface for a series of co
 &lt;p&gt;
 The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-orgeaf5cdb&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgeaf5cdb&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeaf5cdb&quot;&gt;
+&lt;div id=&quot;outline-container-org0c2ecab&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0c2ecab&quot;&gt;Using Emacs as a GUI or interactive interface&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c2ecab&quot;&gt;
 &lt;p&gt;
 The idea and implementation of using Emacs as a GUI or interactive interface are very simple and intuitive.
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Using emacs to define an interactive function for command-line tools, while you want to fuzz search some options or inputs to run a complex command.&lt;/li&gt;
-&lt;li&gt;Using emacs &lt;code&gt;ctable&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006/#fn.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; to list outputs and bind some function on hotkey in its cell, while you want to review command-line tools&#39; output, and run some frequency operations on some specific output.&lt;/li&gt;
+&lt;li&gt;Using emacs &lt;code&gt;ctable&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.1&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fn.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; to list outputs and bind some function on hotkey in its cell, while you want to review command-line tools&#39; output, and run some frequency operations on some specific output.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org988feae&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org988feae&quot;&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org988feae&quot;&gt;
+&lt;div id=&quot;outline-container-org2bf5928&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2bf5928&quot;&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2bf5928&quot;&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif&quot;&gt;&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/kubectl-emacs/raw/main/images/kubect-get-interactive.gif&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org458b974&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org458b974&quot;&gt;Global Interactive Emacs&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org458b974&quot;&gt;
+&lt;div id=&quot;outline-container-org6ebb518&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6ebb518&quot;&gt;Global Interactive Emacs&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6ebb518&quot;&gt;
 &lt;p&gt;
 This tool is inspired by article : &lt;a href=&quot;https://isamert.net/2022/03/16/global-interactive-emacs-functions.html&quot;&gt;Global interactive Emacs functions&lt;/a&gt;.It provides an idea to run Emacs functions outside of Emacs.
 &lt;/p&gt;
@@ -19430,9 +19257,9 @@ So I try to use this idea to write a tool like &lt;a href=&quot;https://www.obde
 I&#39;m using it to replace the Launchbar.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org20e9261&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org20e9261&quot;&gt;Principle&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org20e9261&quot;&gt;
+&lt;div id=&quot;outline-container-org57e3650&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org57e3650&quot;&gt;Principle&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org57e3650&quot;&gt;
 &lt;p&gt;
 the idea of &lt;code&gt;Global Interactive Emacs&lt;/code&gt; is so interesting.
 &lt;/p&gt;
@@ -19442,13 +19269,13 @@ On Emacs, using &lt;code&gt;completing-function&lt;/code&gt; to implement intera
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;code&gt;Global Interactive Emacs&lt;/code&gt; overwrite the &lt;code&gt;completing-function&lt;/code&gt;, using &lt;code&gt;choose&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006/#fn.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to accept parameter. So we can run Emacs interactive function without focus Emacs. 
+&lt;code&gt;Global Interactive Emacs&lt;/code&gt; overwrite the &lt;code&gt;completing-function&lt;/code&gt;, using &lt;code&gt;choose&lt;/code&gt;&lt;sup&gt;&lt;a id=&quot;fnr.2&quot; class=&quot;footref&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fn.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to accept parameter. So we can run Emacs interactive function without focus Emacs.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org8390575&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8390575&quot;&gt;Pros and cons&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8390575&quot;&gt;
+&lt;div id=&quot;outline-container-org2539ce5&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2539ce5&quot;&gt;Pros and cons&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2539ce5&quot;&gt;
 &lt;p&gt;
 This tool has some pros and cons, and I think if you have the following needs, you can try to use it :
 &lt;/p&gt;
@@ -19461,9 +19288,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 &lt;li&gt;&amp;#x2026;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgfb69f72&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgfb69f72&quot;&gt;Pros&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgfb69f72&quot;&gt;
+&lt;div id=&quot;outline-container-orga5ad78f&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orga5ad78f&quot;&gt;Pros&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orga5ad78f&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;b&gt;free&lt;/b&gt;: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need &lt;code&gt;Emacs&lt;/code&gt;  and some open source software that you can use for free.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;consistency&lt;/b&gt;: You can use the same features inside or outside of Emacs and have a similar experience.&lt;/li&gt;
@@ -19472,9 +19299,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2f4855b&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org2f4855b&quot;&gt;Cons&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org2f4855b&quot;&gt;
+&lt;div id=&quot;outline-container-orgf2eec9e&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgf2eec9e&quot;&gt;Cons&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgf2eec9e&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;b&gt;Not powerful for now&lt;/b&gt;: Obviously, the tool is not as powerful as Lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Can&#39;t perfectly support all Emacs interactive functions&lt;/b&gt;: There are currently some Emacs interaction functions that cannot be run outside of Emacs, such as &lt;code&gt;execute-extended-command&lt;/code&gt;. I don&#39;t have the train of thought to support it yet.&lt;/li&gt;
@@ -19482,9 +19309,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org922fb15&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org922fb15&quot;&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org922fb15&quot;&gt;
+&lt;div id=&quot;outline-container-org0aa8794&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org0aa8794&quot;&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org0aa8794&quot;&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif&quot;&gt;&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;&lt;img width=&quot;600px&quot; src=&quot;https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-run-app.gif&quot;&gt;&lt;/p&gt;
@@ -19495,11 +19322,11 @@ This tool has some pros and cons, and I think if you have the following needs, y
 &lt;h2 class=&quot;footnotes&quot;&gt;Footnotes: &lt;/h2&gt;
 &lt;div id=&quot;text-footnotes&quot;&gt;
 
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006/#fnr.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.1&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fnr.1&quot; role=&quot;doc-backlink&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
 &lt;a href=&quot;https://github.com/kiwanami/emacs-ctable&quot;&gt;emacs-ctable&lt;/a&gt; : Table Component for elisp
 &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006/#fnr.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
+&lt;div class=&quot;footdef&quot;&gt;&lt;sup&gt;&lt;a id=&quot;fn.2&quot; class=&quot;footnum&quot; href=&quot;https://qiqijin.com/0006-using_emacs_combine_anything/#fnr.2&quot; role=&quot;doc-backlink&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class=&quot;footpara&quot; role=&quot;doc-footnote&quot;&gt;&lt;p class=&quot;footpara&quot;&gt;
 &lt;a href=&quot;https://github.com/chipsenkbeil/choose&quot;&gt;choose github&lt;/a&gt; :Fuzzy matcher for OS X that uses both std{in,out} and a native GUI
 &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -19511,7 +19338,7 @@ This tool has some pros and cons, and I think if you have the following needs, y
   <entry>
     <title>Project Hail Mary Reading Notes</title>
     <link href="https://qiqijin.com/0005/" />
-    <updated>2025-04-05T02:39:19Z</updated>
+    <updated>2025-04-23T12:43:08Z</updated>
     <id>https://qiqijin.com/0005/</id>
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;
@@ -19547,7 +19374,7 @@ And until the very end, the protagonist remains just an ordinary teacher.
   <entry>
     <title>Goodbye, Time</title>
     <link href="https://qiqijin.com/0004/" />
-    <updated>2025-04-05T02:39:19Z</updated>
+    <updated>2025-04-23T12:43:08Z</updated>
     <id>https://qiqijin.com/0004/</id>
     <content type="html">&lt;p&gt;
 When we first parted, we each entered different worlds, some fresh and exciting, others daunting and frightening. We often talked about our experiences, sometimes with excitement, sometimes with sadness. We felt that at this moment, we had someone to confide in, to share our joys and sorrows with. It felt warm and beautiful, and our relationship felt deeper than ever before.
@@ -19573,7 +19400,7 @@ On the way home, thinking back to our meeting, tears welled up in our eyes.
   <entry>
     <title>Chess Game</title>
     <link href="https://qiqijin.com/0003/" />
-    <updated>2025-04-05T02:39:19Z</updated>
+    <updated>2025-04-23T12:43:08Z</updated>
     <id>https://qiqijin.com/0003/</id>
     <content type="html">&lt;p&gt;
 It&#39;s like when you invite someone to play chess with you. You are full of enthusiasm and think that the other person is also enjoying it. Until the end, when he pushes the chessboard away and leaves, you realize that he was bored and couldn&#39;t bear it anymore. Looking back at the chess game, you can see his emotions everywhere, but you didn&#39;t notice it at all. The reason is that you thought you had similar interests, while he thought he could tolerate it. In the end, when the chess game is over, one person is full of complaints, while the other is confused. If you had communicated your thoughts from the beginning, the outcome might have been different.
@@ -19583,7 +19410,7 @@ It&#39;s like when you invite someone to play chess with you. You are full of en
   <entry>
     <title>The Story Ending</title>
     <link href="https://qiqijin.com/0002/" />
-    <updated>2025-04-05T02:39:19Z</updated>
+    <updated>2025-04-23T12:43:08Z</updated>
     <id>https://qiqijin.com/0002/</id>
     <content type="html">&lt;p&gt;
 On the way home, he suddenly thought it would be better to buy some fruits for his parents, so he found a good-looking fruit stall on the roadside. He forgot what fruits his parents liked, so he squatted down and tried to choose as many varieties as possible.
@@ -19661,24 +19488,24 @@ For a moment, it seemed that a certain emptiness in his heart was filled, and th
   <entry>
     <title>Old Story</title>
     <link href="https://qiqijin.com/0001/" />
-    <updated>2025-04-05T02:39:19Z</updated>
+    <updated>2025-04-23T12:43:08Z</updated>
     <id>https://qiqijin.com/0001/</id>
     <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orga2bd429&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orgdd9240f&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orga30c422&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#org204fd64&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orgf1ab2f4&quot;&gt;Five&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#org4ab268c&quot;&gt;Six&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orgb5d8ba3&quot;&gt;One&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#org34f1b8c&quot;&gt;Two&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orgfce5e6f&quot;&gt;Three&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#org381bf17&quot;&gt;Four&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#org1721079&quot;&gt;Five&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/0001/#orgc5b76cf&quot;&gt;Six&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga2bd429&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga2bd429&quot;&gt;One&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga2bd429&quot;&gt;
+&lt;div id=&quot;outline-container-orgb5d8ba3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb5d8ba3&quot;&gt;One&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb5d8ba3&quot;&gt;
 &lt;p&gt;
 On a cold winter morning, the warm sunlight filtered through the window, scattering across the room. Yin got up very early, busily packing up his things. It had been five years since Yin went to study in the United States alone, and he hadn&#39;t really gone back much. Now, he had graduated, and although his dream of becoming a scientist hadn&#39;t quite come true, he had landed a decent job. It was ordinary, but fulfilling. So, he thought it was time to make a trip back home. Moreover, a good friend from his hometown was getting married, and he ought to return to offer his congratulations.
 &lt;/p&gt;
@@ -19700,9 +19527,9 @@ On a cold winter morning, the warm sunlight filtered through the window, scatter
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgdd9240f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgdd9240f&quot;&gt;Two&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdd9240f&quot;&gt;
+&lt;div id=&quot;outline-container-org34f1b8c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org34f1b8c&quot;&gt;Two&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org34f1b8c&quot;&gt;
 &lt;p&gt;
 Due to last night&#39;s heavy snowfall, the entire city was draped in a silver coat, with the thick blanket of snow absorbing the bustle of the bustling metropolis. Yin lazily sat in the car heading to the airport, gazing at the swiftly receding scenery outside the window, aimlessly reminiscing about the times he once sped from the opposite direction.
 &lt;/p&gt;
@@ -19755,9 +19582,9 @@ Cherish the memories.
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga30c422&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga30c422&quot;&gt;Three&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga30c422&quot;&gt;
+&lt;div id=&quot;outline-container-orgfce5e6f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfce5e6f&quot;&gt;Three&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfce5e6f&quot;&gt;
 &lt;p&gt;
 Time seemed to have slipped away unnoticed, and by the time Yin awoke, it was probably already dark. He wasn&#39;t fully alert and stared blankly at the seat in front of him, trying to piece together the scattered fragments of the dream he had just had.
 &lt;/p&gt;
@@ -19815,9 +19642,9 @@ Ste out of the airport and seeing faces that looked just like his own, Yin was a
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org204fd64&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org204fd64&quot;&gt;Four&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org204fd64&quot;&gt;
+&lt;div id=&quot;outline-container-org381bf17&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org381bf17&quot;&gt;Four&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org381bf17&quot;&gt;
 &lt;p&gt;
 Yin enjoyed sitting in the car, daydreaming while watching the scenery outside the window, sketching the city&#39;s outline in his mind and imagining some far-fetched scenarios. The city had changed a lot in five years. The billboards hanging on the skyscrapers now featured female stars he didn&#39;t recognize, and many places had been renovated to look even more splendid. &quot;Maybe, I really shouldn&#39;t have left this place,&quot; Yin mused half-jokingly as scenes flashed by the window, waiting for home to slowly draw nearer. The not-so-long drive still took several hours, and by the time Yin got home, it was almost dawn.
 &lt;/p&gt;
@@ -19911,9 +19738,9 @@ Yin sat on the swing, lost in his memories for a long time, and when he came bac
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf1ab2f4&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf1ab2f4&quot;&gt;Five&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf1ab2f4&quot;&gt;
+&lt;div id=&quot;outline-container-org1721079&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1721079&quot;&gt;Five&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1721079&quot;&gt;
 &lt;p&gt;
 On the way home, he suddenly thought it would be better to buy some fruits for his parents, so he found a good-looking fruit stall on the roadside. He forgot what fruits his parents liked, so he squatted down and tried to choose as many varieties as possible.
 &lt;/p&gt;
@@ -19987,9 +19814,9 @@ For a moment, it seemed that a certain emptiness in his heart was filled, and th
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4ab268c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4ab268c&quot;&gt;Six&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4ab268c&quot;&gt;
+&lt;div id=&quot;outline-container-orgc5b76cf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc5b76cf&quot;&gt;Six&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc5b76cf&quot;&gt;
 &lt;p&gt;
 &quot;What a loser! Hiding here and crying by yourself after being bullied? If you&#39;re afraid of being bullied, shouldn&#39;t you make yourself stronger?&quot;
 &lt;/p&gt;

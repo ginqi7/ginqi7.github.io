@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html  lang="zh">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content= Qiqi Jin >
+	<meta name="description" content="This is a blog for Qiqi Jin.">
+
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/static/css/font.css" defer>
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css" defer>
+	<link rel="stylesheet" type="text/css" href="/static/css/colors.css" defer>
+	<title>Hello World</title>
+
+    </head>
+
+    <body>
+	
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+	    <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+
+
+	<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+        <link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+        <link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> MacOS 代理 </h1>
+
+    
+
+
+<certer>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/zh/tags/proxy">#proxy </a>
+    </div>
+
+
+	</div>
+    </div>
+</certer>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb7bd91c">简介</a></li>
+<li><a href="#org5f9cf68">为什么使用 v2raya 而不是 v2rayU</a></li>
+<li><a href="#orgbf8b7cc">安装 v2raya</a></li>
+<li><a href="#org179c644">规则配置</a></li>
+<li><a href="#org319a2dd">Shell 配置</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb7bd91c" class="outline-2">
+<h2 id="orgb7bd91c">简介</h2>
+<div class="outline-text-2" id="text-orgb7bd91c">
+<p>
+随便购买一个便宜的机场，使用 v2raya <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>进行管理。
+</p>
+</div>
+</div>
+<div id="outline-container-org5f9cf68" class="outline-2">
+<h2 id="org5f9cf68">为什么使用 v2raya 而不是 v2rayU</h2>
+<div class="outline-text-2" id="text-org5f9cf68">
+<ol class="org-ol">
+<li>v2raya 全平台通用，如果你需要切换其他的平台能够很方便的迁移</li>
+<li>v2raya 的配置比 v2rayU 更丰富，例如分流规则，订阅自动更新等。</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbf8b7cc" class="outline-2">
+<h2 id="orgbf8b7cc">安装 v2raya</h2>
+<div class="outline-text-2" id="text-orgbf8b7cc">
+<div class="org-src-container">
+<pre class="src src-shell">brew tap v2raya/v2raya
+brew install v2ray
+brew install v2raya
+</pre>
+</div>
+
+<p>
+v2ray 在 MacOS 不支持透明代理，只能启动系统代理，系统代理会自动处理网页代理，不再需要 SwitchyOmega，但其他应用的代理需要手动配置。
+</p>
+
+<ul class="org-ul">
+<li>透明代理/系统代理： 启用: 分流规则与规则端口所选模式一致</li>
+<li>透明代理/系统代理实现方式： system proxy</li>
+<li>规则端口的分流模式： RoutingA （可以通过配置决定，哪些访问走代理，哪些访问直连）<a href="#org179c644">规则配置</a></li>
+<li>TCPFastOpen: 关闭</li>
+<li>多路复用： 关闭 （复用TCP连接以减少握手次数，但会影响吞吐量大的使用场景，如观看视频下载、测速。）</li>
+<li>自动更新订阅: 每个 1 小时自动更新</li>
+<li>解析订阅地址/更新时优先使用： 不进行分流 （使用代理来解析订阅地址）</li>
+<li>地址与端口，设置带分流规则的端口即可</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org179c644" class="outline-2">
+<h2 id="org179c644">规则配置</h2>
+<div class="outline-text-2" id="text-org179c644">
+<pre class="example" id="org1129103">
+default: proxy
+
+domain(geosite:google-scholar)-&gt;proxy
+domain(geosite:category-scholar-!cn, geosite:category-scholar-cn)-&gt;direct
+domain(geosite:geolocation-!cn, geosite:google)-&gt;proxy
+domain(geosite:cn)-&gt;direct
+ip(geoip:hk,geoip:mo)-&gt;proxy
+ip(geoip:private, geoip:cn)-&gt;direct
+</pre>
+
+
+<ul class="org-ul">
+<li>默认走代理: default: proxy</li>
+<li>大陆域名走直连: domain(geosite:cn)-&gt;direct</li>
+<li>内网服务器走直连: ip(geoip:private)-&gt;direct</li>
+<li>大陆 IP 走直连: ip(geoip:cn)-&gt;direct</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org319a2dd" class="outline-2">
+<h2 id="org319a2dd">Shell 配置</h2>
+<div class="outline-text-2" id="text-org319a2dd">
+<div class="org-src-container">
+<pre class="src src-shell">export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;export ALL_PROXY=socks5://127.0.0.1:1080
+</pre>
+</div>
+<p>
+此后使用 Shell 命令，它会自动进行网络分流。
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+参考 <a href="https://manateelazycat.github.io/2024/12/19/best-proxy/">manateelazycat-最佳代理实践</a>
+</p></div></div>
+
+
+</div>
+</div>
+
+</article>
+
+<div class="footer-line"></div>
+
+
+
+
+
+    <li>
+	Previous: <a href="/zh/如何写博客/">如何写博客</a>
+    </li>
+
+
+
+    <li>
+	Next: <a href="/zh/image-slicing/">Image Slicing</a>
+    </li>
+
+
+<footer>
+    <small>© Copyright 2025, Qiqi Jin
+    </small>
+</footer>
+
+
+    </body>
+</html>
