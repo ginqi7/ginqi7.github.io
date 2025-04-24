@@ -60,21 +60,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0c2ecab">Using Emacs as a GUI or interactive interface</a>
+<li><a href="#orge5a8aa2">Using Emacs as a GUI or interactive interface</a>
 <ul>
-<li><a href="#org2bf5928">Example</a></li>
+<li><a href="#orgf1ededa">Example</a></li>
 </ul>
 </li>
-<li><a href="#org6ebb518">Global Interactive Emacs</a>
+<li><a href="#org1b0f894">Global Interactive Emacs</a>
 <ul>
-<li><a href="#org57e3650">Principle</a></li>
-<li><a href="#org2539ce5">Pros and cons</a>
+<li><a href="#orga60de27">Principle</a></li>
+<li><a href="#orgf8b7456">Pros and cons</a>
 <ul>
-<li><a href="#orga5ad78f">Pros</a></li>
-<li><a href="#orgf2eec9e">Cons</a></li>
+<li><a href="#org71172fa">Pros</a></li>
+<li><a href="#org19087ad">Cons</a></li>
 </ul>
 </li>
-<li><a href="#org0aa8794">Example</a></li>
+<li><a href="#org98ff456">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -110,9 +110,9 @@ The first 3 tools use Emacs as a GUI or interactive interface for a series of co
 <p>
 The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
 </p>
-<div id="outline-container-org0c2ecab" class="outline-2">
-<h2 id="org0c2ecab">Using Emacs as a GUI or interactive interface</h2>
-<div class="outline-text-2" id="text-org0c2ecab">
+<div id="outline-container-orge5a8aa2" class="outline-2">
+<h2 id="orge5a8aa2">Using Emacs as a GUI or interactive interface</h2>
+<div class="outline-text-2" id="text-orge5a8aa2">
 <p>
 The idea and implementation of using Emacs as a GUI or interactive interface are very simple and intuitive.
 </p>
@@ -122,18 +122,18 @@ The idea and implementation of using Emacs as a GUI or interactive interface are
 <li>Using emacs <code>ctable</code><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> to list outputs and bind some function on hotkey in its cell, while you want to review command-line tools' output, and run some frequency operations on some specific output.</li>
 </ul>
 </div>
-<div id="outline-container-org2bf5928" class="outline-3">
-<h3 id="org2bf5928">Example</h3>
-<div class="outline-text-3" id="text-org2bf5928">
+<div id="outline-container-orgf1ededa" class="outline-3">
+<h3 id="orgf1ededa">Example</h3>
+<div class="outline-text-3" id="text-orgf1ededa">
 <p align="center"><img width="600px" src="https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif"></img></p>
 
 <p align="center"><img width="600px" src="https://github.com/ginqi7/kubectl-emacs/raw/main/images/kubect-get-interactive.gif"></img></p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6ebb518" class="outline-2">
-<h2 id="org6ebb518">Global Interactive Emacs</h2>
-<div class="outline-text-2" id="text-org6ebb518">
+<div id="outline-container-org1b0f894" class="outline-2">
+<h2 id="org1b0f894">Global Interactive Emacs</h2>
+<div class="outline-text-2" id="text-org1b0f894">
 <p>
 This tool is inspired by article : <a href="https://isamert.net/2022/03/16/global-interactive-emacs-functions.html">Global interactive Emacs functions</a>.It provides an idea to run Emacs functions outside of Emacs.
 </p>
@@ -146,9 +146,9 @@ So I try to use this idea to write a tool like <a href="https://www.obdev.at/pro
 I'm using it to replace the Launchbar.
 </p>
 </div>
-<div id="outline-container-org57e3650" class="outline-3">
-<h3 id="org57e3650">Principle</h3>
-<div class="outline-text-3" id="text-org57e3650">
+<div id="outline-container-orga60de27" class="outline-3">
+<h3 id="orga60de27">Principle</h3>
+<div class="outline-text-3" id="text-orga60de27">
 <p>
 the idea of <code>Global Interactive Emacs</code> is so interesting.
 </p>
@@ -162,9 +162,9 @@ On Emacs, using <code>completing-function</code> to implement interactive functi
 </p>
 </div>
 </div>
-<div id="outline-container-org2539ce5" class="outline-3">
-<h3 id="org2539ce5">Pros and cons</h3>
-<div class="outline-text-3" id="text-org2539ce5">
+<div id="outline-container-orgf8b7456" class="outline-3">
+<h3 id="orgf8b7456">Pros and cons</h3>
+<div class="outline-text-3" id="text-orgf8b7456">
 <p>
 This tool has some pros and cons, and I think if you have the following needs, you can try to use it :
 </p>
@@ -177,9 +177,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 <li>&#x2026;</li>
 </ul>
 </div>
-<div id="outline-container-orga5ad78f" class="outline-4">
-<h4 id="orga5ad78f">Pros</h4>
-<div class="outline-text-4" id="text-orga5ad78f">
+<div id="outline-container-org71172fa" class="outline-4">
+<h4 id="org71172fa">Pros</h4>
+<div class="outline-text-4" id="text-org71172fa">
 <ul class="org-ul">
 <li><b>free</b>: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need <code>Emacs</code>  and some open source software that you can use for free.</li>
 <li><b>consistency</b>: You can use the same features inside or outside of Emacs and have a similar experience.</li>
@@ -188,9 +188,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf2eec9e" class="outline-4">
-<h4 id="orgf2eec9e">Cons</h4>
-<div class="outline-text-4" id="text-orgf2eec9e">
+<div id="outline-container-org19087ad" class="outline-4">
+<h4 id="org19087ad">Cons</h4>
+<div class="outline-text-4" id="text-org19087ad">
 <ul class="org-ul">
 <li><b>Not powerful for now</b>: Obviously, the tool is not as powerful as Lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.</li>
 <li><b>Can't perfectly support all Emacs interactive functions</b>: There are currently some Emacs interaction functions that cannot be run outside of Emacs, such as <code>execute-extended-command</code>. I don't have the train of thought to support it yet.</li>
@@ -198,9 +198,9 @@ This tool has some pros and cons, and I think if you have the following needs, y
 </div>
 </div>
 </div>
-<div id="outline-container-org0aa8794" class="outline-3">
-<h3 id="org0aa8794">Example</h3>
-<div class="outline-text-3" id="text-org0aa8794">
+<div id="outline-container-org98ff456" class="outline-3">
+<h3 id="org98ff456">Example</h3>
+<div class="outline-text-3" id="text-org98ff456">
 <p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif"></img></p>
 
 <p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-run-app.gif"></img></p>

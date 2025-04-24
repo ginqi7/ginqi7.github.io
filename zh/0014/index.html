@@ -33,7 +33,7 @@
         <link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
         <link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
 <article>
-    <h1 class="title"> MacOS 代理 </h1>
+    <h1 class="title"> MacOS 透明代理 </h1>
 
     
 
@@ -56,101 +56,137 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb7bd91c">简介</a></li>
-<li><a href="#org5f9cf68">为什么使用 v2raya 而不是 v2rayU</a></li>
-<li><a href="#orgbf8b7cc">安装 v2raya</a></li>
-<li><a href="#org179c644">规则配置</a></li>
-<li><a href="#org319a2dd">Shell 配置</a></li>
+<li><a href="#org2921e1f">简介</a></li>
+<li><a href="#org55ccc2a">安装 shadowsocks-rust</a></li>
+<li><a href="#org49779b3">pf 配置</a>
+<ul>
+<li><a href="#org4f25291">为什么需要先 route-to（强制路由） 再 rdr（重定向）</a></li>
+</ul>
+</li>
+<li><a href="#orga820217">SS 配置</a></li>
+<li><a href="#org90911e3">SSH 配置</a></li>
+<li><a href="#orgcbc56ce">tproxy 脚本</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb7bd91c" class="outline-2">
-<h2 id="orgb7bd91c">简介</h2>
-<div class="outline-text-2" id="text-orgb7bd91c">
+<div id="outline-container-org2921e1f" class="outline-2">
+<h2 id="org2921e1f">简介</h2>
+<div class="outline-text-2" id="text-org2921e1f">
 <p>
-随便购买一个便宜的机场，使用 v2raya <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>进行管理。
+透明代理：用户在访问网络时无需特别配置或知晓代理的存在，不需要一个程序一个程序的设置。代理能够自动判断哪些请求需要通过代理，哪些请求直接链接。一般是通过修改路由表的方式实现。
+</p>
+
+<p>
+本文是参考 <a href="https://climbover.minidump.info/gateway/2023/06/25/macOS-transparent-proxy">macOS上的透明代理</a> 这篇文章
+</p>
+
+<p>
+随便购买一个便宜的机场，使用 <a href="https://github.com/shadowsocks/shadowsocks-rust">shadowsocks-rust</a> 连接机场。使用 <a href="https://murusfirewall.com/Documentation/OS%20X%20PF%20Manual.pdf">Packet Filter 一个状态检测型的包过滤防火墙</a> 修改请求的路由。
 </p>
 </div>
 </div>
-<div id="outline-container-org5f9cf68" class="outline-2">
-<h2 id="org5f9cf68">为什么使用 v2raya 而不是 v2rayU</h2>
-<div class="outline-text-2" id="text-org5f9cf68">
+<div id="outline-container-org55ccc2a" class="outline-2">
+<h2 id="org55ccc2a">安装 shadowsocks-rust</h2>
+<div class="outline-text-2" id="text-org55ccc2a">
+<div class="org-src-container">
+<pre class="src src-shell">brew install shadowsocks-rust
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org49779b3" class="outline-2">
+<h2 id="org49779b3">pf 配置</h2>
+<div class="outline-text-2" id="text-org49779b3">
+<pre class="example" id="org948d74b">
+scrub-anchor "com.apple/*"
+
+table &lt;direct_cidr&gt; persist file "/Users/a77/Downloads/tproxy/configs/direct_cidr.txt" #1
+
+nat-anchor "com.apple/*"
+rdr-anchor "com.apple/*"
+
+rdr pass on lo0 proto tcp from any to any port 0:1024 -&gt; 127.0.0.1 port 59080 #2
+
+pass out route-to (lo0 127.0.0.1) proto tcp from any to !&lt;direct_cidr&gt; #3
+
+dummynet-anchor "com.apple/*"
+anchor "com.apple/*"
+load anchor "com.apple" from "/etc/pf.anchors/com.apple"
+</pre>
+
 <ol class="org-ol">
-<li>v2raya 全平台通用，如果你需要切换其他的平台能够很方便的迁移</li>
-<li>v2raya 的配置比 v2rayU 更丰富，例如分流规则，订阅自动更新等。</li>
+<li>direct<sub>cidr.txt</sub> 文件中定义了哪些 ip 地址不需要代理，<a href="https://github.com/missdeer/daily-weekly-build/tree/cidr">这里有一些ip地址</a></li>
+<li>将所有发往本地回环接口(lo0) 端口为 0-1024 的 TCP 流量，重定向到了本机的 59080 端口。</li>
+<li>确保所有满足条件的出站 TCP 流量在发送之前被强制路由到本机的 lo0 接口，通过 127.0.0.1 转发出去。</li>
 </ol>
-</div>
-</div>
-<div id="outline-container-orgbf8b7cc" class="outline-2">
-<h2 id="orgbf8b7cc">安装 v2raya</h2>
-<div class="outline-text-2" id="text-orgbf8b7cc">
-<div class="org-src-container">
-<pre class="src src-shell">brew tap v2raya/v2raya
-brew install v2ray
-brew install v2raya
-</pre>
-</div>
 
 <p>
-v2ray 在 MacOS 不支持透明代理，只能启动系统代理，系统代理会自动处理网页代理，不再需要 SwitchyOmega，但其他应用的代理需要手动配置。
+实际的调用逻辑是，先把需要代理的请求，发送到本地回环接口(lo0)，然后，再把 lo0 上的流量重定向到 59080 端口（ss 会监听这个端口）。不需要代理的请求，不通过 lo0 直接发往目标。
+</p>
+</div>
+<div id="outline-container-org4f25291" class="outline-3">
+<h3 id="org4f25291">为什么需要先 route-to（强制路由） 再 rdr（重定向）</h3>
+<div class="outline-text-3" id="text-org4f25291">
+<p>
+如果仅仅修改数据包的目标地址和端口，让数据包发往指定的新地址。数据包仍然经过物理接口（例如 en0），并且内核的路由子系统并没有将其当作本地流量处理，这可能导致 连接状态追踪（state tracking）异常，因为数据包的源地址仍然是外部地址，目标地址被改写为 127.0.0.1，但内核网络栈不一定会将这类数据包当作本地回环流量。
 </p>
 
-<ul class="org-ul">
-<li>透明代理/系统代理： 启用: 分流规则与规则端口所选模式一致</li>
-<li>透明代理/系统代理实现方式： system proxy</li>
-<li>规则端口的分流模式： RoutingA （可以通过配置决定，哪些访问走代理，哪些访问直连）<a href="#org179c644">规则配置</a></li>
-<li>TCPFastOpen: 关闭</li>
-<li>多路复用： 关闭 （复用TCP连接以减少握手次数，但会影响吞吐量大的使用场景，如观看视频下载、测速。）</li>
-<li>自动更新订阅: 每个 1 小时自动更新</li>
-<li>解析订阅地址/更新时优先使用： 不进行分流 （使用代理来解析订阅地址）</li>
-<li>地址与端口，设置带分流规则的端口即可</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org179c644" class="outline-2">
-<h2 id="org179c644">规则配置</h2>
-<div class="outline-text-2" id="text-org179c644">
-<pre class="example" id="org1129103">
-default: proxy
-
-domain(geosite:google-scholar)-&gt;proxy
-domain(geosite:category-scholar-!cn, geosite:category-scholar-cn)-&gt;direct
-domain(geosite:geolocation-!cn, geosite:google)-&gt;proxy
-domain(geosite:cn)-&gt;direct
-ip(geoip:hk,geoip:mo)-&gt;proxy
-ip(geoip:private, geoip:cn)-&gt;direct
-</pre>
-
-
-<ul class="org-ul">
-<li>默认走代理: default: proxy</li>
-<li>大陆域名走直连: domain(geosite:cn)-&gt;direct</li>
-<li>内网服务器走直连: ip(geoip:private)-&gt;direct</li>
-<li>大陆 IP 走直连: ip(geoip:cn)-&gt;direct</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org319a2dd" class="outline-2">
-<h2 id="org319a2dd">Shell 配置</h2>
-<div class="outline-text-2" id="text-org319a2dd">
-<div class="org-src-container">
-<pre class="src src-shell">export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;export ALL_PROXY=socks5://127.0.0.1:1080
-</pre>
-</div>
 <p>
-此后使用 Shell 命令，它会自动进行网络分流。
+因此需要将请求先 route-to（强制路由）到 lo0 接口，然后再重定向请求。但这样存在一个问题。 route-to 到 lo0 的请求和自己发送给 127.0.0.1 的请求是一样的。如果把所有 lo0 的请求都 rdr 到 59080 端口，会导致无法访问到本地部署的 127.0.0.1 服务。
+</p>
+
+<p>
+因此，只选择重定向 0-1024 （具体的数字，根据后续的深入使用来配置）请求的端口到代理服务，其他的端口假设为本地服务端口。
 </p>
 </div>
 </div>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
+</div>
+<div id="outline-container-orga820217" class="outline-2">
+<h2 id="orga820217">SS 配置</h2>
+<div class="outline-text-2" id="text-orga820217">
+<div class="org-src-container">
+<pre class="src src-json">  {
+  "locals": [
+    {
+      "local_address": "0.0.0.0",
+      "local_port": 59080,
+      "protocol": "redir"
+    }
+  ],
+  "ss_local_port": 1080,
+  "local_address": "127.0.0.1",
+  "servers": [
+]
+  }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org90911e3" class="outline-2">
+<h2 id="org90911e3">SSH 配置</h2>
+<div class="outline-text-2" id="text-org90911e3">
+<p>
+上述配置，进行 github git SSH 操作时无法联通。因此单独配置 ssh 的代理（违背了透明原则，后续看看能否解决。）。
+</p>
+<pre class="example" id="orgf3f41d0">
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  ProxyCommand nc -x 127.0.0.1:1080 %h %p
+</pre>
+</div>
+</div>
+<div id="outline-container-orgcbc56ce" class="outline-2">
+<h2 id="orgcbc56ce">tproxy 脚本</h2>
+<div class="outline-text-2" id="text-orgcbc56ce">
+<p>
+基于上述逻辑，编写一个 tproxy 脚本。
+</p>
 
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-参考 <a href="https://manateelazycat.github.io/2024/12/19/best-proxy/">manateelazycat-最佳代理实践</a>
-</p></div></div>
-
-
+<p>
+<a href="https://github.com/ginqi7/tproxy">https://github.com/ginqi7/tproxy</a>
+</p>
 </div>
 </div>
 
