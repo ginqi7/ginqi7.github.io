@@ -116,42 +116,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcd09153">概述</a></li>
-<li><a href="#orgf827b56">前提</a>
+<li><a href="#org5e5db97">概述</a></li>
+<li><a href="#org8cd0ca8">前提</a>
 <ul>
-<li><a href="#org3b12e0d">CLI</a></li>
-<li><a href="#org4344980">需要的 Emacs 包</a></li>
-<li><a href="#orgc2e532d">安装 Image-slicing</a></li>
+<li><a href="#org037365d">CLI</a></li>
+<li><a href="#orgd095722">需要的 Emacs 包</a></li>
+<li><a href="#org858ca63">安装 Image-slicing</a></li>
 </ul>
 </li>
-<li><a href="#org521324d">配置</a>
+<li><a href="#orgda7e58b">配置</a>
 <ul>
-<li><a href="#orgdfe2a91">变量</a></li>
-<li><a href="#orgd913cd1">Eww 配置</a></li>
-<li><a href="#org44b95bc">Elfeed 配置</a></li>
+<li><a href="#org7b17e83">变量</a></li>
+<li><a href="#org3d59e9a">Eww 配置</a></li>
+<li><a href="#org5448f8b">Elfeed 配置</a></li>
 </ul>
 </li>
-<li><a href="#orge017ace">特性</a>
+<li><a href="#org66bec48">特性</a>
 <ul>
-<li><a href="#org3917d02">支持的链接格式</a></li>
+<li><a href="#orgc19f554">支持的链接格式</a></li>
 </ul>
 </li>
-<li><a href="#orgcd522ed">例子</a></li>
-<li><a href="#org529120a">缺点</a></li>
-<li><a href="#orgfac7144">Todo List</a></li>
-<li><a href="#orgf7dd696">开发历史</a>
+<li><a href="#org174383c">例子</a></li>
+<li><a href="#org7ecbca8">缺点</a></li>
+<li><a href="#org2d398f3">Todo List</a></li>
+<li><a href="#org2a234bf">开发历史</a>
 <ul>
-<li><a href="#org2dcf545">Dec 18, 2024</a></li>
-<li><a href="#org8916a64">Dec 16, 2024</a></li>
-<li><a href="#org65922f9">May 12, 2023</a></li>
+<li><a href="#org428153a">Dec 18, 2024</a></li>
+<li><a href="#org7927b03">Dec 16, 2024</a></li>
+<li><a href="#org41925ec">May 12, 2023</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcd09153" class="outline-2">
-<h2 id="orgcd09153">概述</h2>
-<div class="outline-text-2" id="text-orgcd09153">
+<div id="outline-container-org5e5db97" class="outline-2">
+<h2 id="org5e5db97">概述</h2>
+<div class="outline-text-2" id="text-org5e5db97">
 <p>
 在 Emacs 图片的展示逻辑与文本是一样的，占用一行。如果图片很高，它会调整当前行高适配图片。这种情况导致在 Emacs 当中滚动图片的体验相当糟糕。
 </p>
@@ -169,21 +169,21 @@
 </p>
 </div>
 </div>
-<div id="outline-container-orgf827b56" class="outline-2">
-<h2 id="orgf827b56">前提</h2>
-<div class="outline-text-2" id="text-orgf827b56">
+<div id="outline-container-org8cd0ca8" class="outline-2">
+<h2 id="org8cd0ca8">前提</h2>
+<div class="outline-text-2" id="text-org8cd0ca8">
 </div>
-<div id="outline-container-org3b12e0d" class="outline-3">
-<h3 id="org3b12e0d">CLI</h3>
-<div class="outline-text-3" id="text-org3b12e0d">
+<div id="outline-container-org037365d" class="outline-3">
+<h3 id="org037365d">CLI</h3>
+<div class="outline-text-3" id="text-org037365d">
 <p>
 <b>Curl</b>: 使用 Curl 异步下载 web 图片，如果没有 web 图片则不需要。
 </p>
 </div>
 </div>
-<div id="outline-container-org4344980" class="outline-3">
-<h3 id="org4344980">需要的 Emacs 包</h3>
-<div class="outline-text-3" id="text-org4344980">
+<div id="outline-container-orgd095722" class="outline-3">
+<h3 id="orgd095722">需要的 Emacs 包</h3>
+<div class="outline-text-3" id="text-orgd095722">
 <ul class="org-ul">
 <li><b>org-element</b>: 用于解析 Buffer 里的所有链接。</li>
 <li><b>image</b>: 用于创建 Image 对象。</li>
@@ -191,14 +191,15 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc2e532d" class="outline-3">
-<h3 id="orgc2e532d">安装 Image-slicing</h3>
-<div class="outline-text-3" id="text-orgc2e532d">
+<div id="outline-container-org858ca63" class="outline-3">
+<h3 id="org858ca63">安装 Image-slicing</h3>
+<div class="outline-text-3" id="text-org858ca63">
 <ul class="org-ul">
 <li>克隆 Image-slicing 项目到你自己的 Emacs 配置目录下：</li>
 </ul>
+
 <div class="org-src-container">
-<pre class="src src-sh">git clone git@github.com:ginqi7/image-slicing.git ~/.emacs.d/lisp/image-slicing
+<pre class="src src-bash">git clone git@github.com:ginqi7/image-slicing.git ~/.emacs.d/lisp/image-slicing
 </pre>
 </div>
 
@@ -212,17 +213,17 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org521324d" class="outline-2">
-<h2 id="org521324d">配置</h2>
-<div class="outline-text-2" id="text-org521324d">
+<div id="outline-container-orgda7e58b" class="outline-2">
+<h2 id="orgda7e58b">配置</h2>
+<div class="outline-text-2" id="text-orgda7e58b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(<span style="color: #6c71c4;">require</span> '<span style="color: #381a8a;">image-slicing</span>)
 </pre>
 </div>
 </div>
-<div id="outline-container-orgdfe2a91" class="outline-3">
-<h3 id="orgdfe2a91">变量</h3>
-<div class="outline-text-3" id="text-orgdfe2a91">
+<div id="outline-container-org7b17e83" class="outline-3">
+<h3 id="org7b17e83">变量</h3>
+<div class="outline-text-3" id="text-org7b17e83">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -268,9 +269,9 @@
 </table>
 </div>
 </div>
-<div id="outline-container-orgd913cd1" class="outline-3">
-<h3 id="orgd913cd1">Eww 配置</h3>
-<div class="outline-text-3" id="text-orgd913cd1">
+<div id="outline-container-org3d59e9a" class="outline-3">
+<h3 id="org3d59e9a">Eww 配置</h3>
+<div class="outline-text-3" id="text-org3d59e9a">
 <ol class="org-ol">
 <li>取消 EWW 默认的图片渲染方法</li>
 </ol>
@@ -288,9 +289,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org44b95bc" class="outline-3">
-<h3 id="org44b95bc">Elfeed 配置</h3>
-<div class="outline-text-3" id="text-org44b95bc">
+<div id="outline-container-org5448f8b" class="outline-3">
+<h3 id="org5448f8b">Elfeed 配置</h3>
+<div class="outline-text-3" id="text-org5448f8b">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #c4a599; font-style: italic;">;; </span><span style="color: #c4a599; font-style: italic;">add to shr-external-rendering-functions (skip if alread setup for eww)</span>
 (<span style="color: #0000ff;">add-to-list</span> 'shr-external-rendering-functions
@@ -303,18 +304,18 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orge017ace" class="outline-2">
-<h2 id="orge017ace">特性</h2>
-<div class="outline-text-2" id="text-orge017ace">
+<div id="outline-container-org66bec48" class="outline-2">
+<h2 id="org66bec48">特性</h2>
+<div class="outline-text-2" id="text-org66bec48">
 <ul class="org-ul">
 <li><code>image-slicing-mode</code>: 自动解析 buffer 中的图片链接，并用多行的形式渲染。</li>
 <li><code>Asynchronous</code>: 异步下载 Web 图片。</li>
 <li><code>Multiple Modes</code>: 支持多种模式的 buffer 例如：org-mode, eww, elfeed.</li>
 </ul>
 </div>
-<div id="outline-container-org3917d02" class="outline-3">
-<h3 id="org3917d02">支持的链接格式</h3>
-<div class="outline-text-3" id="text-org3917d02">
+<div id="outline-container-orgc19f554" class="outline-3">
+<h3 id="orgc19f554">支持的链接格式</h3>
+<div class="outline-text-3" id="text-orgc19f554">
 <ul class="org-ul">
 <li>Org 格式的链接
 <ul class="org-ul">
@@ -335,11 +336,11 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd522ed" class="outline-2">
-<h2 id="orgcd522ed">例子</h2>
-<div class="outline-text-2" id="text-orgcd522ed">
+<div id="outline-container-org174383c" class="outline-2">
+<h2 id="org174383c">例子</h2>
+<div class="outline-text-2" id="text-org174383c">
 
-<div id="org0a178de" class="figure">
+<div id="orge7e44ff" class="figure">
 <p><img src="data:image/gif;base64,R0lGODlhwAMcAoAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/gdnaWYuc2tpACH5BAQeAAAA
 LAAAAADAAxwChwAAAP////X19cXFxfPz8/7+/v3///7///b29vHx8f39/v/+/5CQj9LS0sbGxv//
 /n19fQUFBaKjourq6fX09d/f3vv///r5+QMDAuzs7LCxsPr6+v///e7u7fj+/4+Pj8bHxvz+//j5
@@ -17128,9 +17129,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </div>
 </div>
 </div>
-<div id="outline-container-org529120a" class="outline-2">
-<h2 id="org529120a">缺点</h2>
-<div class="outline-text-2" id="text-org529120a">
+<div id="outline-container-org7ecbca8" class="outline-2">
+<h2 id="org7ecbca8">缺点</h2>
+<div class="outline-text-2" id="text-org7ecbca8">
 <ul class="org-ul">
 <li>如果有许多的网络图片，它会生成需要的临时文件，在系统的临时目录下。</li>
 <li>如果 URL 链接太短，图片的切片数目会比较少，那么单个切片的行高会比较高。</li>
@@ -17138,21 +17139,21 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfac7144" class="outline-2">
-<h2 id="orgfac7144">Todo List</h2>
-<div class="outline-text-2" id="text-orgfac7144">
+<div id="outline-container-org2d398f3" class="outline-2">
+<h2 id="org2d398f3">Todo List</h2>
+<div class="outline-text-2" id="text-org2d398f3">
 <ul class="org-ul">
 <li>适配 nov</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf7dd696" class="outline-2">
-<h2 id="orgf7dd696">开发历史</h2>
-<div class="outline-text-2" id="text-orgf7dd696">
+<div id="outline-container-org2a234bf" class="outline-2">
+<h2 id="org2a234bf">开发历史</h2>
+<div class="outline-text-2" id="text-org2a234bf">
 </div>
-<div id="outline-container-org2dcf545" class="outline-3">
-<h3 id="org2dcf545">Dec 18, 2024</h3>
-<div class="outline-text-3" id="text-org2dcf545">
+<div id="outline-container-org428153a" class="outline-3">
+<h3 id="org428153a">Dec 18, 2024</h3>
+<div class="outline-text-3" id="text-org428153a">
 <p>
 我发现了一个类似的包 <a href="https://github.com/jcfk/org-sliced-images">org-sliced-images</a>, 我从中学习到了一些代码，使我的代码更加简洁：
 </p>
@@ -17162,9 +17163,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </p>
 </div>
 </div>
-<div id="outline-container-org8916a64" class="outline-3">
-<h3 id="org8916a64">Dec 16, 2024</h3>
-<div class="outline-text-3" id="text-org8916a64">
+<div id="outline-container-org7927b03" class="outline-3">
+<h3 id="org7927b03">Dec 16, 2024</h3>
+<div class="outline-text-3" id="text-org7927b03">
 <p>
 上一个版本存在一些问题：
 </p>
@@ -17178,9 +17179,9 @@ SEyiEpfIxCY68YlriAAAOw=="screencast.gif />
 </p>
 </div>
 </div>
-<div id="outline-container-org65922f9" class="outline-3">
-<h3 id="org65922f9">May 12, 2023</h3>
-<div class="outline-text-3" id="text-org65922f9">
+<div id="outline-container-org41925ec" class="outline-3">
+<h3 id="org41925ec">May 12, 2023</h3>
+<div class="outline-text-3" id="text-org41925ec">
 <p>
 想到一个有趣的想法：把图片切片，通过 overlays 一行一行的展示，来提高图片滚动的体验。
 </p>

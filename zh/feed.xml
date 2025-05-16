@@ -4,136 +4,599 @@
   <subtitle>Qiqi Jin&#39;s zh Blog.</subtitle>
   <link href="https://qiqijin.com/zh/zh/feed.xml" rel="self" />
   <link href="https://qiqijin.com/" />
-  <updated>2025-04-23T12:43:24Z</updated>
+  <updated>2025-05-16T04:55:47Z</updated>
   <id>https://qiqijin.com/</id>
   <author>
     <name>Qiqi Jin</name>
     <email>ginqi7@gmail.com</email>
   </author>
   <entry>
-    <title>如何写博客</title>
-    <link href="https://qiqijin.com/zh/%E5%A6%82%E4%BD%95%E5%86%99%E5%8D%9A%E5%AE%A2/" />
-    <updated>2025-04-23T12:43:24Z</updated>
-    <id>https://qiqijin.com/zh/%E5%A6%82%E4%BD%95%E5%86%99%E5%8D%9A%E5%AE%A2/</id>
-    <content type="html">&lt;html&gt;
- &lt;body&gt;
-  &lt;div&gt;
-   &lt;h1&gt;
-    如何写博客
-   &lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   &lt;b&gt;
-    &lt;h2&gt;
-     写博客的目的
-    &lt;/h2&gt;
-   &lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   有人看自然是最好的，能够提升个人的声誉。但多半是没人看的。
-  &lt;/div&gt;
-  &lt;div&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   那还坚持写博客的原因：
-  &lt;/div&gt;
-  &lt;ol&gt;
-   &lt;li&gt;
-    虚荣，有一个漂亮的个人博客，自己感觉十分喜悦
-   &lt;/li&gt;
-   &lt;li&gt;
-    迫使自己思考，写文章可以让人更加集中精神，迫使自己思考，梳理自己的思路
-   &lt;/li&gt;
-   &lt;li&gt;
-    提高表达能力，如何快速，理性，科学地表达自己的想法
-   &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div&gt;
-   &lt;h2&gt;
-    文章类型
-   &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   通常我会写三种类型的文字：
-  &lt;/div&gt;
-  &lt;ol&gt;
-   &lt;li&gt;
-    简短的想法
-   &lt;/li&gt;
-   &lt;li&gt;
-    长的纯文字
-   &lt;/li&gt;
-   &lt;li&gt;
-    技术文章
-   &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div&gt;
-   其中一二类的纯文字更习惯使用手机，不必坐在电脑旁边，（一坐在电脑旁，我就更喜欢写代码），随时随地，拿出手机一点点地编写，一点点地修改，可以消耗我刷短视频的时间。
-  &lt;/div&gt;
-  &lt;div&gt;
-   而技术文章，需要附带代码，图表，使用 org-mode 更加强大。
-  &lt;/div&gt;
-  &lt;div&gt;
-   因此，我写了两个小工具和一个 11ty blog 模板：
-  &lt;/div&gt;
-  &lt;ol&gt;
-   &lt;li&gt;
-    org-to-11ty
-   &lt;/li&gt;
-   &lt;li&gt;
-    notes-publish
-   &lt;/li&gt;
-   &lt;li&gt;
-    jin-11ty-blog-template
-   &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div&gt;
-   &lt;h2&gt;
-    工具
-   &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   &lt;b&gt;
-    &lt;h3&gt;
-     Eleventy
-    &lt;/h3&gt;
-   &lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   Eleventy 是一个简单的网站生成器，它可以根据模板，把某个目录下的数据转换为 HTML 文件。
-  &lt;/div&gt;
-  &lt;div&gt;
-   它可以高度定制你需要的网站样式。而我个人的需求有:
-  &lt;/div&gt;
-  &lt;ol&gt;
-   &lt;li&gt;
-    双语网站，支持我编写中文、英文的内容
-   &lt;/li&gt;
-   &lt;li&gt;
-    Toughts 页面，支持编写简短的个人想法。
-   &lt;/li&gt;
-   &lt;li&gt;
-    RSS，支持文章、想法的RSS。（由于图片是base64嵌入的，rss 文件可能比较大）
-   &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div&gt;
-   &lt;h3&gt;
-    notes-publish
-   &lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   可以把 MacOS Notes 中 posts 和 thoughts 目录下的文章导出。（其中图片会按照base64嵌入）这样我就可以安静地用手机编写一些纯文本的文章。
-  &lt;/div&gt;
-  &lt;div&gt;
-   &lt;h2&gt;
-    文章发布时机
-   &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-   如果一篇文章想法太多。那么只要某天写完其中三分之一以上就可以发布了。以后你看到博客上有未完成的文章，就会给你动力去补全它（比如这一篇）。
-  &lt;/div&gt;
- &lt;/body&gt;
-&lt;/html&gt;
+    <title>MacOS 微信 CLI</title>
+    <link href="https://qiqijin.com/zh/macos-wechat-cli/" />
+    <updated>2025-05-16T04:55:47Z</updated>
+    <id>https://qiqijin.com/zh/macos-wechat-cli/</id>
+    <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgce7b9f0&quot;&gt;背景&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#org158dcd1&quot;&gt;优缺点&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgbb5783b&quot;&gt;优点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgd19d9b1&quot;&gt;缺点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgede5e58&quot;&gt;已知问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#org68c3bb6&quot;&gt;集成插件&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgfa5793a&quot;&gt;macos-wechat-emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#org078d0d4&quot;&gt;开发详情&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgd1dec01&quot;&gt;定位链&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#orgef80f1f&quot;&gt;图片、链接预览&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/macos-wechat-cli/#org413c62b&quot;&gt;性能优化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgce7b9f0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgce7b9f0&quot;&gt;背景&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgce7b9f0&quot;&gt;
+&lt;p&gt;
+几年前，当微信 Web 没有被封时，我一直是使用 &lt;a href=&quot;https://github.com/hexsum/Mojo-Weixin&quot;&gt;Mojo-Weixin&lt;/a&gt; 通过 Emacs 来访问微信。只是很不幸，后来当微信 Web 无法访问了，该项目对我而言变得不可用。微信也没有提供公共的 api。很难有一个安全的第三方客户端。
+&lt;/p&gt;
+
+&lt;p&gt;
+我对微信的需求比较简单。能够快速简单地在 Emacs 中查看/发送针对某几个人的信息。我并不是需要一个完整的微信客户端。
+&lt;/p&gt;
+
+&lt;p&gt;
+MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开发了 &lt;a href=&quot;https://github.com/ginqi7/macos-wechat-cli&quot;&gt;macos-wechat-cli&lt;/a&gt; 利用 Accessibility API 访问微信的 GUI，通过命令行来与微信进行交互。
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://github.com/ginqi7/macos-wechat-cli&quot;&gt;macos-wechat-cli&lt;/a&gt; 的目标不是开发一个完整的微信客户端，而是借助 MacOS 微信 GUI，提供简单高效的 CLI 命令，能够供其他应用集成，访问微信。例如 &lt;a href=&quot;https://github.com/ginqi7/macos-wechat-emacs&quot;&gt;macos-wechat-emacs&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org158dcd1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org158dcd1&quot;&gt;优缺点&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org158dcd1&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgbb5783b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbb5783b&quot;&gt;优点&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbb5783b&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;对微信没有任何侵入，没有被封禁的风险&lt;/li&gt;
+&lt;li&gt;通过 JSON 输出，可以很容易被其他应用集成&lt;/li&gt;
+&lt;li&gt;尽可优化了 Accessibility API 访问的性能，能够在 0.5 秒里完成数据更新、数据发送&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgd19d9b1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd19d9b1&quot;&gt;缺点&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd19d9b1&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;如果微信升级过程中 UI 发生变化，应用可能会出问题。&lt;/li&gt;
+&lt;li&gt;当前版本有中文相关的硬编码，只支持中文微信&lt;/li&gt;
+&lt;li&gt;只展示当前 GUI 已经加载出来的信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgede5e58&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgede5e58&quot;&gt;已知问题&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgede5e58&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;所有信息都会展示为“1 条未读消息”, 因此把“1 条未读消息”展示为“无未读信息”&lt;/li&gt;
+&lt;li&gt;预览图片、链接后，需要关闭才能进行后续的操作。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org68c3bb6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org68c3bb6&quot;&gt;集成插件&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org68c3bb6&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgfa5793a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgfa5793a&quot;&gt;&lt;a href=&quot;https://github.com/ginqi7/macos-wechat-emacs&quot;&gt;macos-wechat-emacs&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgfa5793a&quot;&gt;
+&lt;p&gt;
+当前版本 macos-wechat-emacs 只提供了简单的交互界面（对话列表，消息页面）。后续将优化消息页面的展示。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org078d0d4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org078d0d4&quot;&gt;开发详情&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgd1dec01&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd1dec01&quot;&gt;定位链&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd1dec01&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;微信聊天列标：[.splitGroup, .scrollArea, .table, .row, .cell, .row]&lt;/li&gt;
+&lt;li&gt;微信聊天按钮： [.radioButton]&lt;/li&gt;
+&lt;li&gt;定位聊天输入框：[.splitGroup, .splitGroup, .scrollArea, .textArea],&lt;/li&gt;
+&lt;li&gt;定位详细的聊天详情：[.splitGroup, .splitGroup, .scrollArea, .table, .row, .cell, .unknown],&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgef80f1f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgef80f1f&quot;&gt;图片、链接预览&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgef80f1f&quot;&gt;
+&lt;p&gt;
+通过 message index 定位到信息在微信 GUI 中的位置，通过触发 press 事件，展示预览窗口。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org413c62b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org413c62b&quot;&gt;性能优化&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org413c62b&quot;&gt;
+&lt;p&gt;
+当微信 GUI 位于，最前台时，Accessibility API 的性能超快。当它位于后台时，性能会大幅下降。
+测试发现，如果 Accessibility API 前，对微信的进程发送一个按键事件。会提高后续的访问性能。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Emacs Packages</title>
+    <link href="https://qiqijin.com/zh/0017/" />
+    <updated>2025-05-16T04:55:47Z</updated>
+    <id>https://qiqijin.com/zh/0017/</id>
+    <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org85b6cc4&quot;&gt;Edit Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgac804d6&quot;&gt;英文学习三部曲&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org5643b4f&quot;&gt;jin-theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org171a521&quot;&gt;auto-save&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org032d9c4&quot;&gt;consult&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc38e5c3&quot;&gt;vertico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf61e397&quot;&gt;orderless&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org63747c0&quot;&gt;AmaiKinono@puni.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org4f08ec8&quot;&gt;DogLooksGood@emacs-rime.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3f31cf1&quot;&gt;Elilif@emacs-anki-helper.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org9e71f30&quot;&gt;Fanael@highlight-defined.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgfb0be70&quot;&gt;Vonfry@zoxide.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org9c5f087&quot;&gt;Wilfred@helpful.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org4d9b384&quot;&gt;Wilfred@refine.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org062dd75&quot;&gt;abo-abo@ace-window.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org8bde800&quot;&gt;abo-abo@avy.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgfa71946&quot;&gt;abo-abo@org-download.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgdae1cb1&quot;&gt;andreasjansson@language-detection.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orged0f295&quot;&gt;bastibe@org-journal.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org34a456b&quot;&gt;benma@visual-regexp.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org60ac7af&quot;&gt;bmag@imenu-list.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgfa4f6f3&quot;&gt;bzg@org-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgefbd29b&quot;&gt;casouri@vundo.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc0380a4&quot;&gt;casouri@xeft.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org65afdfb&quot;&gt;cute-jumper@ace-pinyin.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgeadfa0c&quot;&gt;cute-jumper@pinyinlib.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org2b9d775&quot;&gt;emacs-openai@deepl.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org0b0f34d&quot;&gt;emacs-pe@nov.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org1c8f098&quot;&gt;emacsmirror@gcmh.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf07516c&quot;&gt;emacsmirror@highlight-parentheses.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org6827957&quot;&gt;emacsmirror@memory-usage.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org8a056b3&quot;&gt;flycheck@flycheck.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org188873a&quot;&gt;fxbois@web-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3bc7f95&quot;&gt;ginqi7@auto-browser.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org0253872&quot;&gt;Update 2025-04-29&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgadea0b6&quot;&gt;2 weeks ago&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgec11aa8&quot;&gt;ginqi7@deno-bridge-jieba.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgb3adeba&quot;&gt;ginqi7@dictionary-overlay.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3d80955&quot;&gt;ginqi7@eaf-pdf-viewer.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org5e00454&quot;&gt;Update 2025-04-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org78c5721&quot;&gt;ginqi7@eaf-video-player.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgad68d75&quot;&gt;Update 2025-04-29&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc5e0687&quot;&gt;2 weeks ago&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org87409bc&quot;&gt;ginqi7@emacs-application-framework.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org9415ff3&quot;&gt;Update 2025-04-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org4b93abb&quot;&gt;ginqi7@html2org.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org1bcb665&quot;&gt;ginqi7@image-slicing.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgea133f3&quot;&gt;ginqi7@justify-kp.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org8e395c7&quot;&gt;ginqi7@leetcode-emacs.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc2d3365&quot;&gt;ginqi7@named-format.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgaa4685e&quot;&gt;ginqi7@plantuml-emacs.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgaa0fc7f&quot;&gt;ginqi7@real-time-translation.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org11424e9&quot;&gt;Update 2025-04-29&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3c54e48&quot;&gt;2 weeks ago&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org4d6e9b6&quot;&gt;ginqi7@syllable-stress.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgcfe363a&quot;&gt;jacktasia@dumb-jump.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org6a89434&quot;&gt;joaotavora@yasnippet.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org324743b&quot;&gt;jrblevin@markdown-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org013a7d9&quot;&gt;justinbarclay@parinfer-rust-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org247a3df&quot;&gt;jwiegley@emacs-async.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org6833635&quot;&gt;karthink@gptel.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf0ee0dc&quot;&gt;Update as of 2025-04-12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc8f2d1c&quot;&gt;ljos@jq-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgac0af6f&quot;&gt;magit@magit.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org7303635&quot;&gt;magit@with-editor.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org7b36384&quot;&gt;manateelazycat@awesome-tray.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org970b2df&quot;&gt;manateelazycat@key-echo.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orge887c0a&quot;&gt;Update 2025-04-16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgead3d9c&quot;&gt;manateelazycat@lsp-bridge.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org51081a4&quot;&gt;manateelazycat@mind-wave.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org8923c56&quot;&gt;manateelazycat@sort-tab.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org7826b18&quot;&gt;manateelazycat@thing-edit.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgb3ae8a7&quot;&gt;mhayashi1120@Emacs-wgrep.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org86939af&quot;&gt;minad@marginalia.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org1971859&quot;&gt;minad@tempel.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf856798&quot;&gt;misohena@phscroll.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org92cd2aa&quot;&gt;ncaq@auto-sudoedit.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org53396ac&quot;&gt;nflath@sudo-edit.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc59f15e&quot;&gt;oantolin@embark.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgbc892f3&quot;&gt;pashky@restclient.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org29ff1c7&quot;&gt;radian-software@ctrlf.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org84ccd87&quot;&gt;rainstormstudio@nerd-icons-dired.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org98f49ba&quot;&gt;rainstormstudio@nerd-icons.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3c2b097&quot;&gt;rnkn@olivetti.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgefaa36d&quot;&gt;sigma@pcache.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org7fbe4bd&quot;&gt;skuro@plantuml-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org790aae5&quot;&gt;tarsius@hl-todo.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf0d671b&quot;&gt;tkf@emacs-request.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgb905bc1&quot;&gt;tumashu@posframe.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgc10b127&quot;&gt;twlz0ne@separedit.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#orgf823118&quot;&gt;xuchunyang@elisp-demos.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org7075fbe&quot;&gt;xuchunyang@shr-tag-pre-highlight.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org2009fe7&quot;&gt;yoshiki@yaml-mode.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org3f3bf19&quot;&gt;zk-phi@indent-guide.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0017/#org160db35&quot;&gt;zkry@yaml.el.el&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org85b6cc4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org85b6cc4&quot;&gt;Edit Mode&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgac804d6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgac804d6&quot;&gt;英文学习三部曲&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org5643b4f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5643b4f&quot;&gt;jin-theme&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org171a521&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org171a521&quot;&gt;auto-save&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org032d9c4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org032d9c4&quot;&gt;consult&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc38e5c3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc38e5c3&quot;&gt;vertico&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf61e397&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf61e397&quot;&gt;orderless&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org63747c0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org63747c0&quot;&gt;AmaiKinono@puni.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4f08ec8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4f08ec8&quot;&gt;DogLooksGood@emacs-rime.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3f31cf1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3f31cf1&quot;&gt;Elilif@emacs-anki-helper.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org9e71f30&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9e71f30&quot;&gt;Fanael@highlight-defined.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgfb0be70&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfb0be70&quot;&gt;Vonfry@zoxide.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org9c5f087&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9c5f087&quot;&gt;Wilfred@helpful.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4d9b384&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4d9b384&quot;&gt;Wilfred@refine.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org062dd75&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org062dd75&quot;&gt;abo-abo@ace-window.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8bde800&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8bde800&quot;&gt;abo-abo@avy.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgfa71946&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfa71946&quot;&gt;abo-abo@org-download.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgdae1cb1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdae1cb1&quot;&gt;andreasjansson@language-detection.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orged0f295&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orged0f295&quot;&gt;bastibe@org-journal.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org34a456b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org34a456b&quot;&gt;benma@visual-regexp.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org60ac7af&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org60ac7af&quot;&gt;bmag@imenu-list.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgfa4f6f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfa4f6f3&quot;&gt;bzg@org-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgefbd29b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgefbd29b&quot;&gt;casouri@vundo.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc0380a4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc0380a4&quot;&gt;casouri@xeft.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org65afdfb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org65afdfb&quot;&gt;cute-jumper@ace-pinyin.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgeadfa0c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgeadfa0c&quot;&gt;cute-jumper@pinyinlib.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org2b9d775&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2b9d775&quot;&gt;emacs-openai@deepl.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org0b0f34d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0b0f34d&quot;&gt;emacs-pe@nov.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org1c8f098&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1c8f098&quot;&gt;emacsmirror@gcmh.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf07516c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf07516c&quot;&gt;emacsmirror@highlight-parentheses.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org6827957&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6827957&quot;&gt;emacsmirror@memory-usage.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8a056b3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8a056b3&quot;&gt;flycheck@flycheck.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org188873a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org188873a&quot;&gt;fxbois@web-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3bc7f95&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3bc7f95&quot;&gt;ginqi7@auto-browser.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org0253872&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0253872&quot;&gt;Update 2025-04-29&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgadea0b6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgadea0b6&quot;&gt;2 weeks ago&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgec11aa8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgec11aa8&quot;&gt;ginqi7@deno-bridge-jieba.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb3adeba&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb3adeba&quot;&gt;ginqi7@dictionary-overlay.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3d80955&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3d80955&quot;&gt;ginqi7@eaf-pdf-viewer.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org5e00454&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5e00454&quot;&gt;Update 2025-04-16&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org78c5721&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org78c5721&quot;&gt;ginqi7@eaf-video-player.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgad68d75&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgad68d75&quot;&gt;Update 2025-04-29&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc5e0687&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc5e0687&quot;&gt;2 weeks ago&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org87409bc&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org87409bc&quot;&gt;ginqi7@emacs-application-framework.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org9415ff3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9415ff3&quot;&gt;Update 2025-04-16&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4b93abb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4b93abb&quot;&gt;ginqi7@html2org.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org1bcb665&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1bcb665&quot;&gt;ginqi7@image-slicing.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgea133f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgea133f3&quot;&gt;ginqi7@justify-kp.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8e395c7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8e395c7&quot;&gt;ginqi7@leetcode-emacs.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc2d3365&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc2d3365&quot;&gt;ginqi7@named-format.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgaa4685e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaa4685e&quot;&gt;ginqi7@plantuml-emacs.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgaa0fc7f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaa0fc7f&quot;&gt;ginqi7@real-time-translation.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org11424e9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org11424e9&quot;&gt;Update 2025-04-29&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3c54e48&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3c54e48&quot;&gt;2 weeks ago&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org4d6e9b6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4d6e9b6&quot;&gt;ginqi7@syllable-stress.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgcfe363a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcfe363a&quot;&gt;jacktasia@dumb-jump.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org6a89434&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6a89434&quot;&gt;joaotavora@yasnippet.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org324743b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org324743b&quot;&gt;jrblevin@markdown-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org013a7d9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org013a7d9&quot;&gt;justinbarclay@parinfer-rust-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org247a3df&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org247a3df&quot;&gt;jwiegley@emacs-async.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org6833635&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6833635&quot;&gt;karthink@gptel.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf0ee0dc&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf0ee0dc&quot;&gt;Update as of 2025-04-12&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc8f2d1c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc8f2d1c&quot;&gt;ljos@jq-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgac0af6f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgac0af6f&quot;&gt;magit@magit.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7303635&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7303635&quot;&gt;magit@with-editor.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7b36384&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7b36384&quot;&gt;manateelazycat@awesome-tray.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org970b2df&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org970b2df&quot;&gt;manateelazycat@key-echo.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orge887c0a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge887c0a&quot;&gt;Update 2025-04-16&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgead3d9c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgead3d9c&quot;&gt;manateelazycat@lsp-bridge.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org51081a4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org51081a4&quot;&gt;manateelazycat@mind-wave.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8923c56&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8923c56&quot;&gt;manateelazycat@sort-tab.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7826b18&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7826b18&quot;&gt;manateelazycat@thing-edit.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb3ae8a7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb3ae8a7&quot;&gt;mhayashi1120@Emacs-wgrep.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org86939af&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org86939af&quot;&gt;minad@marginalia.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org1971859&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1971859&quot;&gt;minad@tempel.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf856798&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf856798&quot;&gt;misohena@phscroll.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org92cd2aa&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org92cd2aa&quot;&gt;ncaq@auto-sudoedit.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org53396ac&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org53396ac&quot;&gt;nflath@sudo-edit.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc59f15e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc59f15e&quot;&gt;oantolin@embark.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgbc892f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbc892f3&quot;&gt;pashky@restclient.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org29ff1c7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org29ff1c7&quot;&gt;radian-software@ctrlf.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org84ccd87&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org84ccd87&quot;&gt;rainstormstudio@nerd-icons-dired.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org98f49ba&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org98f49ba&quot;&gt;rainstormstudio@nerd-icons.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3c2b097&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3c2b097&quot;&gt;rnkn@olivetti.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgefaa36d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgefaa36d&quot;&gt;sigma@pcache.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7fbe4bd&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7fbe4bd&quot;&gt;skuro@plantuml-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org790aae5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org790aae5&quot;&gt;tarsius@hl-todo.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf0d671b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf0d671b&quot;&gt;tkf@emacs-request.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb905bc1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb905bc1&quot;&gt;tumashu@posframe.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc10b127&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc10b127&quot;&gt;twlz0ne@separedit.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf823118&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf823118&quot;&gt;xuchunyang@elisp-demos.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7075fbe&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7075fbe&quot;&gt;xuchunyang@shr-tag-pre-highlight.el.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org2009fe7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2009fe7&quot;&gt;yoshiki@yaml-mode.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3f3bf19&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3f3bf19&quot;&gt;zk-phi@indent-guide.el&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org160db35&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org160db35&quot;&gt;zkry@yaml.el.el&lt;/h2&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>MacOS 软件</title>
+    <link href="https://qiqijin.com/zh/0015/" />
+    <updated>2025-05-16T04:54:07Z</updated>
+    <id>https://qiqijin.com/zh/0015/</id>
+    <content type="html">&lt;div id=&quot;table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org7fce108&quot;&gt;浏览器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org5aecd24&quot;&gt;通信&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org351055e&quot;&gt;终端&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#orgc7034d9&quot;&gt;密码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org9955679&quot;&gt;记忆辅助&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org45c8030&quot;&gt;截屏、录屏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#orgb7d68c9&quot;&gt;绘图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org9bef003&quot;&gt;按键管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#orgeaa131a&quot;&gt;Menu Bar 管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org2583adf&quot;&gt;窗口管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org944630f&quot;&gt;词典&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org8092492&quot;&gt;输入法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0015/#org3dc9362&quot;&gt;容器管理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7fce108&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7fce108&quot;&gt;浏览器&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org5aecd24&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5aecd24&quot;&gt;通信&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org351055e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org351055e&quot;&gt;终端&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc7034d9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc7034d9&quot;&gt;密码&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org9955679&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9955679&quot;&gt;记忆辅助&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org45c8030&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org45c8030&quot;&gt;截屏、录屏&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb7d68c9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb7d68c9&quot;&gt;绘图&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org9bef003&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9bef003&quot;&gt;按键管理&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgeaa131a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgeaa131a&quot;&gt;Menu Bar 管理&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org2583adf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2583adf&quot;&gt;窗口管理&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org944630f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org944630f&quot;&gt;词典&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8092492&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8092492&quot;&gt;输入法&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3dc9362&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3dc9362&quot;&gt;容器管理&lt;/h2&gt;
+&lt;/div&gt;
 </content>
   </entry>
   <entry>
@@ -145,22 +608,22 @@
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org2921e1f&quot;&gt;简介&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org55ccc2a&quot;&gt;安装 shadowsocks-rust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org49779b3&quot;&gt;pf 配置&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#orgcb7f97f&quot;&gt;简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org0b4e567&quot;&gt;安装 shadowsocks-rust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org4a7e288&quot;&gt;pf 配置&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org4f25291&quot;&gt;为什么需要先 route-to（强制路由） 再 rdr（重定向）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org9ab9e1f&quot;&gt;为什么需要先 route-to（强制路由）再 rdr（重定向）&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#orga820217&quot;&gt;SS 配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org90911e3&quot;&gt;SSH 配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#orgcbc56ce&quot;&gt;tproxy 脚本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#org7e8e0ad&quot;&gt;SS 配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#orgcc7f381&quot;&gt;SSH 配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0014/#orgca2059c&quot;&gt;tproxy 脚本&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2921e1f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2921e1f&quot;&gt;简介&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2921e1f&quot;&gt;
+&lt;div id=&quot;outline-container-orgcb7f97f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcb7f97f&quot;&gt;简介&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcb7f97f&quot;&gt;
 &lt;p&gt;
 透明代理：用户在访问网络时无需特别配置或知晓代理的存在，不需要一个程序一个程序的设置。代理能够自动判断哪些请求需要通过代理，哪些请求直接链接。一般是通过修改路由表的方式实现。
 &lt;/p&gt;
@@ -174,19 +637,19 @@
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org55ccc2a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org55ccc2a&quot;&gt;安装 shadowsocks-rust&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org55ccc2a&quot;&gt;
+&lt;div id=&quot;outline-container-org0b4e567&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0b4e567&quot;&gt;安装 shadowsocks-rust&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0b4e567&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-shell&quot;&gt;brew install shadowsocks-rust
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org49779b3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org49779b3&quot;&gt;pf 配置&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org49779b3&quot;&gt;
-&lt;pre class=&quot;example&quot; id=&quot;org948d74b&quot;&gt;
+&lt;div id=&quot;outline-container-org4a7e288&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4a7e288&quot;&gt;pf 配置&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a7e288&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org0476f85&quot;&gt;
 scrub-anchor &quot;com.apple/*&quot;
 
 table &amp;lt;direct_cidr&amp;gt; persist file &quot;/Users/a77/Downloads/tproxy/configs/direct_cidr.txt&quot; #1
@@ -205,34 +668,34 @@ load anchor &quot;com.apple&quot; from &quot;/etc/pf.anchors/com.apple&quot;
 
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;direct&lt;sub&gt;cidr.txt&lt;/sub&gt; 文件中定义了哪些 ip 地址不需要代理，&lt;a href=&quot;https://github.com/missdeer/daily-weekly-build/tree/cidr&quot;&gt;这里有一些ip地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;将所有发往本地回环接口(lo0) 端口为 0-1024 的 TCP 流量，重定向到了本机的 59080 端口。&lt;/li&gt;
+&lt;li&gt;将所有发往本地回环接口 (lo0) 端口为 0-1024 的 TCP 流量，重定向到了本机的 59080 端口。&lt;/li&gt;
 &lt;li&gt;确保所有满足条件的出站 TCP 流量在发送之前被强制路由到本机的 lo0 接口，通过 127.0.0.1 转发出去。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;
-实际的调用逻辑是，先把需要代理的请求，发送到本地回环接口(lo0)，然后，再把 lo0 上的流量重定向到 59080 端口（ss 会监听这个端口）。不需要代理的请求，不通过 lo0 直接发往目标。
+实际的调用逻辑是，先把需要代理的请求，发送到本地回环接口 (lo0)，然后，再把 lo0 上的流量重定向到 59080 端口（ss 会监听这个端口）。不需要代理的请求，不通过 lo0 直接发往目标。
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4f25291&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4f25291&quot;&gt;为什么需要先 route-to（强制路由） 再 rdr（重定向）&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4f25291&quot;&gt;
+&lt;div id=&quot;outline-container-org9ab9e1f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org9ab9e1f&quot;&gt;为什么需要先 route-to（强制路由）再 rdr（重定向）&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org9ab9e1f&quot;&gt;
 &lt;p&gt;
 如果仅仅修改数据包的目标地址和端口，让数据包发往指定的新地址。数据包仍然经过物理接口（例如 en0），并且内核的路由子系统并没有将其当作本地流量处理，这可能导致 连接状态追踪（state tracking）异常，因为数据包的源地址仍然是外部地址，目标地址被改写为 127.0.0.1，但内核网络栈不一定会将这类数据包当作本地回环流量。
 &lt;/p&gt;
 
 &lt;p&gt;
-因此需要将请求先 route-to（强制路由）到 lo0 接口，然后再重定向请求。但这样存在一个问题。 route-to 到 lo0 的请求和自己发送给 127.0.0.1 的请求是一样的。如果把所有 lo0 的请求都 rdr 到 59080 端口，会导致无法访问到本地部署的 127.0.0.1 服务。
+因此需要将请求先 route-to（强制路由）到 lo0 接口，然后再重定向请求。但这样存在一个问题。route-to 到 lo0 的请求和自己发送给 127.0.0.1 的请求是一样的。如果把所有 lo0 的请求都 rdr 到 59080 端口，会导致无法访问到本地部署的 127.0.0.1 服务。
 &lt;/p&gt;
 
 &lt;p&gt;
-因此，只选择重定向 0-1024 （具体的数字，根据后续的深入使用来配置）请求的端口到代理服务，其他的端口假设为本地服务端口。
+因此，只选择重定向 0-1024（具体的数字，根据后续的深入使用来配置）请求的端口到代理服务，其他的端口假设为本地服务端口。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga820217&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga820217&quot;&gt;SS 配置&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga820217&quot;&gt;
+&lt;div id=&quot;outline-container-org7e8e0ad&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7e8e0ad&quot;&gt;SS 配置&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7e8e0ad&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-json&quot;&gt;  {
   &quot;locals&quot;: [
@@ -251,24 +714,25 @@ load anchor &quot;com.apple&quot; from &quot;/etc/pf.anchors/com.apple&quot;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org90911e3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org90911e3&quot;&gt;SSH 配置&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org90911e3&quot;&gt;
+&lt;div id=&quot;outline-container-orgcc7f381&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcc7f381&quot;&gt;SSH 配置&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcc7f381&quot;&gt;
 &lt;p&gt;
-上述配置，进行 github git SSH 操作时无法联通。因此单独配置 ssh 的代理（违背了透明原则，后续看看能否解决。）。
+上述配置，进行 github git SSH 操作时无法联通。因此单独配置 ssh, 端口设置为 443（违背了透明原则，后续看看能否解决。）。
 &lt;/p&gt;
-&lt;pre class=&quot;example&quot; id=&quot;orgf3f41d0&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org271a0e2&quot;&gt;
 Host github.com
+  Hostname ssh.github.com
+  Port 443
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
-  ProxyCommand nc -x 127.0.0.1:1080 %h %p
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgcbc56ce&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcbc56ce&quot;&gt;tproxy 脚本&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcbc56ce&quot;&gt;
+&lt;div id=&quot;outline-container-orgca2059c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgca2059c&quot;&gt;tproxy 脚本&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgca2059c&quot;&gt;
 &lt;p&gt;
 基于上述逻辑，编写一个 tproxy 脚本。
 &lt;/p&gt;
@@ -289,42 +753,42 @@ Host github.com
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgcd09153&quot;&gt;概述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgf827b56&quot;&gt;前提&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org5e5db97&quot;&gt;概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org8cd0ca8&quot;&gt;前提&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org3b12e0d&quot;&gt;CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org4344980&quot;&gt;需要的 Emacs 包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgc2e532d&quot;&gt;安装 Image-slicing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org037365d&quot;&gt;CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgd095722&quot;&gt;需要的 Emacs 包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org858ca63&quot;&gt;安装 Image-slicing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org521324d&quot;&gt;配置&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgda7e58b&quot;&gt;配置&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgdfe2a91&quot;&gt;变量&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgd913cd1&quot;&gt;Eww 配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org44b95bc&quot;&gt;Elfeed 配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org7b17e83&quot;&gt;变量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org3d59e9a&quot;&gt;Eww 配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org5448f8b&quot;&gt;Elfeed 配置&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orge017ace&quot;&gt;特性&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org66bec48&quot;&gt;特性&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org3917d02&quot;&gt;支持的链接格式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgc19f554&quot;&gt;支持的链接格式&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgcd522ed&quot;&gt;例子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org529120a&quot;&gt;缺点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgfac7144&quot;&gt;Todo List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#orgf7dd696&quot;&gt;开发历史&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org174383c&quot;&gt;例子&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org7ecbca8&quot;&gt;缺点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org2d398f3&quot;&gt;Todo List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org2a234bf&quot;&gt;开发历史&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org2dcf545&quot;&gt;Dec 18, 2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org8916a64&quot;&gt;Dec 16, 2024&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org65922f9&quot;&gt;May 12, 2023&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org428153a&quot;&gt;Dec 18, 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org7927b03&quot;&gt;Dec 16, 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/image-slicing/#org41925ec&quot;&gt;May 12, 2023&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgcd09153&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcd09153&quot;&gt;概述&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcd09153&quot;&gt;
+&lt;div id=&quot;outline-container-org5e5db97&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5e5db97&quot;&gt;概述&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5e5db97&quot;&gt;
 &lt;p&gt;
 在 Emacs 图片的展示逻辑与文本是一样的，占用一行。如果图片很高，它会调整当前行高适配图片。这种情况导致在 Emacs 当中滚动图片的体验相当糟糕。
 &lt;/p&gt;
@@ -342,21 +806,21 @@ Host github.com
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf827b56&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf827b56&quot;&gt;前提&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf827b56&quot;&gt;
+&lt;div id=&quot;outline-container-org8cd0ca8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8cd0ca8&quot;&gt;前提&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8cd0ca8&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3b12e0d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3b12e0d&quot;&gt;CLI&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3b12e0d&quot;&gt;
+&lt;div id=&quot;outline-container-org037365d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org037365d&quot;&gt;CLI&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org037365d&quot;&gt;
 &lt;p&gt;
 &lt;b&gt;Curl&lt;/b&gt;: 使用 Curl 异步下载 web 图片，如果没有 web 图片则不需要。
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4344980&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4344980&quot;&gt;需要的 Emacs 包&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4344980&quot;&gt;
+&lt;div id=&quot;outline-container-orgd095722&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd095722&quot;&gt;需要的 Emacs 包&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd095722&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;b&gt;org-element&lt;/b&gt;: 用于解析 Buffer 里的所有链接。&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;image&lt;/b&gt;: 用于创建 Image 对象。&lt;/li&gt;
@@ -364,14 +828,15 @@ Host github.com
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgc2e532d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgc2e532d&quot;&gt;安装 Image-slicing&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgc2e532d&quot;&gt;
+&lt;div id=&quot;outline-container-org858ca63&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org858ca63&quot;&gt;安装 Image-slicing&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org858ca63&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;克隆 Image-slicing 项目到你自己的 Emacs 配置目录下：&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-sh&quot;&gt;git clone git@github.com:ginqi7/image-slicing.git ~/.emacs.d/lisp/image-slicing
+&lt;pre class=&quot;src src-bash&quot;&gt;git clone git@github.com:ginqi7/image-slicing.git ~/.emacs.d/lisp/image-slicing
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -385,17 +850,17 @@ Host github.com
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org521324d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org521324d&quot;&gt;配置&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org521324d&quot;&gt;
+&lt;div id=&quot;outline-container-orgda7e58b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgda7e58b&quot;&gt;配置&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgda7e58b&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span style=&quot;color: #6c71c4;&quot;&gt;require&lt;/span&gt; &#39;&lt;span style=&quot;color: #381a8a;&quot;&gt;image-slicing&lt;/span&gt;)
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgdfe2a91&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgdfe2a91&quot;&gt;变量&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgdfe2a91&quot;&gt;
+&lt;div id=&quot;outline-container-org7b17e83&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7b17e83&quot;&gt;变量&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7b17e83&quot;&gt;
 &lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
 
 
@@ -441,9 +906,9 @@ Host github.com
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd913cd1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd913cd1&quot;&gt;Eww 配置&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd913cd1&quot;&gt;
+&lt;div id=&quot;outline-container-org3d59e9a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org3d59e9a&quot;&gt;Eww 配置&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3d59e9a&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;取消 EWW 默认的图片渲染方法&lt;/li&gt;
 &lt;/ol&gt;
@@ -461,9 +926,9 @@ Host github.com
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org44b95bc&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org44b95bc&quot;&gt;Elfeed 配置&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org44b95bc&quot;&gt;
+&lt;div id=&quot;outline-container-org5448f8b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5448f8b&quot;&gt;Elfeed 配置&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org5448f8b&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #c4a599; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #c4a599; font-style: italic;&quot;&gt;add to shr-external-rendering-functions (skip if alread setup for eww)&lt;/span&gt;
 (&lt;span style=&quot;color: #0000ff;&quot;&gt;add-to-list&lt;/span&gt; &#39;shr-external-rendering-functions
@@ -476,18 +941,18 @@ Host github.com
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge017ace&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge017ace&quot;&gt;特性&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge017ace&quot;&gt;
+&lt;div id=&quot;outline-container-org66bec48&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org66bec48&quot;&gt;特性&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org66bec48&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;code&gt;image-slicing-mode&lt;/code&gt;: 自动解析 buffer 中的图片链接，并用多行的形式渲染。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Asynchronous&lt;/code&gt;: 异步下载 Web 图片。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Multiple Modes&lt;/code&gt;: 支持多种模式的 buffer 例如：org-mode, eww, elfeed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3917d02&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3917d02&quot;&gt;支持的链接格式&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3917d02&quot;&gt;
+&lt;div id=&quot;outline-container-orgc19f554&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgc19f554&quot;&gt;支持的链接格式&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgc19f554&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Org 格式的链接
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -508,11 +973,11 @@ Host github.com
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgcd522ed&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcd522ed&quot;&gt;例子&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcd522ed&quot;&gt;
+&lt;div id=&quot;outline-container-org174383c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org174383c&quot;&gt;例子&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org174383c&quot;&gt;
 
-&lt;div id=&quot;org0a178de&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;orge7e44ff&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/gif;base64,R0lGODlhwAMcAoAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/gdnaWYuc2tpACH5BAQeAAAA
 LAAAAADAAxwChwAAAP////X19cXFxfPz8/7+/v3///7///b29vHx8f39/v/+/5CQj9LS0sbGxv//
 /n19fQUFBaKjourq6fX09d/f3vv///r5+QMDAuzs7LCxsPr6+v///e7u7fj+/4+Pj8bHxvz+//j5
@@ -17301,9 +17766,9 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org529120a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org529120a&quot;&gt;缺点&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org529120a&quot;&gt;
+&lt;div id=&quot;outline-container-org7ecbca8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7ecbca8&quot;&gt;缺点&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7ecbca8&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;如果有许多的网络图片，它会生成需要的临时文件，在系统的临时目录下。&lt;/li&gt;
 &lt;li&gt;如果 URL 链接太短，图片的切片数目会比较少，那么单个切片的行高会比较高。&lt;/li&gt;
@@ -17311,21 +17776,21 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgfac7144&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfac7144&quot;&gt;Todo List&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfac7144&quot;&gt;
+&lt;div id=&quot;outline-container-org2d398f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2d398f3&quot;&gt;Todo List&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2d398f3&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;适配 nov&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf7dd696&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf7dd696&quot;&gt;开发历史&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf7dd696&quot;&gt;
+&lt;div id=&quot;outline-container-org2a234bf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2a234bf&quot;&gt;开发历史&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2a234bf&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2dcf545&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org2dcf545&quot;&gt;Dec 18, 2024&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2dcf545&quot;&gt;
+&lt;div id=&quot;outline-container-org428153a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org428153a&quot;&gt;Dec 18, 2024&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org428153a&quot;&gt;
 &lt;p&gt;
 我发现了一个类似的包 &lt;a href=&quot;https://github.com/jcfk/org-sliced-images&quot;&gt;org-sliced-images&lt;/a&gt;, 我从中学习到了一些代码，使我的代码更加简洁：
 &lt;/p&gt;
@@ -17335,9 +17800,9 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org8916a64&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8916a64&quot;&gt;Dec 16, 2024&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8916a64&quot;&gt;
+&lt;div id=&quot;outline-container-org7927b03&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7927b03&quot;&gt;Dec 16, 2024&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7927b03&quot;&gt;
 &lt;p&gt;
 上一个版本存在一些问题：
 &lt;/p&gt;
@@ -17351,9 +17816,9 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org65922f9&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org65922f9&quot;&gt;May 12, 2023&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org65922f9&quot;&gt;
+&lt;div id=&quot;outline-container-org41925ec&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org41925ec&quot;&gt;May 12, 2023&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org41925ec&quot;&gt;
 &lt;p&gt;
 想到一个有趣的想法：把图片切片，通过 overlays 一行一行的展示，来提高图片滚动的体验。
 &lt;/p&gt;
@@ -17390,35 +17855,35 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org66c1a57&quot;&gt;目标&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgba590d3&quot;&gt;安装&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org505c366&quot;&gt;目标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org8eddea8&quot;&gt;安装&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org79d84db&quot;&gt;websocket-bridge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org4015e79&quot;&gt;Python 相关包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgbbb76bf&quot;&gt;网络翻译&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org2f40651&quot;&gt;下载 dictionary-overlay&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org80e4341&quot;&gt;添加下面配置到 ~/.emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgd1bc0c1&quot;&gt;websocket-bridge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org8ff63be&quot;&gt;Python 相关包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org875b333&quot;&gt;网络翻译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orga75a9bc&quot;&gt;下载 dictionary-overlay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org22d897b&quot;&gt;添加下面配置到 ~/.emacs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgfaa1682&quot;&gt;命令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgbadc2a2&quot;&gt;选项&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgb820f50&quot;&gt;命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgaa03da2&quot;&gt;选项&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgada3792&quot;&gt;face&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org050acc3&quot;&gt;face&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org4bf475a&quot;&gt;使用方法探讨&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org3a51206&quot;&gt;翻译逻辑&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org25f1a1c&quot;&gt;词干提取 + 词形还原&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org8cdc6c7&quot;&gt;使用方法探讨&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgd6033e3&quot;&gt;翻译逻辑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#org0175c84&quot;&gt;词干提取 + 词形还原&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orga0b6579&quot;&gt;SnowballStemmer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/dictionary-overlay/#orgd16ced4&quot;&gt;SnowballStemmer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org66c1a57&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org66c1a57&quot;&gt;目标&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org66c1a57&quot;&gt;
+&lt;div id=&quot;outline-container-org505c366&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org505c366&quot;&gt;目标&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org505c366&quot;&gt;
 &lt;p&gt;
 辅助英文较弱的 Emacser 进行英文阅读。提供了两种能力：
 &lt;/p&gt;
@@ -17428,7 +17893,7 @@ SEyiEpfIxCY68YlriAAAOw==&quot; screencast.gif=&quot;&quot;&gt;
 &lt;/ol&gt;
 
 
-&lt;div id=&quot;org67f8d7a&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;orgb75e797&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACagAAAPICAIAAAC5eBmhAAAMPWlDQ1BJQ0MgUHJvZmlsZQAASImV
 VwdYU8kWnltSIbTQpYTeBBEpAaSE0ELvzUZIAoQSYyCo2MuigmsXFbChqyIKVkAsKGJnUex9saCi
 rIsFu/ImBXTdV7433zd3/vvPmf+cOXfm3jsAqB/nisV5qAYA+aJCSVxIACMlNY1BegJUAA1WI+DA
@@ -22994,21 +23459,21 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgba590d3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgba590d3&quot;&gt;安装&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgba590d3&quot;&gt;
+&lt;div id=&quot;outline-container-org8eddea8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8eddea8&quot;&gt;安装&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8eddea8&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org79d84db&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org79d84db&quot;&gt;&lt;a href=&quot;https://github.com/ginqi7/websocket-bridge&quot;&gt;websocket-bridge&lt;/a&gt;&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org79d84db&quot;&gt;
+&lt;div id=&quot;outline-container-orgd1bc0c1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd1bc0c1&quot;&gt;&lt;a href=&quot;https://github.com/ginqi7/websocket-bridge&quot;&gt;websocket-bridge&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd1bc0c1&quot;&gt;
 &lt;p&gt;
 用于 Emacs 与外部应用进行 websocket 通信
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4015e79&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org4015e79&quot;&gt;Python 相关包&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4015e79&quot;&gt;
+&lt;div id=&quot;outline-container-org8ff63be&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org8ff63be&quot;&gt;Python 相关包&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8ff63be&quot;&gt;
 &lt;p&gt;
 插件通过 python 编写，需要安装 python3
 &lt;/p&gt;
@@ -23026,9 +23491,9 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgbbb76bf&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbbb76bf&quot;&gt;网络翻译&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbbb76bf&quot;&gt;
+&lt;div id=&quot;outline-container-org875b333&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org875b333&quot;&gt;网络翻译&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org875b333&quot;&gt;
 &lt;p&gt;
 默认会使用 sdcv 本地词典翻译。当单词在本地词典未找到时，会使用网络翻译，目前支持：
 &lt;/p&gt;
@@ -23042,18 +23507,18 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2f40651&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org2f40651&quot;&gt;下载 dictionary-overlay&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2f40651&quot;&gt;
+&lt;div id=&quot;outline-container-orga75a9bc&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orga75a9bc&quot;&gt;下载 dictionary-overlay&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orga75a9bc&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-shell&quot;&gt;git clone --depth=1 -b main https://github.com/ginqi7/dictionary-overlay ~/.emacs.d/site-lisp/dictionary-overlay/
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org80e4341&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org80e4341&quot;&gt;添加下面配置到 ~/.emacs&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org80e4341&quot;&gt;
+&lt;div id=&quot;outline-container-org22d897b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org22d897b&quot;&gt;添加下面配置到 ~/.emacs&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org22d897b&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-emacs-lisp&quot;&gt;(&lt;span style=&quot;color: #0000ff;&quot;&gt;add-to-list&lt;/span&gt; &#39;load-path &lt;span style=&quot;background-color: #FFEE99;&quot;&gt;&quot;~/.emacs.d/site-lisp/dictionary-overlay/&quot;&lt;/span&gt;)
 (&lt;span style=&quot;color: #6c71c4;&quot;&gt;require&lt;/span&gt; &#39;&lt;span style=&quot;color: #381a8a;&quot;&gt;dictionary-overlay&lt;/span&gt;)
@@ -23062,9 +23527,9 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgfaa1682&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfaa1682&quot;&gt;命令&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfaa1682&quot;&gt;
+&lt;div id=&quot;outline-container-orgb820f50&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb820f50&quot;&gt;命令&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb820f50&quot;&gt;
 &lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
 
 
@@ -23148,9 +23613,9 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgbadc2a2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbadc2a2&quot;&gt;选项&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbadc2a2&quot;&gt;
+&lt;div id=&quot;outline-container-orgaa03da2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaa03da2&quot;&gt;选项&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaa03da2&quot;&gt;
 &lt;table border=&quot;2&quot; cellspacing=&quot;0&quot; cellpadding=&quot;6&quot; rules=&quot;groups&quot; frame=&quot;hsides&quot;&gt;
 
 
@@ -23159,12 +23624,13 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 
 &lt;col class=&quot;org-left&quot;&gt;
 &lt;/colgroup&gt;
-&lt;tbody&gt;
+&lt;thead&gt;
 &lt;tr&gt;
-&lt;td class=&quot;org-left&quot;&gt;选项&lt;/td&gt;
-&lt;td class=&quot;org-left&quot;&gt;说明&lt;/td&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;选项&lt;/th&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;说明&lt;/th&gt;
 &lt;/tr&gt;
-
+&lt;/thead&gt;
+&lt;tbody&gt;
 &lt;tr&gt;
 &lt;td class=&quot;org-left&quot;&gt;dictionary-overlay-just-unknown-words&lt;/td&gt;
 &lt;td class=&quot;org-left&quot;&gt;t 时使用“生词本”模式，nil 为“透析阅读”模式，默认为 t&lt;/td&gt;
@@ -23192,9 +23658,9 @@ AAECBAgQIECAAAECBAgQKBX4AaVnpkMt7e2hAAAAAElFTkSuQmCC&quot; 20221109T224717--dict
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgada3792&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgada3792&quot;&gt;face&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgada3792&quot;&gt;
+&lt;div id=&quot;outline-container-org050acc3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org050acc3&quot;&gt;face&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org050acc3&quot;&gt;
 &lt;p&gt;
 用于控制生词的展示，为了不影响阅读默认为空，不对原始 face 做任何修改。如果希望能通过 face 对生词进行显示增加可以参考
 &lt;/p&gt;
@@ -23225,7 +23691,7 @@ face `dictionary-overlay-unknownword` 如果用户不自行定义，那么不会
 &lt;/div&gt;
 
 
-&lt;div id=&quot;orge267fb3&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;org5dbb159&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACboAAAOyCAYAAAC/+PGEAAAKpWlDQ1BJQ0MgUHJvZmlsZQAASImV
 lwdQ0+kSwL//P73REhCQEnqT3gJICT106WAjJAFCiSEQmh05PMpZUBEBRdFTAQXPAshZAcV2CCiI
 9UAOEeU8LNhQeX9gCN69ee/N25md/c1md7/db/7fzAYAigxbKEyGZQBIEaSLgr1c6ZFR0XTcM0AC
@@ -29939,9 +30405,9 @@ RK5CYII=&quot; 20221109T224717--dictionary-overlay__emacs_project_cn_blog-1.png=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4bf475a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4bf475a&quot;&gt;使用方法探讨&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4bf475a&quot;&gt;
+&lt;div id=&quot;outline-container-org8cdc6c7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8cdc6c7&quot;&gt;使用方法探讨&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8cdc6c7&quot;&gt;
 &lt;p&gt;
 默认使用“生词本”模式，阅读英文文章时，需要手动添加生词（ &lt;code&gt;dictionary-overlay-mark-word-unknown&lt;/code&gt; ）。可以和你的“查询单词”的快捷键保持在一起。那么你下次遇到生词时，会自动展示出生词。
 &lt;/p&gt;
@@ -29963,9 +30429,9 @@ RK5CYII=&quot; 20221109T224717--dictionary-overlay__emacs_project_cn_blog-1.png=
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3a51206&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3a51206&quot;&gt;翻译逻辑&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3a51206&quot;&gt;
+&lt;div id=&quot;outline-container-orgd6033e3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd6033e3&quot;&gt;翻译逻辑&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd6033e3&quot;&gt;
 &lt;p&gt;
 当前当前翻译的逻辑是：
 &lt;/p&gt;
@@ -29976,7 +30442,7 @@ RK5CYII=&quot; 20221109T224717--dictionary-overlay__emacs_project_cn_blog-1.png=
 &lt;/ol&gt;
 
 
-&lt;div id=&quot;org9330fb9&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;orga6155c8&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACUgAAAIiCAYAAAAQULDXAAAMPWlDQ1BJQ0MgUHJvZmlsZQAASImV
 VwdYU8kWnltSIbTQpYTeBBEpAaSE0ELvzUZIAoQSYyCo2MuigmsXFbChqyIKVkAsKGJnUex9saCi
 rIsFu/ImBXTdV7433zd3/vvPmf+cOXfm3jsAqB/nisV5qAYA+aJCSVxIACMlNY1BegJUAA1WI+DA
@@ -31039,9 +31505,9 @@ ECBAgAABAgQIECBAgAABAgQKgQFthjyqDA0ypQAAAABJRU5ErkJggg==&quot; 20221109T224717--
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org25f1a1c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org25f1a1c&quot;&gt;词干提取 + 词形还原&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org25f1a1c&quot;&gt;
+&lt;div id=&quot;outline-container-org0175c84&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0175c84&quot;&gt;词干提取 + 词形还原&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0175c84&quot;&gt;
 &lt;p&gt;
 在自然语言处理领域，对单词有两种处理方式：
 &lt;/p&gt;
@@ -31063,7 +31529,7 @@ ECBAgAABAgQIECBAgAABAgQKgQFthjyqDA0ypQAAAABJRU5ErkJggg==&quot; 20221109T224717--
 &lt;/p&gt;
 
 
-&lt;div id=&quot;org7ddd958&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;orgea1b7b9&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdQAAAJcCAYAAADw9SbGAAAMPWlDQ1BJQ0MgUHJvZmlsZQAASImV
 VwdYU8kWnltSIbTQpYTeBBEpAaSE0ELvzUZIAoQSYyCo2MuigmsXFbChqyIKVkAsKGJnUex9saCi
 rIsFu/ImBXTdV7433zd3/vvPmf+cOXfm3jsAqB/nisV5qAYA+aJCSVxIACMlNY1BegJUAA1WI+DA
@@ -32414,7 +32880,7 @@ EEAAAQQQQAABBBBAAAEEEEDAcQL/D31b6ZcYSVsUAAAAAElFTkSuQmCC&quot; 20221109T224717--
 &lt;/p&gt;
 
 
-&lt;div id=&quot;org24a7407&quot; class=&quot;figure&quot;&gt;
+&lt;div id=&quot;org1880d8f&quot; class=&quot;figure&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACcIAAANKCAYAAACjp6+cAAAMPWlDQ1BJQ0MgUHJvZmlsZQAASImV
 VwdYU8kWnltSIbTQpYTeBBEpAaSE0ELvzUZIAoQSYyCo2MuigmsXFbChqyIKVkAsKGJnUex9saCi
 rIsFu/ImBXTdV7433zd3/vvPmf+cOXfm3jsAqB/nisV5qAYA+aJCSVxIACMlNY1BegJUAA1WI+DA
@@ -36390,9 +36856,9 @@ gAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAgggEByB/w+sdKHIZq39yAAAAABJRU5ErkJggg==&quo
 &lt;p&gt;&lt;span class=&quot;figure-number&quot;&gt;Figure 4: &lt;/span&gt;stem render&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga0b6579&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orga0b6579&quot;&gt;SnowballStemmer&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orga0b6579&quot;&gt;
+&lt;div id=&quot;outline-container-orgd16ced4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd16ced4&quot;&gt;SnowballStemmer&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd16ced4&quot;&gt;
 &lt;p&gt;
 Snowball 是一种很常用的词干提取算法。python 中有一个专门的实现 Snowball 算法的包 snowballstemmer, 它比 nltk 包轻量。当前版本不需要 nltk 的复杂功能，因此直接使用 snowballstemmer 包。
 &lt;/p&gt;
@@ -36425,8 +36891,8 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0011/#orgabe0ace&quot;&gt;喜欢与不喜欢&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0011/#org447fcaf&quot;&gt;总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0011/#orgcc49346&quot;&gt;喜欢与不喜欢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0011/#orgfaecef3&quot;&gt;总结&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -36491,9 +36957,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;p&gt;
 整个故事分成了三个部分：第一部分描述了少年与中年女人之间的虐恋；第二部分揭示了女主角神秘的过往，对德国二战的罪行进行了审判与反思；最后一部分进行了点题，男主角为女主角进行了持久的​&lt;code&gt;朗读&lt;/code&gt;​，留下了一个耐人寻味的结局。
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-orgabe0ace&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgabe0ace&quot;&gt;喜欢与不喜欢&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgabe0ace&quot;&gt;
+&lt;div id=&quot;outline-container-orgcc49346&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcc49346&quot;&gt;喜欢与不喜欢&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcc49346&quot;&gt;
 &lt;p&gt;
 我比较喜欢文中，站在男主人公的视角，对女主角的一些描述，例如：
 &lt;/p&gt;
@@ -36589,9 +37055,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org447fcaf&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org447fcaf&quot;&gt;总结&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org447fcaf&quot;&gt;
+&lt;div id=&quot;outline-container-orgfaecef3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfaecef3&quot;&gt;总结&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfaecef3&quot;&gt;
 &lt;p&gt;
 整本书的故事，十分独特。但或许由于翻译的原因，读起来并不是十分流畅。
 &lt;/p&gt;
@@ -36839,18 +37305,18 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id=&quot;text-table-of-contents&quot; role=&quot;doc-toc&quot;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orgfb0fbd0&quot;&gt;一&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orgaea7f78&quot;&gt;二&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org505c709&quot;&gt;三&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orge15ca86&quot;&gt;四&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org63ea8fa&quot;&gt;五&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org74579b1&quot;&gt;六&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orgbbcce89&quot;&gt;一&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orga9cefc6&quot;&gt;二&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#orgfbd18d0&quot;&gt;三&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org9979ce5&quot;&gt;四&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org9f65162&quot;&gt;五&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qiqijin.com/zh/0001/#org134df26&quot;&gt;六&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgfb0fbd0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfb0fbd0&quot;&gt;一&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb0fbd0&quot;&gt;
+&lt;div id=&quot;outline-container-orgbbcce89&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbbcce89&quot;&gt;一&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbbcce89&quot;&gt;
 &lt;p&gt;
 冬日清晨，温暖的阳光透过窗，散落在房间里。银起得很早，正在忙着收拾东西。从银只身到美国留学开始，已经有五年没怎么回去了。如今他已经毕业了，科学家的梦想最终也并没能如愿，有了一份不错的工作。虽然平凡，但也充实。所以他想是时候回去一趟了。而且他在家乡的好友要结婚了，他总该要回去祝贺一下。
 &lt;/p&gt;
@@ -36872,9 +37338,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgaea7f78&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgaea7f78&quot;&gt;二&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaea7f78&quot;&gt;
+&lt;div id=&quot;outline-container-orga9cefc6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga9cefc6&quot;&gt;二&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga9cefc6&quot;&gt;
 &lt;p&gt;
 由于昨晚的大雪，整个城市披上了银妆，厚重的白雪吸收了这繁华都市的喧嚣。银慵懒地坐在开往机场的车上，看着窗外飞速倒退的风景，不着边际地回忆着自己曾经从相反方向飞驰而来地片段。
 &lt;/p&gt;
@@ -36928,9 +37394,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org505c709&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org505c709&quot;&gt;三&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org505c709&quot;&gt;
+&lt;div id=&quot;outline-container-orgfbd18d0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfbd18d0&quot;&gt;三&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfbd18d0&quot;&gt;
 &lt;p&gt;
 也不知道过了多久，等银醒过来的时候大概天已经黑了，他还没有完全清醒，直勾勾地望着前面的座椅发呆，试图回忆起刚刚做过的那场散乱的梦。
 &lt;/p&gt;
@@ -36988,9 +37454,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge15ca86&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge15ca86&quot;&gt;四&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge15ca86&quot;&gt;
+&lt;div id=&quot;outline-container-org9979ce5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9979ce5&quot;&gt;四&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9979ce5&quot;&gt;
 &lt;p&gt;
 银很喜欢坐在车里一边发呆一边注视窗外的风景，在飞速游移中在脑海里刻画城市的轮廓，幻想一些不着边际的情节。五年来城市有了很多变化。高楼上悬挂的广告牌都换上了不认识的女明星，许多的地方都被翻新得更加华丽。「说不定，我还真不该离开这里。」银望着窗外闪过的画面，半开玩笑地自言自语。等待着家慢慢地向自己靠近。不算太远的车程还是花了好几个小时，等到银回到家的时候天都快亮了。
 &lt;/p&gt;
@@ -37084,9 +37550,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org63ea8fa&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org63ea8fa&quot;&gt;五&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org63ea8fa&quot;&gt;
+&lt;div id=&quot;outline-container-org9f65162&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9f65162&quot;&gt;五&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9f65162&quot;&gt;
 &lt;p&gt;
 在回家的路上，他突然想到应该买点水果给父母比较好，于是在路边找到一家看起来不错的水果摊。他忘了父母喜欢吃什么水果了，只好蹲在那尽量多选些种类。
 &lt;/p&gt;
@@ -37156,9 +37622,9 @@ Snowball 是一种很常用的词干提取算法。python 中有一个专门的�
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org74579b1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org74579b1&quot;&gt;六&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org74579b1&quot;&gt;
+&lt;div id=&quot;outline-container-org134df26&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org134df26&quot;&gt;六&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org134df26&quot;&gt;
 &lt;p&gt;
 「真没出息呢！被人欺负了就一个人躲在这里哭么？害怕被人欺负，不是应该让自己更厉害吗！」
 &lt;/p&gt;
