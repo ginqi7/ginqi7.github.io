@@ -116,29 +116,29 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgce7b9f0">背景</a></li>
-<li><a href="#org158dcd1">优缺点</a>
+<li><a href="#org9d5e66c">背景</a></li>
+<li><a href="#orga1ea760">优缺点</a>
 <ul>
-<li><a href="#orgbb5783b">优点</a></li>
-<li><a href="#orgd19d9b1">缺点</a></li>
-<li><a href="#orgede5e58">已知问题</a></li>
+<li><a href="#org48e67a7">优点</a></li>
+<li><a href="#org28c50c8">缺点</a></li>
+<li><a href="#org3eba4af">已知问题</a></li>
 </ul>
 </li>
-<li><a href="#org68c3bb6">集成插件</a>
+<li><a href="#org1e07801">集成插件</a>
 <ul>
-<li><a href="#orgfa5793a">macos-wechat-emacs</a></li>
-<li><a href="#org078d0d4">开发详情</a></li>
+<li><a href="#org82d110b">macos-wechat-emacs</a></li>
+<li><a href="#org5d7f0a3">开发详情</a></li>
 </ul>
 </li>
-<li><a href="#orgd1dec01">定位链</a></li>
-<li><a href="#orgef80f1f">图片、链接预览</a></li>
-<li><a href="#org413c62b">性能优化</a></li>
+<li><a href="#org9d92c6e">定位链</a></li>
+<li><a href="#org015cfbb">图片、链接预览</a></li>
+<li><a href="#orgf92c6aa">性能优化</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgce7b9f0" class="outline-2">
-<h2 id="orgce7b9f0">背景</h2>
-<div class="outline-text-2" id="text-orgce7b9f0">
+<div id="outline-container-org9d5e66c" class="outline-2">
+<h2 id="org9d5e66c">背景</h2>
+<div class="outline-text-2" id="text-org9d5e66c">
 <p>
 几年前，当微信 Web 没有被封时，我一直是使用 <a href="https://github.com/hexsum/Mojo-Weixin">Mojo-Weixin</a> 通过 Emacs 来访问微信。只是很不幸，后来当微信 Web 无法访问了，该项目对我而言变得不可用。微信也没有提供公共的 api。很难有一个安全的第三方客户端。
 </p>
@@ -154,15 +154,19 @@ MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开
 <p>
 <a href="https://github.com/ginqi7/macos-wechat-cli">macos-wechat-cli</a> 的目标不是开发一个完整的微信客户端，而是借助 MacOS 微信 GUI，提供简单高效的 CLI 命令，能够供其他应用集成，访问微信。例如 <a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a>
 </p>
+
+<p>
+<b>只支持微信 3.8</b>
+</p>
 </div>
 </div>
-<div id="outline-container-org158dcd1" class="outline-2">
-<h2 id="org158dcd1">优缺点</h2>
-<div class="outline-text-2" id="text-org158dcd1">
+<div id="outline-container-orga1ea760" class="outline-2">
+<h2 id="orga1ea760">优缺点</h2>
+<div class="outline-text-2" id="text-orga1ea760">
 </div>
-<div id="outline-container-orgbb5783b" class="outline-3">
-<h3 id="orgbb5783b">优点</h3>
-<div class="outline-text-3" id="text-orgbb5783b">
+<div id="outline-container-org48e67a7" class="outline-3">
+<h3 id="org48e67a7">优点</h3>
+<div class="outline-text-3" id="text-org48e67a7">
 <ol class="org-ol">
 <li>对微信没有任何侵入，没有被封禁的风险</li>
 <li>通过 JSON 输出，可以很容易被其他应用集成</li>
@@ -170,9 +174,9 @@ MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd19d9b1" class="outline-3">
-<h3 id="orgd19d9b1">缺点</h3>
-<div class="outline-text-3" id="text-orgd19d9b1">
+<div id="outline-container-org28c50c8" class="outline-3">
+<h3 id="org28c50c8">缺点</h3>
+<div class="outline-text-3" id="text-org28c50c8">
 <ol class="org-ol">
 <li>如果微信升级过程中 UI 发生变化，应用可能会出问题。</li>
 <li>当前版本有中文相关的硬编码，只支持中文微信</li>
@@ -180,35 +184,36 @@ MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开
 </ol>
 </div>
 </div>
-<div id="outline-container-orgede5e58" class="outline-3">
-<h3 id="orgede5e58">已知问题</h3>
-<div class="outline-text-3" id="text-orgede5e58">
+<div id="outline-container-org3eba4af" class="outline-3">
+<h3 id="org3eba4af">已知问题</h3>
+<div class="outline-text-3" id="text-org3eba4af">
 <ol class="org-ol">
 <li>所有信息都会展示为“1 条未读消息”, 因此把“1 条未读消息”展示为“无未读信息”</li>
 <li>预览图片、链接后，需要关闭才能进行后续的操作。</li>
+<li>微信必须打开，可以放置在后台，但不能最小化。</li>
 </ol>
 </div>
 </div>
 </div>
-<div id="outline-container-org68c3bb6" class="outline-2">
-<h2 id="org68c3bb6">集成插件</h2>
-<div class="outline-text-2" id="text-org68c3bb6">
+<div id="outline-container-org1e07801" class="outline-2">
+<h2 id="org1e07801">集成插件</h2>
+<div class="outline-text-2" id="text-org1e07801">
 </div>
-<div id="outline-container-orgfa5793a" class="outline-3">
-<h3 id="orgfa5793a"><a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a></h3>
-<div class="outline-text-3" id="text-orgfa5793a">
+<div id="outline-container-org82d110b" class="outline-3">
+<h3 id="org82d110b"><a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a></h3>
+<div class="outline-text-3" id="text-org82d110b">
 <p>
 当前版本 macos-wechat-emacs 只提供了简单的交互界面（对话列表，消息页面）。后续将优化消息页面的展示。
 </p>
 </div>
 </div>
-<div id="outline-container-org078d0d4" class="outline-3">
-<h3 id="org078d0d4">开发详情</h3>
+<div id="outline-container-org5d7f0a3" class="outline-3">
+<h3 id="org5d7f0a3">开发详情</h3>
 </div>
 </div>
-<div id="outline-container-orgd1dec01" class="outline-2">
-<h2 id="orgd1dec01">定位链</h2>
-<div class="outline-text-2" id="text-orgd1dec01">
+<div id="outline-container-org9d92c6e" class="outline-2">
+<h2 id="org9d92c6e">定位链</h2>
+<div class="outline-text-2" id="text-org9d92c6e">
 <ol class="org-ol">
 <li>微信聊天列标：[.splitGroup, .scrollArea, .table, .row, .cell, .row]</li>
 <li>微信聊天按钮： [.radioButton]</li>
@@ -217,17 +222,17 @@ MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开
 </ol>
 </div>
 </div>
-<div id="outline-container-orgef80f1f" class="outline-2">
-<h2 id="orgef80f1f">图片、链接预览</h2>
-<div class="outline-text-2" id="text-orgef80f1f">
+<div id="outline-container-org015cfbb" class="outline-2">
+<h2 id="org015cfbb">图片、链接预览</h2>
+<div class="outline-text-2" id="text-org015cfbb">
 <p>
 通过 message index 定位到信息在微信 GUI 中的位置，通过触发 press 事件，展示预览窗口。
 </p>
 </div>
 </div>
-<div id="outline-container-org413c62b" class="outline-2">
-<h2 id="org413c62b">性能优化</h2>
-<div class="outline-text-2" id="text-org413c62b">
+<div id="outline-container-orgf92c6aa" class="outline-2">
+<h2 id="orgf92c6aa">性能优化</h2>
+<div class="outline-text-2" id="text-orgf92c6aa">
 <p>
 当微信 GUI 位于，最前台时，Accessibility API 的性能超快。当它位于后台时，性能会大幅下降。
 测试发现，如果 Accessibility API 前，对微信的进程发送一个按键事件。会提高后续的访问性能。

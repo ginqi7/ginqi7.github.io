@@ -116,22 +116,23 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcb7f97f">简介</a></li>
-<li><a href="#org0b4e567">安装 shadowsocks-rust</a></li>
-<li><a href="#org4a7e288">pf 配置</a>
+<li><a href="#org1ef0e44">简介</a></li>
+<li><a href="#orgda07fa1">安装 shadowsocks-rust</a></li>
+<li><a href="#org27ed412">pf 配置</a>
 <ul>
-<li><a href="#org9ab9e1f">为什么需要先 route-to（强制路由）再 rdr（重定向）</a></li>
+<li><a href="#orgf8a8988">为什么需要先 route-to（强制路由）再 rdr（重定向）</a></li>
 </ul>
 </li>
-<li><a href="#org7e8e0ad">SS 配置</a></li>
-<li><a href="#orgcc7f381">SSH 配置</a></li>
-<li><a href="#orgca2059c">tproxy 脚本</a></li>
+<li><a href="#org568bff3">SS 配置</a></li>
+<li><a href="#org52d98a6">SSH 配置</a></li>
+<li><a href="#orgded389d">问题</a></li>
+<li><a href="#orgdd3e3f8">tproxy 脚本</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcb7f97f" class="outline-2">
-<h2 id="orgcb7f97f">简介</h2>
-<div class="outline-text-2" id="text-orgcb7f97f">
+<div id="outline-container-org1ef0e44" class="outline-2">
+<h2 id="org1ef0e44">简介</h2>
+<div class="outline-text-2" id="text-org1ef0e44">
 <p>
 透明代理：用户在访问网络时无需特别配置或知晓代理的存在，不需要一个程序一个程序的设置。代理能够自动判断哪些请求需要通过代理，哪些请求直接链接。一般是通过修改路由表的方式实现。
 </p>
@@ -145,19 +146,19 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org0b4e567" class="outline-2">
-<h2 id="org0b4e567">安装 shadowsocks-rust</h2>
-<div class="outline-text-2" id="text-org0b4e567">
+<div id="outline-container-orgda07fa1" class="outline-2">
+<h2 id="orgda07fa1">安装 shadowsocks-rust</h2>
+<div class="outline-text-2" id="text-orgda07fa1">
 <div class="org-src-container">
 <pre class="src src-shell">brew install shadowsocks-rust
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org4a7e288" class="outline-2">
-<h2 id="org4a7e288">pf 配置</h2>
-<div class="outline-text-2" id="text-org4a7e288">
-<pre class="example" id="org0476f85">
+<div id="outline-container-org27ed412" class="outline-2">
+<h2 id="org27ed412">pf 配置</h2>
+<div class="outline-text-2" id="text-org27ed412">
+<pre class="example" id="orga26890f">
 scrub-anchor "com.apple/*"
 
 table &lt;direct_cidr&gt; persist file "/Users/a77/Downloads/tproxy/configs/direct_cidr.txt" #1
@@ -184,9 +185,9 @@ load anchor "com.apple" from "/etc/pf.anchors/com.apple"
 实际的调用逻辑是，先把需要代理的请求，发送到本地回环接口 (lo0)，然后，再把 lo0 上的流量重定向到 59080 端口（ss 会监听这个端口）。不需要代理的请求，不通过 lo0 直接发往目标。
 </p>
 </div>
-<div id="outline-container-org9ab9e1f" class="outline-3">
-<h3 id="org9ab9e1f">为什么需要先 route-to（强制路由）再 rdr（重定向）</h3>
-<div class="outline-text-3" id="text-org9ab9e1f">
+<div id="outline-container-orgf8a8988" class="outline-3">
+<h3 id="orgf8a8988">为什么需要先 route-to（强制路由）再 rdr（重定向）</h3>
+<div class="outline-text-3" id="text-orgf8a8988">
 <p>
 如果仅仅修改数据包的目标地址和端口，让数据包发往指定的新地址。数据包仍然经过物理接口（例如 en0），并且内核的路由子系统并没有将其当作本地流量处理，这可能导致 连接状态追踪（state tracking）异常，因为数据包的源地址仍然是外部地址，目标地址被改写为 127.0.0.1，但内核网络栈不一定会将这类数据包当作本地回环流量。
 </p>
@@ -201,9 +202,9 @@ load anchor "com.apple" from "/etc/pf.anchors/com.apple"
 </div>
 </div>
 </div>
-<div id="outline-container-org7e8e0ad" class="outline-2">
-<h2 id="org7e8e0ad">SS 配置</h2>
-<div class="outline-text-2" id="text-org7e8e0ad">
+<div id="outline-container-org568bff3" class="outline-2">
+<h2 id="org568bff3">SS 配置</h2>
+<div class="outline-text-2" id="text-org568bff3">
 <div class="org-src-container">
 <pre class="src src-json">  {
   "locals": [
@@ -222,13 +223,13 @@ load anchor "com.apple" from "/etc/pf.anchors/com.apple"
 </div>
 </div>
 </div>
-<div id="outline-container-orgcc7f381" class="outline-2">
-<h2 id="orgcc7f381">SSH 配置</h2>
-<div class="outline-text-2" id="text-orgcc7f381">
+<div id="outline-container-org52d98a6" class="outline-2">
+<h2 id="org52d98a6">SSH 配置</h2>
+<div class="outline-text-2" id="text-org52d98a6">
 <p>
 上述配置，进行 github git SSH 操作时无法联通。因此单独配置 ssh, 端口设置为 443（违背了透明原则，后续看看能否解决。）。
 </p>
-<pre class="example" id="org271a0e2">
+<pre class="example" id="org2fcb849">
 Host github.com
   Hostname ssh.github.com
   Port 443
@@ -238,9 +239,17 @@ Host github.com
 </pre>
 </div>
 </div>
-<div id="outline-container-orgca2059c" class="outline-2">
-<h2 id="orgca2059c">tproxy 脚本</h2>
-<div class="outline-text-2" id="text-orgca2059c">
+<div id="outline-container-orgded389d" class="outline-2">
+<h2 id="orgded389d">问题</h2>
+<div class="outline-text-2" id="text-orgded389d">
+<ul class="org-ul">
+<li>启动 docker 容器会破坏这个透明代理</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdd3e3f8" class="outline-2">
+<h2 id="orgdd3e3f8">tproxy 脚本</h2>
+<div class="outline-text-2" id="text-orgdd3e3f8">
 <p>
 基于上述逻辑，编写一个 tproxy 脚本。
 </p>
