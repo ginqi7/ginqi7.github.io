@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/"  class= "en-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="en-language">
+                            </a>
+                            <a href="/" class="image-text"> (英文)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/feed.xml"  class= "zh-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="zh-rss">
+                            </a>
+                            <a href="/zh/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/thoughts/0"  class= "zh-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="zh-thoughts">
+                            </a>
+                            <a href="/zh/thoughts/0" class="image-text"> (想法)  </a>
+                        </div>
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> MacOS 透明代理 </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/zh/tags/macos">#macos </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/zh/tags/proxy">#proxy </a>
+    </div>
+
+
+	</div>
+    </div>
+</center>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org67d5084">简介</a></li>
+<li><a href="#org78c2a30">安装 shadowsocks-rust</a></li>
+<li><a href="#org204785a">pf 配置</a>
+<ul>
+<li><a href="#orgb19b4ad">为什么需要先 route-to（强制路由）再 rdr（重定向）</a></li>
+</ul>
+</li>
+<li><a href="#org992d997">SS 配置</a></li>
+<li><a href="#org80c5356">SSH 配置</a></li>
+<li><a href="#orgc397b44">问题</a></li>
+<li><a href="#org7b368b5">tproxy 脚本</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67d5084" class="outline-2">
+<h2 id="org67d5084">简介</h2>
+<div class="outline-text-2" id="text-org67d5084">
+<p>
+透明代理：用户在访问网络时无需特别配置或知晓代理的存在，不需要一个程序一个程序的设置。代理能够自动判断哪些请求需要通过代理，哪些请求直接链接。一般是通过修改路由表的方式实现。
+</p>
+
+<p>
+本文是参考 <a href="https://climbover.minidump.info/gateway/2023/06/25/macOS-transparent-proxy">macOS上的透明代理</a> 这篇文章
+</p>
+
+<p>
+随便购买一个便宜的机场，使用 <a href="https://github.com/shadowsocks/shadowsocks-rust">shadowsocks-rust</a> 连接机场。使用 <a href="https://murusfirewall.com/Documentation/OS%20X%20PF%20Manual.pdf">Packet Filter 一个状态检测型的包过滤防火墙</a> 修改请求的路由。
+</p>
+</div>
+</div>
+<div id="outline-container-org78c2a30" class="outline-2">
+<h2 id="org78c2a30">安装 shadowsocks-rust</h2>
+<div class="outline-text-2" id="text-org78c2a30">
+<div class="org-src-container">
+<pre class="src src-shell">brew install shadowsocks-rust
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org204785a" class="outline-2">
+<h2 id="org204785a">pf 配置</h2>
+<div class="outline-text-2" id="text-org204785a">
+<pre class="example" id="org1af8cf7">
+scrub-anchor "com.apple/*"
+
+table &lt;direct_cidr&gt; persist file "/Users/a77/Downloads/tproxy/configs/direct_cidr.txt" #1
+
+nat-anchor "com.apple/*"
+rdr-anchor "com.apple/*"
+
+rdr pass on lo0 proto tcp from any to any port 0:1024 -&gt; 127.0.0.1 port 59080 #2
+
+pass out route-to (lo0 127.0.0.1) proto tcp from any to !&lt;direct_cidr&gt; #3
+
+dummynet-anchor "com.apple/*"
+anchor "com.apple/*"
+load anchor "com.apple" from "/etc/pf.anchors/com.apple"
+</pre>
+
+<ol class="org-ol">
+<li>direct<sub>cidr.txt</sub> 文件中定义了哪些 ip 地址不需要代理，<a href="https://github.com/missdeer/daily-weekly-build/tree/cidr">这里有一些ip地址</a></li>
+<li>将所有发往本地回环接口 (lo0) 端口为 0-1024 的 TCP 流量，重定向到了本机的 59080 端口。</li>
+<li>确保所有满足条件的出站 TCP 流量在发送之前被强制路由到本机的 lo0 接口，通过 127.0.0.1 转发出去。</li>
+</ol>
+
+<p>
+实际的调用逻辑是，先把需要代理的请求，发送到本地回环接口 (lo0)，然后，再把 lo0 上的流量重定向到 59080 端口（ss 会监听这个端口）。不需要代理的请求，不通过 lo0 直接发往目标。
+</p>
+</div>
+<div id="outline-container-orgb19b4ad" class="outline-3">
+<h3 id="orgb19b4ad">为什么需要先 route-to（强制路由）再 rdr（重定向）</h3>
+<div class="outline-text-3" id="text-orgb19b4ad">
+<p>
+如果仅仅修改数据包的目标地址和端口，让数据包发往指定的新地址。数据包仍然经过物理接口（例如 en0），并且内核的路由子系统并没有将其当作本地流量处理，这可能导致 连接状态追踪（state tracking）异常，因为数据包的源地址仍然是外部地址，目标地址被改写为 127.0.0.1，但内核网络栈不一定会将这类数据包当作本地回环流量。
+</p>
+
+<p>
+因此需要将请求先 route-to（强制路由）到 lo0 接口，然后再重定向请求。但这样存在一个问题。route-to 到 lo0 的请求和自己发送给 127.0.0.1 的请求是一样的。如果把所有 lo0 的请求都 rdr 到 59080 端口，会导致无法访问到本地部署的 127.0.0.1 服务。
+</p>
+
+<p>
+因此，只选择重定向 0-1024（具体的数字，根据后续的深入使用来配置）请求的端口到代理服务，其他的端口假设为本地服务端口。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org992d997" class="outline-2">
+<h2 id="org992d997">SS 配置</h2>
+<div class="outline-text-2" id="text-org992d997">
+<div class="org-src-container">
+<pre class="src src-json">  {
+  "locals": [
+    {
+      "local_address": "0.0.0.0",
+      "local_port": 59080,
+      "protocol": "redir"
+    }
+  ],
+  "ss_local_port": 1080,
+  "local_address": "127.0.0.1",
+  "servers": [
+]
+  }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org80c5356" class="outline-2">
+<h2 id="org80c5356">SSH 配置</h2>
+<div class="outline-text-2" id="text-org80c5356">
+<p>
+上述配置，进行 github git SSH 操作时无法联通。因此单独配置 ssh, 端口设置为 443（违背了透明原则，后续看看能否解决。）。
+</p>
+<pre class="example" id="org7b561c1">
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc397b44" class="outline-2">
+<h2 id="orgc397b44">问题</h2>
+<div class="outline-text-2" id="text-orgc397b44">
+<ul class="org-ul">
+<li>启动 docker 容器会破坏这个透明代理</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b368b5" class="outline-2">
+<h2 id="org7b368b5">tproxy 脚本</h2>
+<div class="outline-text-2" id="text-org7b368b5">
+<p>
+基于上述逻辑，编写一个 tproxy 脚本。
+</p>
+
+<p>
+<a href="https://github.com/ginqi7/tproxy">https://github.com/ginqi7/tproxy</a>
+</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+    <li>
+	Previous: <a href="/zh/0015/">MacOS 软件</a>
+    </li>
+
+
+
+    <li>
+	Next: <a href="/zh/image-slicing/">Image Slicing</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>

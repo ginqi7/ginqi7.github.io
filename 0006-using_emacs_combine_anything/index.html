@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh"  class= "zh-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="zh-language">
+                            </a>
+                            <a href="/zh" class="image-text"> (Chinese)  </a>
+                        </div>
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/feed.xml"  class= "en-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="en-rss">
+                            </a>
+                            <a href="/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/thoughts/0"  class= "en-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="en-thoughts">
+                            </a>
+                            <a href="/thoughts/0" class="image-text"> (Thoughts)  </a>
+                        </div>
+                    
+                
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> Using Emacs Combine Anything </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/tags/emacs">#emacs </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/tags/project">#project </a>
+    </div>
+
+
+	</div>
+    </div>
+</center>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org015ea66">Using Emacs as a GUI or interactive interface</a>
+<ul>
+<li><a href="#orgb8af759">Example</a></li>
+</ul>
+</li>
+<li><a href="#orgd1539d3">Global Interactive Emacs</a>
+<ul>
+<li><a href="#org5471e4d">Principle</a></li>
+<li><a href="#org60d4450">Pros and cons</a>
+<ul>
+<li><a href="#org8f81365">Pros</a></li>
+<li><a href="#orgc569970">Cons</a></li>
+</ul>
+</li>
+<li><a href="#org9292796">Example</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+I've written several Emacs tools to be more productive. As an Emacs Lisp novice, instead of writing pure Emacs Lisp programs, I used Emacs Lisp to encapsulate several console tools and use Emacs as an adhesive. Overall, it feels good to use.
+</p>
+
+<p>
+I feel using Emacs as a console tools' GUI interface is a good choice. On the one hand, it can reuse a series of methods and plugins of Emacs and write some frequent operations as Emacs functions and bind them to a shortcut key. You can run some console commands easily and quickly while writing documents, On the other hand, there is no need to repeat the core logic of console tools.
+</p>
+
+<p>
+Recently wrote for 4 Emacs tools:
+</p>
+
+<ol class="org-ol">
+<li>leetcode-emacs: <a href="https://github.com/ginqi7/leetcode-emacs">https://github.com/ginqi7/leetcode-emacs</a>, an emacs plugin to write Leetcode programs</li>
+<li>hbase-shell-emacs: <a href="https://github.com/ginqi7/hbase-shell-emacs">https://github.com/ginqi7/hbase-shell-emacs</a>, A Emacs Plugin for Hbase shell</li>
+<li>kubectl-emacs: <a href="https://github.com/ginqi7/kubectl-emacs">https://github.com/ginqi7/kubectl-emacs</a>, This is an Emacs plugin that makes it easier and faster to manage k8s using kubectl.</li>
+<li>global-interactive-emacs: <a href="https://github.com/ginqi7/global-interactive-emacs">https://github.com/ginqi7/global-interactive-emacs</a>, Global Interactive Emacs</li>
+</ol>
+
+<p>
+These tools can be divided into two categories:
+</p>
+
+<p>
+The first 3 tools use Emacs as a GUI or interactive interface for a series of command-line tools
+</p>
+
+<p>
+The last one is using Emacs as the backend of the system application shortcut launcher. Use interactive methods outside of Emacs defined in Emacs.
+</p>
+<div id="outline-container-org015ea66" class="outline-2">
+<h2 id="org015ea66">Using Emacs as a GUI or interactive interface</h2>
+<div class="outline-text-2" id="text-org015ea66">
+<p>
+The idea and implementation of using Emacs as a GUI or interactive interface are very simple and intuitive.
+</p>
+
+<ul class="org-ul">
+<li>Using emacs to define an interactive function for command-line tools, while you want to fuzz search some options or inputs to run a complex command.</li>
+<li>Using emacs <code>ctable</code><sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> to list outputs and bind some function on hotkey in its cell, while you want to review command-line tools' output, and run some frequency operations on some specific output.</li>
+</ul>
+</div>
+<div id="outline-container-orgb8af759" class="outline-3">
+<h3 id="orgb8af759">Example</h3>
+<div class="outline-text-3" id="text-orgb8af759">
+<p align="center"><img width="600px" src="https://github.com/ginqi7/leetcode-emacs/raw/master/resources/leetcode-filter-by-tag.gif"></img></p>
+
+<p align="center"><img width="600px" src="https://github.com/ginqi7/kubectl-emacs/raw/main/images/kubect-get-interactive.gif"></img></p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1539d3" class="outline-2">
+<h2 id="orgd1539d3">Global Interactive Emacs</h2>
+<div class="outline-text-2" id="text-orgd1539d3">
+<p>
+This tool is inspired by article : <a href="https://isamert.net/2022/03/16/global-interactive-emacs-functions.html">Global interactive Emacs functions</a>.It provides an idea to run Emacs functions outside of Emacs.
+</p>
+
+<p>
+So I try to use this idea to write a tool like <a href="https://www.obdev.at/products/launchbar/index.html">lauchbar</a> or <a href="https://www.alfredapp.com/">Alfred</a>. It can help users quickly launch apps or run workflows.
+</p>
+
+<p>
+I'm using it to replace the Launchbar.
+</p>
+</div>
+<div id="outline-container-org5471e4d" class="outline-3">
+<h3 id="org5471e4d">Principle</h3>
+<div class="outline-text-3" id="text-org5471e4d">
+<p>
+the idea of <code>Global Interactive Emacs</code> is so interesting.
+</p>
+
+<p>
+On Emacs, using <code>completing-function</code> to implement interactive function, it will use minibuffer to input function parameter.
+</p>
+
+<p>
+<code>Global Interactive Emacs</code> overwrite the <code>completing-function</code>, using <code>choose</code><sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> to accept parameter. So we can run Emacs interactive function without focus Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org60d4450" class="outline-3">
+<h3 id="org60d4450">Pros and cons</h3>
+<div class="outline-text-3" id="text-org60d4450">
+<p>
+This tool has some pros and cons, and I think if you have the following needs, you can try to use it :
+</p>
+
+<ul class="org-ul">
+<li>you don't want pay for other tools like <a href="https://www.obdev.at/products/launchbar/index.html">lauchbar</a> or <a href="https://www.alfredapp.com/">Alfred</a> .</li>
+<li>you wish some function in Emacs could run out of Emacs.</li>
+<li>You're familiar with Emacs, there are some plugins, and custom functions that you want to reuse.</li>
+<li>You don't want to learn a new language or workflow of a new software</li>
+<li>&#x2026;</li>
+</ul>
+</div>
+<div id="outline-container-org8f81365" class="outline-4">
+<h4 id="org8f81365">Pros</h4>
+<div class="outline-text-4" id="text-org8f81365">
+<ul class="org-ul">
+<li><b>free</b>: Whether Lauchbar or Alfred, you need to pay for it to use it comfortably and efficiently. Just need <code>Emacs</code>  and some open source software that you can use for free.</li>
+<li><b>consistency</b>: You can use the same features inside or outside of Emacs and have a similar experience.</li>
+<li><b>Simple Configuration</b>: If you are familiar with Emacs, you can easily configure it with emacs-lisp without having to relearn the language and process of other tools.</li>
+<li><b>Scalability</b>: You can write your interactive functions and plug them into the tool, or use the Emacs plugins developed by others to extract the interaction functions and plug them into the tool.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc569970" class="outline-4">
+<h4 id="orgc569970">Cons</h4>
+<div class="outline-text-4" id="text-orgc569970">
+<ul class="org-ul">
+<li><b>Not powerful for now</b>: Obviously, the tool is not as powerful as Lauchbar or Alfred. At the moment it is only useful for my own needs. I will continue to improve according to my needs, and anyone is welcome to help improve it.</li>
+<li><b>Can't perfectly support all Emacs interactive functions</b>: There are currently some Emacs interaction functions that cannot be run outside of Emacs, such as <code>execute-extended-command</code>. I don't have the train of thought to support it yet.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9292796" class="outline-3">
+<h3 id="org9292796">Example</h3>
+<div class="outline-text-3" id="text-org9292796">
+<p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-open-url.gif"></img></p>
+
+<p align="center"><img width="600px" src="https://github.com/ginqi7/global-interactive-emacs/raw/main/example/global-interactive-run-app.gif"></img></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://github.com/kiwanami/emacs-ctable">emacs-ctable</a> : Table Component for elisp
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://github.com/chipsenkbeil/choose">choose github</a> :Fuzzy matcher for OS X that uses both std{in,out} and a native GUI
+</p></div></div>
+
+
+</div>
+</div>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+    <li>
+	Previous: <a href="/image-slicing/">Image Slicing</a>
+    </li>
+
+
+
+    <li>
+	Next: <a href="/0005/">Project Hail Mary Reading Notes</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>

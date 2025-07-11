@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/"  class= "en-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="en-language">
+                            </a>
+                            <a href="/" class="image-text"> (英文)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/feed.xml"  class= "zh-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="zh-rss">
+                            </a>
+                            <a href="/zh/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/thoughts/0"  class= "zh-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="zh-thoughts">
+                            </a>
+                            <a href="/zh/thoughts/0" class="image-text"> (想法)  </a>
+                        </div>
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> MacOS 微信 CLI </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/zh/tags/macos">#macos </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/zh/tags/software">#software </a>
+    </div>
+
+
+	</div>
+    </div>
+</center>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0ee7fc6">背景</a></li>
+<li><a href="#org0580f3e">优缺点</a>
+<ul>
+<li><a href="#orge04a403">优点</a></li>
+<li><a href="#org44befa1">缺点</a></li>
+<li><a href="#org9653637">已知问题</a></li>
+</ul>
+</li>
+<li><a href="#orgaa928d0">集成插件</a>
+<ul>
+<li><a href="#orgd01fd81">macos-wechat-emacs</a></li>
+<li><a href="#orgee6c2dd">开发详情</a></li>
+</ul>
+</li>
+<li><a href="#orgf6ac892">定位链</a></li>
+<li><a href="#org0394276">图片、链接预览</a></li>
+<li><a href="#org3857c9c">性能优化</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ee7fc6" class="outline-2">
+<h2 id="org0ee7fc6">背景</h2>
+<div class="outline-text-2" id="text-org0ee7fc6">
+<p>
+几年前，当微信 Web 没有被封时，我一直是使用 <a href="https://github.com/hexsum/Mojo-Weixin">Mojo-Weixin</a> 通过 Emacs 来访问微信。只是很不幸，后来当微信 Web 无法访问了，该项目对我而言变得不可用。微信也没有提供公共的 api。很难有一个安全的第三方客户端。
+</p>
+
+<p>
+我对微信的需求比较简单。能够快速简单地在 Emacs 中查看/发送针对某几个人的信息。我并不是需要一个完整的微信客户端。
+</p>
+
+<p>
+MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开发了 <a href="https://github.com/ginqi7/macos-wechat-cli">macos-wechat-cli</a> 利用 Accessibility API 访问微信的 GUI，通过命令行来与微信进行交互。
+</p>
+
+<p>
+<a href="https://github.com/ginqi7/macos-wechat-cli">macos-wechat-cli</a> 的目标不是开发一个完整的微信客户端，而是借助 MacOS 微信 GUI，提供简单高效的 CLI 命令，能够供其他应用集成，访问微信。例如 <a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a>
+</p>
+
+<p>
+<b>只支持微信 3.8</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org0580f3e" class="outline-2">
+<h2 id="org0580f3e">优缺点</h2>
+<div class="outline-text-2" id="text-org0580f3e">
+</div>
+<div id="outline-container-orge04a403" class="outline-3">
+<h3 id="orge04a403">优点</h3>
+<div class="outline-text-3" id="text-orge04a403">
+<ol class="org-ol">
+<li>对微信没有任何侵入，没有被封禁的风险</li>
+<li>通过 JSON 输出，可以很容易被其他应用集成</li>
+<li>尽可优化了 Accessibility API 访问的性能，能够在 0.5 秒里完成数据更新、数据发送</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org44befa1" class="outline-3">
+<h3 id="org44befa1">缺点</h3>
+<div class="outline-text-3" id="text-org44befa1">
+<ol class="org-ol">
+<li>如果微信升级过程中 UI 发生变化，应用可能会出问题。</li>
+<li>当前版本有中文相关的硬编码，只支持中文微信</li>
+<li>只展示当前 GUI 已经加载出来的信息</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9653637" class="outline-3">
+<h3 id="org9653637">已知问题</h3>
+<div class="outline-text-3" id="text-org9653637">
+<ol class="org-ol">
+<li>所有信息都会展示为“1 条未读消息”, 因此把“1 条未读消息”展示为“无未读信息”</li>
+<li>预览图片、链接后，需要关闭才能进行后续的操作。</li>
+<li>微信必须打开，可以放置在后台，但不能最小化。</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa928d0" class="outline-2">
+<h2 id="orgaa928d0">集成插件</h2>
+<div class="outline-text-2" id="text-orgaa928d0">
+</div>
+<div id="outline-container-orgd01fd81" class="outline-3">
+<h3 id="orgd01fd81"><a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a></h3>
+<div class="outline-text-3" id="text-orgd01fd81">
+<p>
+当前版本 macos-wechat-emacs 只提供了简单的交互界面（对话列表，消息页面）。后续将优化消息页面的展示。
+</p>
+</div>
+</div>
+<div id="outline-container-orgee6c2dd" class="outline-3">
+<h3 id="orgee6c2dd">开发详情</h3>
+</div>
+</div>
+<div id="outline-container-orgf6ac892" class="outline-2">
+<h2 id="orgf6ac892">定位链</h2>
+<div class="outline-text-2" id="text-orgf6ac892">
+<ol class="org-ol">
+<li>微信聊天列标：[.splitGroup, .scrollArea, .table, .row, .cell, .row]</li>
+<li>微信聊天按钮： [.radioButton]</li>
+<li>定位聊天输入框：[.splitGroup, .splitGroup, .scrollArea, .textArea],</li>
+<li>定位详细的聊天详情：[.splitGroup, .splitGroup, .scrollArea, .table, .row, .cell, .unknown],</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0394276" class="outline-2">
+<h2 id="org0394276">图片、链接预览</h2>
+<div class="outline-text-2" id="text-org0394276">
+<p>
+通过 message index 定位到信息在微信 GUI 中的位置，通过触发 press 事件，展示预览窗口。
+</p>
+</div>
+</div>
+<div id="outline-container-org3857c9c" class="outline-2">
+<h2 id="org3857c9c">性能优化</h2>
+<div class="outline-text-2" id="text-org3857c9c">
+<p>
+当微信 GUI 位于，最前台时，Accessibility API 的性能超快。当它位于后台时，性能会大幅下降。
+测试发现，如果 Accessibility API 前，对微信的进程发送一个按键事件。会提高后续的访问性能。
+</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+    <li>
+	Previous: <a href="/zh/如何写博客/">如何写博客</a>
+    </li>
+
+
+
+    <li>
+	Next: <a href="/zh/0017/">Emacs Packages</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>

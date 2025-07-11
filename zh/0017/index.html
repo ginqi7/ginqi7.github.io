@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/"  class= "en-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="en-language">
+                            </a>
+                            <a href="/" class="image-text"> (英文)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/feed.xml"  class= "zh-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="zh-rss">
+                            </a>
+                            <a href="/zh/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/thoughts/0"  class= "zh-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="zh-thoughts">
+                            </a>
+                            <a href="/zh/thoughts/0" class="image-text"> (想法)  </a>
+                        </div>
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> Emacs Packages </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/zh/tags/macos">#macos </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/zh/tags/software">#software </a>
+    </div>
+
+
+	</div>
+    </div>
+</center>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org34fac7a">Edit Mode</a>
+<ul>
+<li><a href="#orge446a9f">Meow</a></li>
+</ul>
+</li>
+<li><a href="#org43ccb40">英文学习三部曲</a>
+<ul>
+<li><a href="#org54a65d0">阅读</a></li>
+<li><a href="#org991aa3d">视频</a></li>
+<li><a href="#orgd7e102a">写作</a></li>
+</ul>
+</li>
+<li><a href="#orgf4660be">jin-theme</a></li>
+<li><a href="#orgb8d71f9">auto-save</a></li>
+<li><a href="#orge6031b1">consult</a></li>
+<li><a href="#orgdbba996">vertico</a></li>
+<li><a href="#orge439c0f">orderless</a></li>
+<li><a href="#org6dba3ee">AmaiKinono@puni.el</a></li>
+<li><a href="#org69220ea">DogLooksGood@emacs-rime.el</a></li>
+<li><a href="#org8c36cfa">Elilif@emacs-anki-helper.el</a></li>
+<li><a href="#org6d7fef3">Fanael@highlight-defined.el</a></li>
+<li><a href="#org527b852">Vonfry@zoxide.el.el</a></li>
+<li><a href="#org7e51a3e">Wilfred@helpful.el</a></li>
+<li><a href="#orgf697b2d">Wilfred@refine.el</a></li>
+<li><a href="#org85a0e6e">abo-abo@ace-window.el</a></li>
+<li><a href="#orgdb9dc28">abo-abo@avy.el</a></li>
+<li><a href="#orgfeb4bbb">abo-abo@org-download.el</a></li>
+<li><a href="#org6274632">andreasjansson@language-detection.el.el</a></li>
+<li><a href="#org711feb7">bastibe@org-journal.el</a></li>
+<li><a href="#org07d5627">benma@visual-regexp.el.el</a></li>
+<li><a href="#org9b7d262">bmag@imenu-list.el</a></li>
+<li><a href="#org2e6e64d">bzg@org-mode.el</a></li>
+<li><a href="#org1ba4d02">casouri@vundo.el</a></li>
+<li><a href="#orge904b2f">casouri@xeft.el</a></li>
+<li><a href="#orgd9ae91c">cute-jumper@ace-pinyin.el</a></li>
+<li><a href="#org58bc2db">cute-jumper@pinyinlib.el.el</a></li>
+<li><a href="#orge745a14">emacs-openai@deepl.el</a></li>
+<li><a href="#orgccfa662">emacs-pe@nov.el.el</a></li>
+<li><a href="#orgb145ea2">emacsmirror@gcmh.el</a></li>
+<li><a href="#orga2055e9">emacsmirror@highlight-parentheses.el</a></li>
+<li><a href="#org2090a3a">emacsmirror@memory-usage.el</a></li>
+<li><a href="#orgaa2d13e">flycheck@flycheck.el</a></li>
+<li><a href="#org5175efb">fxbois@web-mode.el</a></li>
+<li><a href="#org8195288">ginqi7@auto-browser.el</a></li>
+<li><a href="#org8b9ba52">Update 2025-04-29</a></li>
+<li><a href="#orga93aa25">2 weeks ago</a></li>
+<li><a href="#org558f46a">ginqi7@deno-bridge-jieba.el</a></li>
+<li><a href="#orga9647b7">ginqi7@dictionary-overlay.el</a></li>
+<li><a href="#org80605a3">ginqi7@eaf-pdf-viewer.el</a></li>
+<li><a href="#orgfd28905">Update 2025-04-16</a></li>
+<li><a href="#orgaf7109a">ginqi7@eaf-video-player.el</a></li>
+<li><a href="#org5538c0f">Update 2025-04-29</a></li>
+<li><a href="#orgefcbe43">2 weeks ago</a></li>
+<li><a href="#org40ebfd4">ginqi7@emacs-application-framework.el</a></li>
+<li><a href="#orgb75ffdd">Update 2025-04-16</a></li>
+<li><a href="#org78e0d3b">ginqi7@html2org.el</a></li>
+<li><a href="#orgb93f329">ginqi7@image-slicing.el</a></li>
+<li><a href="#orgf6b778d">ginqi7@justify-kp.el</a></li>
+<li><a href="#orga219893">ginqi7@leetcode-emacs.el</a></li>
+<li><a href="#org78ac7d6">ginqi7@named-format.el</a></li>
+<li><a href="#orgaae2bb9">ginqi7@plantuml-emacs.el</a></li>
+<li><a href="#org201518c">ginqi7@real-time-translation.el</a></li>
+<li><a href="#orge92d3f1">Update 2025-04-29</a></li>
+<li><a href="#org18d6a63">2 weeks ago</a></li>
+<li><a href="#org0ef8eb1">ginqi7@syllable-stress.el</a></li>
+<li><a href="#org369a518">jacktasia@dumb-jump.el</a></li>
+<li><a href="#orgba4ee7c">joaotavora@yasnippet.el</a></li>
+<li><a href="#orga95f4c9">jrblevin@markdown-mode.el</a></li>
+<li><a href="#org0984d9e">justinbarclay@parinfer-rust-mode.el</a></li>
+<li><a href="#org0b980cc">jwiegley@emacs-async.el</a></li>
+<li><a href="#org8a8debb">karthink@gptel.el</a></li>
+<li><a href="#org5fab713">Update as of 2025-04-12</a></li>
+<li><a href="#org6be68a7">ljos@jq-mode.el</a></li>
+<li><a href="#org0bba960">magit@magit.el</a></li>
+<li><a href="#orgb2c9bae">magit@with-editor.el</a></li>
+<li><a href="#org2bb55de">manateelazycat@awesome-tray.el</a></li>
+<li><a href="#org6e96f75">manateelazycat@key-echo.el</a></li>
+<li><a href="#org3883714">Update 2025-04-16</a></li>
+<li><a href="#orgc75b6fe">manateelazycat@lsp-bridge.el</a></li>
+<li><a href="#orgdb1d9f2">manateelazycat@mind-wave.el</a></li>
+<li><a href="#orgf21f95a">manateelazycat@sort-tab.el</a></li>
+<li><a href="#org75dda7a">manateelazycat@thing-edit.el</a></li>
+<li><a href="#orgdf41a66">mhayashi1120@Emacs-wgrep.el</a></li>
+<li><a href="#org984dbc6">minad@marginalia.el</a></li>
+<li><a href="#org636cfb2">minad@tempel.el</a></li>
+<li><a href="#org4b03235">misohena@phscroll.el</a></li>
+<li><a href="#org6637f65">ncaq@auto-sudoedit.el</a></li>
+<li><a href="#orgbb4f9db">nflath@sudo-edit.el</a></li>
+<li><a href="#orgec43880">oantolin@embark.el</a></li>
+<li><a href="#orgb3eaabf">pashky@restclient.el.el</a></li>
+<li><a href="#org29d6cce">radian-software@ctrlf.el</a></li>
+<li><a href="#org38d271f">rainstormstudio@nerd-icons-dired.el</a></li>
+<li><a href="#org8e3e46b">rainstormstudio@nerd-icons.el.el</a></li>
+<li><a href="#org9d60833">rnkn@olivetti.el</a></li>
+<li><a href="#org82b53ae">sigma@pcache.el</a></li>
+<li><a href="#org11fd73e">skuro@plantuml-mode.el</a></li>
+<li><a href="#org429366a">tarsius@hl-todo.el</a></li>
+<li><a href="#org0bc4912">tkf@emacs-request.el</a></li>
+<li><a href="#org80d977a">tumashu@posframe.el</a></li>
+<li><a href="#org5f9bf34">twlz0ne@separedit.el.el</a></li>
+<li><a href="#orgccc6a5e">xuchunyang@elisp-demos.el</a></li>
+<li><a href="#orgd48d6a5">xuchunyang@shr-tag-pre-highlight.el.el</a></li>
+<li><a href="#org96e02a4">yoshiki@yaml-mode.el</a></li>
+<li><a href="#org571d54c">zk-phi@indent-guide.el</a></li>
+<li><a href="#org02f7a69">zkry@yaml.el.el</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34fac7a" class="outline-2">
+<h2 id="org34fac7a">Edit Mode</h2>
+<div class="outline-text-2" id="text-org34fac7a">
+</div>
+<div id="outline-container-orge446a9f" class="outline-3">
+<h3 id="orge446a9f">Meow</h3>
+</div>
+</div>
+<div id="outline-container-org43ccb40" class="outline-2">
+<h2 id="org43ccb40">英文学习三部曲</h2>
+<div class="outline-text-2" id="text-org43ccb40">
+</div>
+<div id="outline-container-org54a65d0" class="outline-3">
+<h3 id="org54a65d0">阅读</h3>
+<div class="outline-text-3" id="text-org54a65d0">
+<ul class="org-ul">
+<li>eaf-pdf-viewer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org991aa3d" class="outline-3">
+<h3 id="org991aa3d">视频</h3>
+<div class="outline-text-3" id="text-org991aa3d">
+<ul class="org-ul">
+<li>eaf-video-viewer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7e102a" class="outline-3">
+<h3 id="orgd7e102a">写作</h3>
+<div class="outline-text-3" id="text-orgd7e102a">
+<ul class="org-ul">
+<li>real-time-translation</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4660be" class="outline-2">
+<h2 id="orgf4660be">jin-theme</h2>
+</div>
+<div id="outline-container-orgb8d71f9" class="outline-2">
+<h2 id="orgb8d71f9">auto-save</h2>
+</div>
+<div id="outline-container-orge6031b1" class="outline-2">
+<h2 id="orge6031b1">consult</h2>
+</div>
+<div id="outline-container-orgdbba996" class="outline-2">
+<h2 id="orgdbba996">vertico</h2>
+</div>
+<div id="outline-container-orge439c0f" class="outline-2">
+<h2 id="orge439c0f">orderless</h2>
+</div>
+<div id="outline-container-org6dba3ee" class="outline-2">
+<h2 id="org6dba3ee">AmaiKinono@puni.el</h2>
+</div>
+<div id="outline-container-org69220ea" class="outline-2">
+<h2 id="org69220ea">DogLooksGood@emacs-rime.el</h2>
+</div>
+<div id="outline-container-org8c36cfa" class="outline-2">
+<h2 id="org8c36cfa">Elilif@emacs-anki-helper.el</h2>
+</div>
+<div id="outline-container-org6d7fef3" class="outline-2">
+<h2 id="org6d7fef3">Fanael@highlight-defined.el</h2>
+</div>
+<div id="outline-container-org527b852" class="outline-2">
+<h2 id="org527b852">Vonfry@zoxide.el.el</h2>
+</div>
+<div id="outline-container-org7e51a3e" class="outline-2">
+<h2 id="org7e51a3e">Wilfred@helpful.el</h2>
+</div>
+<div id="outline-container-orgf697b2d" class="outline-2">
+<h2 id="orgf697b2d">Wilfred@refine.el</h2>
+</div>
+<div id="outline-container-org85a0e6e" class="outline-2">
+<h2 id="org85a0e6e">abo-abo@ace-window.el</h2>
+</div>
+<div id="outline-container-orgdb9dc28" class="outline-2">
+<h2 id="orgdb9dc28">abo-abo@avy.el</h2>
+</div>
+<div id="outline-container-orgfeb4bbb" class="outline-2">
+<h2 id="orgfeb4bbb">abo-abo@org-download.el</h2>
+</div>
+<div id="outline-container-org6274632" class="outline-2">
+<h2 id="org6274632">andreasjansson@language-detection.el.el</h2>
+</div>
+<div id="outline-container-org711feb7" class="outline-2">
+<h2 id="org711feb7">bastibe@org-journal.el</h2>
+</div>
+<div id="outline-container-org07d5627" class="outline-2">
+<h2 id="org07d5627">benma@visual-regexp.el.el</h2>
+</div>
+<div id="outline-container-org9b7d262" class="outline-2">
+<h2 id="org9b7d262">bmag@imenu-list.el</h2>
+</div>
+<div id="outline-container-org2e6e64d" class="outline-2">
+<h2 id="org2e6e64d">bzg@org-mode.el</h2>
+</div>
+<div id="outline-container-org1ba4d02" class="outline-2">
+<h2 id="org1ba4d02">casouri@vundo.el</h2>
+</div>
+<div id="outline-container-orge904b2f" class="outline-2">
+<h2 id="orge904b2f">casouri@xeft.el</h2>
+</div>
+<div id="outline-container-orgd9ae91c" class="outline-2">
+<h2 id="orgd9ae91c">cute-jumper@ace-pinyin.el</h2>
+</div>
+<div id="outline-container-org58bc2db" class="outline-2">
+<h2 id="org58bc2db">cute-jumper@pinyinlib.el.el</h2>
+</div>
+<div id="outline-container-orge745a14" class="outline-2">
+<h2 id="orge745a14">emacs-openai@deepl.el</h2>
+</div>
+<div id="outline-container-orgccfa662" class="outline-2">
+<h2 id="orgccfa662">emacs-pe@nov.el.el</h2>
+</div>
+<div id="outline-container-orgb145ea2" class="outline-2">
+<h2 id="orgb145ea2">emacsmirror@gcmh.el</h2>
+</div>
+<div id="outline-container-orga2055e9" class="outline-2">
+<h2 id="orga2055e9">emacsmirror@highlight-parentheses.el</h2>
+</div>
+<div id="outline-container-org2090a3a" class="outline-2">
+<h2 id="org2090a3a">emacsmirror@memory-usage.el</h2>
+</div>
+<div id="outline-container-orgaa2d13e" class="outline-2">
+<h2 id="orgaa2d13e">flycheck@flycheck.el</h2>
+</div>
+<div id="outline-container-org5175efb" class="outline-2">
+<h2 id="org5175efb">fxbois@web-mode.el</h2>
+</div>
+<div id="outline-container-org8195288" class="outline-2">
+<h2 id="org8195288">ginqi7@auto-browser.el</h2>
+</div>
+<div id="outline-container-org8b9ba52" class="outline-2">
+<h2 id="org8b9ba52">Update 2025-04-29</h2>
+</div>
+<div id="outline-container-orga93aa25" class="outline-2">
+<h2 id="orga93aa25">2 weeks ago</h2>
+</div>
+<div id="outline-container-org558f46a" class="outline-2">
+<h2 id="org558f46a">ginqi7@deno-bridge-jieba.el</h2>
+</div>
+<div id="outline-container-orga9647b7" class="outline-2">
+<h2 id="orga9647b7">ginqi7@dictionary-overlay.el</h2>
+</div>
+<div id="outline-container-org80605a3" class="outline-2">
+<h2 id="org80605a3">ginqi7@eaf-pdf-viewer.el</h2>
+</div>
+<div id="outline-container-orgfd28905" class="outline-2">
+<h2 id="orgfd28905">Update 2025-04-16</h2>
+</div>
+<div id="outline-container-orgaf7109a" class="outline-2">
+<h2 id="orgaf7109a">ginqi7@eaf-video-player.el</h2>
+</div>
+<div id="outline-container-org5538c0f" class="outline-2">
+<h2 id="org5538c0f">Update 2025-04-29</h2>
+</div>
+<div id="outline-container-orgefcbe43" class="outline-2">
+<h2 id="orgefcbe43">2 weeks ago</h2>
+</div>
+<div id="outline-container-org40ebfd4" class="outline-2">
+<h2 id="org40ebfd4">ginqi7@emacs-application-framework.el</h2>
+</div>
+<div id="outline-container-orgb75ffdd" class="outline-2">
+<h2 id="orgb75ffdd">Update 2025-04-16</h2>
+</div>
+<div id="outline-container-org78e0d3b" class="outline-2">
+<h2 id="org78e0d3b">ginqi7@html2org.el</h2>
+</div>
+<div id="outline-container-orgb93f329" class="outline-2">
+<h2 id="orgb93f329">ginqi7@image-slicing.el</h2>
+</div>
+<div id="outline-container-orgf6b778d" class="outline-2">
+<h2 id="orgf6b778d">ginqi7@justify-kp.el</h2>
+</div>
+<div id="outline-container-orga219893" class="outline-2">
+<h2 id="orga219893">ginqi7@leetcode-emacs.el</h2>
+</div>
+<div id="outline-container-org78ac7d6" class="outline-2">
+<h2 id="org78ac7d6">ginqi7@named-format.el</h2>
+</div>
+<div id="outline-container-orgaae2bb9" class="outline-2">
+<h2 id="orgaae2bb9">ginqi7@plantuml-emacs.el</h2>
+</div>
+<div id="outline-container-org201518c" class="outline-2">
+<h2 id="org201518c">ginqi7@real-time-translation.el</h2>
+</div>
+<div id="outline-container-orge92d3f1" class="outline-2">
+<h2 id="orge92d3f1">Update 2025-04-29</h2>
+</div>
+<div id="outline-container-org18d6a63" class="outline-2">
+<h2 id="org18d6a63">2 weeks ago</h2>
+</div>
+<div id="outline-container-org0ef8eb1" class="outline-2">
+<h2 id="org0ef8eb1">ginqi7@syllable-stress.el</h2>
+</div>
+<div id="outline-container-org369a518" class="outline-2">
+<h2 id="org369a518">jacktasia@dumb-jump.el</h2>
+</div>
+<div id="outline-container-orgba4ee7c" class="outline-2">
+<h2 id="orgba4ee7c">joaotavora@yasnippet.el</h2>
+</div>
+<div id="outline-container-orga95f4c9" class="outline-2">
+<h2 id="orga95f4c9">jrblevin@markdown-mode.el</h2>
+</div>
+<div id="outline-container-org0984d9e" class="outline-2">
+<h2 id="org0984d9e">justinbarclay@parinfer-rust-mode.el</h2>
+</div>
+<div id="outline-container-org0b980cc" class="outline-2">
+<h2 id="org0b980cc">jwiegley@emacs-async.el</h2>
+</div>
+<div id="outline-container-org8a8debb" class="outline-2">
+<h2 id="org8a8debb">karthink@gptel.el</h2>
+</div>
+<div id="outline-container-org5fab713" class="outline-2">
+<h2 id="org5fab713">Update as of 2025-04-12</h2>
+</div>
+<div id="outline-container-org6be68a7" class="outline-2">
+<h2 id="org6be68a7">ljos@jq-mode.el</h2>
+</div>
+<div id="outline-container-org0bba960" class="outline-2">
+<h2 id="org0bba960">magit@magit.el</h2>
+</div>
+<div id="outline-container-orgb2c9bae" class="outline-2">
+<h2 id="orgb2c9bae">magit@with-editor.el</h2>
+</div>
+<div id="outline-container-org2bb55de" class="outline-2">
+<h2 id="org2bb55de">manateelazycat@awesome-tray.el</h2>
+</div>
+<div id="outline-container-org6e96f75" class="outline-2">
+<h2 id="org6e96f75">manateelazycat@key-echo.el</h2>
+</div>
+<div id="outline-container-org3883714" class="outline-2">
+<h2 id="org3883714">Update 2025-04-16</h2>
+</div>
+<div id="outline-container-orgc75b6fe" class="outline-2">
+<h2 id="orgc75b6fe">manateelazycat@lsp-bridge.el</h2>
+</div>
+<div id="outline-container-orgdb1d9f2" class="outline-2">
+<h2 id="orgdb1d9f2">manateelazycat@mind-wave.el</h2>
+</div>
+<div id="outline-container-orgf21f95a" class="outline-2">
+<h2 id="orgf21f95a">manateelazycat@sort-tab.el</h2>
+</div>
+<div id="outline-container-org75dda7a" class="outline-2">
+<h2 id="org75dda7a">manateelazycat@thing-edit.el</h2>
+</div>
+<div id="outline-container-orgdf41a66" class="outline-2">
+<h2 id="orgdf41a66">mhayashi1120@Emacs-wgrep.el</h2>
+</div>
+<div id="outline-container-org984dbc6" class="outline-2">
+<h2 id="org984dbc6">minad@marginalia.el</h2>
+</div>
+<div id="outline-container-org636cfb2" class="outline-2">
+<h2 id="org636cfb2">minad@tempel.el</h2>
+</div>
+<div id="outline-container-org4b03235" class="outline-2">
+<h2 id="org4b03235">misohena@phscroll.el</h2>
+</div>
+<div id="outline-container-org6637f65" class="outline-2">
+<h2 id="org6637f65">ncaq@auto-sudoedit.el</h2>
+</div>
+<div id="outline-container-orgbb4f9db" class="outline-2">
+<h2 id="orgbb4f9db">nflath@sudo-edit.el</h2>
+</div>
+<div id="outline-container-orgec43880" class="outline-2">
+<h2 id="orgec43880">oantolin@embark.el</h2>
+</div>
+<div id="outline-container-orgb3eaabf" class="outline-2">
+<h2 id="orgb3eaabf">pashky@restclient.el.el</h2>
+</div>
+<div id="outline-container-org29d6cce" class="outline-2">
+<h2 id="org29d6cce">radian-software@ctrlf.el</h2>
+</div>
+<div id="outline-container-org38d271f" class="outline-2">
+<h2 id="org38d271f">rainstormstudio@nerd-icons-dired.el</h2>
+</div>
+<div id="outline-container-org8e3e46b" class="outline-2">
+<h2 id="org8e3e46b">rainstormstudio@nerd-icons.el.el</h2>
+</div>
+<div id="outline-container-org9d60833" class="outline-2">
+<h2 id="org9d60833">rnkn@olivetti.el</h2>
+</div>
+<div id="outline-container-org82b53ae" class="outline-2">
+<h2 id="org82b53ae">sigma@pcache.el</h2>
+</div>
+<div id="outline-container-org11fd73e" class="outline-2">
+<h2 id="org11fd73e">skuro@plantuml-mode.el</h2>
+</div>
+<div id="outline-container-org429366a" class="outline-2">
+<h2 id="org429366a">tarsius@hl-todo.el</h2>
+</div>
+<div id="outline-container-org0bc4912" class="outline-2">
+<h2 id="org0bc4912">tkf@emacs-request.el</h2>
+</div>
+<div id="outline-container-org80d977a" class="outline-2">
+<h2 id="org80d977a">tumashu@posframe.el</h2>
+</div>
+<div id="outline-container-org5f9bf34" class="outline-2">
+<h2 id="org5f9bf34">twlz0ne@separedit.el.el</h2>
+</div>
+<div id="outline-container-orgccc6a5e" class="outline-2">
+<h2 id="orgccc6a5e">xuchunyang@elisp-demos.el</h2>
+</div>
+<div id="outline-container-orgd48d6a5" class="outline-2">
+<h2 id="orgd48d6a5">xuchunyang@shr-tag-pre-highlight.el.el</h2>
+</div>
+<div id="outline-container-org96e02a4" class="outline-2">
+<h2 id="org96e02a4">yoshiki@yaml-mode.el</h2>
+</div>
+<div id="outline-container-org571d54c" class="outline-2">
+<h2 id="org571d54c">zk-phi@indent-guide.el</h2>
+</div>
+<div id="outline-container-org02f7a69" class="outline-2">
+<h2 id="org02f7a69">zkry@yaml.el.el</h2>
+</div>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+    <li>
+	Previous: <a href="/zh/macos-wechat-cli/">MacOS 微信 CLI</a>
+    </li>
+
+
+
+    <li>
+	Next: <a href="/zh/0015/">MacOS 软件</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>

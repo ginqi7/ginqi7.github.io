@@ -1,0 +1,131 @@
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgae363eb">背景</a></li>
+<li><a href="#orgfc1e183">优缺点</a>
+<ul>
+<li><a href="#org59a68b9">优点</a></li>
+<li><a href="#orgf582bd6">缺点</a></li>
+<li><a href="#orgdee1458">已知问题</a></li>
+</ul>
+</li>
+<li><a href="#org4cf9e10">集成插件</a>
+<ul>
+<li><a href="#org7a474bd">macos-wechat-emacs</a></li>
+<li><a href="#org70f9ede">开发详情</a></li>
+</ul>
+</li>
+<li><a href="#orgc2e012c">定位链</a></li>
+<li><a href="#org92fcaa1">图片、链接预览</a></li>
+<li><a href="#org3f3e6d7">性能优化</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae363eb" class="outline-2">
+<h2 id="orgae363eb">背景</h2>
+<div class="outline-text-2" id="text-orgae363eb">
+<p>
+几年前，当微信 Web 没有被封时，我一直是使用 <a href="https://github.com/hexsum/Mojo-Weixin">Mojo-Weixin</a> 通过 Emacs 来访问微信。只是很不幸，后来当微信 Web 无法访问了，该项目对我而言变得不可用。微信也没有提供公共的 api。很难有一个安全的第三方客户端。
+</p>
+
+<p>
+我对微信的需求比较简单。能够快速简单地在 Emacs 中查看/发送针对某几个人的信息。我并不是需要一个完整的微信客户端。
+</p>
+
+<p>
+MacOS 提供了 Accessibility API 去访问其他应用的 GUI，因此，我开发了 <a href="https://github.com/ginqi7/macos-wechat-cli">macos-wechat-cli</a> 利用 Accessibility API 访问微信的 GUI，通过命令行来与微信进行交互。
+</p>
+
+<p>
+<a href="https://github.com/ginqi7/macos-wechat-cli">macos-wechat-cli</a> 的目标不是开发一个完整的微信客户端，而是借助 MacOS 微信 GUI，提供简单高效的 CLI 命令，能够供其他应用集成，访问微信。例如 <a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a>
+</p>
+
+<p>
+<b>只支持微信 3.8</b>
+</p>
+
+<p>
+1234567895412312311
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc1e183" class="outline-2">
+<h2 id="orgfc1e183">优缺点</h2>
+<div class="outline-text-2" id="text-orgfc1e183">
+</div>
+<div id="outline-container-org59a68b9" class="outline-3">
+<h3 id="org59a68b9">优点</h3>
+<div class="outline-text-3" id="text-org59a68b9">
+<ol class="org-ol">
+<li>对微信没有任何侵入，没有被封禁的风险</li>
+<li>通过 JSON 输出，可以很容易被其他应用集成</li>
+<li>尽可优化了 Accessibility API 访问的性能，能够在 0.5 秒里完成数据更新、数据发送</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf582bd6" class="outline-3">
+<h3 id="orgf582bd6">缺点</h3>
+<div class="outline-text-3" id="text-orgf582bd6">
+<ol class="org-ol">
+<li>如果微信升级过程中 UI 发生变化，应用可能会出问题。</li>
+<li>当前版本有中文相关的硬编码，只支持中文微信</li>
+<li>只展示当前 GUI 已经加载出来的信息</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdee1458" class="outline-3">
+<h3 id="orgdee1458">已知问题</h3>
+<div class="outline-text-3" id="text-orgdee1458">
+<ol class="org-ol">
+<li>所有信息都会展示为“1 条未读消息”, 因此把“1 条未读消息”展示为“无未读信息”</li>
+<li>预览图片、链接后，需要关闭才能进行后续的操作。</li>
+<li>微信必须打开，可以放置在后台，但不能最小化。</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org4cf9e10" class="outline-2">
+<h2 id="org4cf9e10">集成插件</h2>
+<div class="outline-text-2" id="text-org4cf9e10">
+</div>
+<div id="outline-container-org7a474bd" class="outline-3">
+<h3 id="org7a474bd"><a href="https://github.com/ginqi7/macos-wechat-emacs">macos-wechat-emacs</a></h3>
+<div class="outline-text-3" id="text-org7a474bd">
+<p>
+当前版本 macos-wechat-emacs 只提供了简单的交互界面（对话列表，消息页面）。后续将优化消息页面的展示。
+</p>
+</div>
+</div>
+<div id="outline-container-org70f9ede" class="outline-3">
+<h3 id="org70f9ede">开发详情</h3>
+</div>
+</div>
+<div id="outline-container-orgc2e012c" class="outline-2">
+<h2 id="orgc2e012c">定位链</h2>
+<div class="outline-text-2" id="text-orgc2e012c">
+<ol class="org-ol">
+<li>微信聊天列标：[.splitGroup, .scrollArea, .table, .row, .cell, .row]</li>
+<li>微信聊天按钮： [.radioButton]</li>
+<li>定位聊天输入框：[.splitGroup, .splitGroup, .scrollArea, .textArea],</li>
+<li>定位详细的聊天详情：[.splitGroup, .splitGroup, .scrollArea, .table, .row, .cell, .unknown],</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org92fcaa1" class="outline-2">
+<h2 id="org92fcaa1">图片、链接预览</h2>
+<div class="outline-text-2" id="text-org92fcaa1">
+<p>
+通过 message index 定位到信息在微信 GUI 中的位置，通过触发 press 事件，展示预览窗口。
+</p>
+</div>
+</div>
+<div id="outline-container-org3f3e6d7" class="outline-2">
+<h2 id="org3f3e6d7">性能优化</h2>
+<div class="outline-text-2" id="text-org3f3e6d7">
+<p>
+当微信 GUI 位于，最前台时，Accessibility API 的性能超快。当它位于后台时，性能会大幅下降。
+测试发现，如果 Accessibility API 前，对微信的进程发送一个按键事件。会提高后续的访问性能。
+</p>
+</div>
+</div>

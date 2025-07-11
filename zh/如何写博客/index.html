@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/"  class= "en-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="en-language">
+                            </a>
+                            <a href="/" class="image-text"> (英文)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/feed.xml"  class= "zh-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="zh-rss">
+                            </a>
+                            <a href="/zh/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/thoughts/0"  class= "zh-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="zh-thoughts">
+                            </a>
+                            <a href="/zh/thoughts/0" class="image-text"> (想法)  </a>
+                        </div>
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> 如何写博客 </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+
+	</div>
+    </div>
+</center>
+
+
+    <html>
+ <body>
+  <div>
+   <h1>
+    如何写博客
+   </h1>
+  </div>
+  <div>
+   <h2>
+    写博客的目的
+   </h2>
+  </div>
+  <div>
+   有人看自然是最好的，能够提升个人的声誉。但多半是没人看的。
+  </div>
+  <div>
+   <h1>
+   </h1>
+  </div>
+  <div>
+   那还坚持写博客的原因：
+  </div>
+  <ul class="Apple-dash-list">
+   <li>
+    虚荣：有一个漂亮的个人博客，自己感觉十分喜悦
+   </li>
+   <li>
+    迫使自己思考：写文章可以让人更加集中精神，迫使自己思考，梳理自己的思路
+   </li>
+   <li>
+    提高表达能力：如何快速，理性，科学地表达自己的想法
+   </li>
+  </ul>
+  <div>
+   <h2>
+    文章类型
+   </h2>
+  </div>
+  <div>
+   通常我会写三种类型的文字：
+  </div>
+  <ul class="Apple-dash-list">
+   <li>
+    简短的想法
+   </li>
+   <li>
+    长的纯文字
+   </li>
+   <li>
+    技术文章
+   </li>
+  </ul>
+  <div>
+   其中一二类的纯文字更习惯使用手机，不必坐在电脑旁边，（一坐在电脑旁，我就更喜欢写代码），随时随地，拿出手机一点点地编写，一点点地修改，可以消耗我刷短视频的时间。
+  </div>
+  <div>
+   而技术文章，需要附带代码，图表，使用 org-mode 更加强大。
+  </div>
+  <div>
+   因此，我写了两个小工具和一个 11ty blog 模板：
+  </div>
+  <ul class="Apple-dash-list">
+   <li>
+    org-to-11ty
+   </li>
+   <li>
+    notes-publish-cli
+   </li>
+   <li>
+    jin-11ty-template
+   </li>
+  </ul>
+  <div>
+   <h2>
+    工具
+   </h2>
+  </div>
+  <div>
+   <h3>
+    Eleventy
+   </h3>
+  </div>
+  <div>
+   Eleventy 是一个简单的网站生成器，它可以根据模板，把某个目录下的数据转换为 HTML 文件。
+  </div>
+  <div>
+   它可以高度定制你需要的网站样式。而我个人的需求有:
+  </div>
+  <ul class="Apple-dash-list">
+   <li>
+    双语网站，支持我编写中文、英文的内容
+   </li>
+   <li>
+    Toughts 页面，支持编写简短的个人想法。
+   </li>
+   <li>
+    RSS，支持文章、想法的RSS。（由于图片是base64嵌入的，rss 文件可能比较大）
+   </li>
+  </ul>
+  <div>
+   通过简单的代码，可以无限扩展：
+  </div>
+  <ul class="Apple-dash-list">
+   <li>
+    通过卡片展示 ‘Bilibili’ 链接
+   </li>
+   <li>
+    通过卡片展示 ‘豆瓣’ 链接
+   </li>
+   <li>
+    [TODO] 通过卡片展示“github” 链接
+   </li>
+  </ul>
+  <div>
+   <h3>
+    notes-publish
+   </h3>
+  </div>
+  <div>
+   可以把 MacOS Notes 中 posts 和 thoughts 目录下的文章导出。（其中图片会按照base64嵌入）这样我就可以安静地用手机编写一些纯文本的文章。
+  </div>
+  <div>
+   <h2>
+    文章发布时机
+   </h2>
+  </div>
+  <div>
+   如果一篇文章想法太多。那么只要某天写完其中三分之一以上就可以发布了。以后你看到博客上有未完成的文章，就会给你动力去补全它（比如这一篇）。
+  </div>
+  <div>
+   <h3>
+    定时发布
+   </h3>
+  </div>
+  <div>
+   通过一个定时脚本，每天晚上定时发布博客。
+  </div>
+ </body>
+</html>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+
+
+    <li>
+	Next: <a href="/zh/macos-wechat-cli/">MacOS 微信 CLI</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>

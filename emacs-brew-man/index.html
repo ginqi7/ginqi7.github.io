@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh"  class= "zh-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="zh-language">
+                            </a>
+                            <a href="/zh" class="image-text"> (Chinese)  </a>
+                        </div>
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/feed.xml"  class= "en-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="en-rss">
+                            </a>
+                            <a href="/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/thoughts/0"  class= "en-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="en-thoughts">
+                            </a>
+                            <a href="/thoughts/0" class="image-text"> (Thoughts)  </a>
+                        </div>
+                    
+                
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/article.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/toc-block.css" defer>
+<link rel="stylesheet" type="text/css" href="/static/css/before.css" defer>
+<article>
+    <h1 class="title"> Emacs Brew Manager </h1>
+
+    
+
+
+<center>
+    <div>
+	<div class="categories">
+	    
+    <div class="category-item">
+	<a href="/tags/emacs">#emacs </a>
+    </div>
+
+    <div class="category-item">
+	<a href="/tags/project">#project </a>
+    </div>
+
+
+	</div>
+    </div>
+</center>
+
+
+    <div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdea233f">Summary</a></li>
+<li><a href="#orga47a794">Features</a>
+<ul>
+<li><a href="#org5f50eb0">Display all installed Formulae and Casks.</a></li>
+<li><a href="#org1374a52">Display all installed Taps.</a></li>
+</ul>
+</li>
+<li><a href="#org2ead81d">How it works</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdea233f" class="outline-2">
+<h2 id="orgdea233f">Summary</h2>
+<div class="outline-text-2" id="text-orgdea233f">
+<p>
+A simple Homebrew manager by Emacs.
+</p>
+
+<p>
+The brew CLI is already sufficient for adding, deleting, or searching for formulae. However, when reviewing installed formulae — such as identifying unused ones or checking for version updates — a GUI is more convenient. That's why I created this Emacs package to manage installed formulae with additional features.
+</p>
+</div>
+</div>
+<div id="outline-container-orga47a794" class="outline-2">
+<h2 id="orga47a794">Features</h2>
+<div class="outline-text-2" id="text-orga47a794">
+</div>
+<div id="outline-container-org5f50eb0" class="outline-3">
+<h3 id="org5f50eb0">Display all installed Formulae and Casks.</h3>
+<div class="outline-text-3" id="text-org5f50eb0">
+<p>
+You can view all installed Formulae and Casks, with columns indicating the available new versions for updates and whether the Formula or Cask is used by other Formulae or Casks.
+</p>
+
+<p>
+You can use the list information to decide which formulae and casks to delete or update, making your computer system cleaner and more controllable.
+</p>
+</div>
+</div>
+<div id="outline-container-org1374a52" class="outline-3">
+<h3 id="org1374a52">Display all installed Taps.</h3>
+<div class="outline-text-3" id="text-org1374a52">
+<p>
+You can check the Tap to see how many Formulae and Casks are available and how many are installed.
+</p>
+
+<p>
+You can delete unnecessary taps and interactively select to install Formulae or Casks provided by a specific tap.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2ead81d" class="outline-2">
+<h2 id="org2ead81d">How it works</h2>
+<div class="outline-text-2" id="text-org2ead81d">
+<p>
+Essentially, it is a wrapper around the brew command line, utilizing <a href="https://github.com/ginqi7/websocket-bridge-ruby">websocket-bridge-ruby</a> as a bridge. The choice of Ruby is due to its ease in handling shell outcomes.
+</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-line"></div>
+
+
+
+
+
+
+
+    <li>
+	Next: <a href="/org-reminders/">Org Reminders</a>
+    </li>
+
+
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
+</html>
