@@ -1,0 +1,20 @@
+
+<div id="content" class="content">
+  <h1 class="title">Archive</h1>
+  
+  <!-- Get thoughts collections. -->
+  
+</div>
+
+<script>
+  window.onload = function () {
+    // 定义你的链接数组
+    var links = ['/thoughts/en/Screenshot Software - History/','/thoughts/en/The Lost Mistress/']
+    // 随机选择一个链接
+    var randomIndex = Math.floor(Math.random() * links.length);
+    var target = links[randomIndex];
+
+    // 跳转到该页面
+    window.location.href = target;
+  };
+</script>

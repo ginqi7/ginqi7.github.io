@@ -1,5 +1,284 @@
-<html>
- <body>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Qiqi Jin" />
+    <meta
+      name="description"
+      content="This is a blog for Qiqi Jin."
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/table.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css" defer />
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css" defer />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/colors.css"
+      defer
+    />
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    
+<!-- Get LangType -->
+
+<!-- Get Home Href  -->
+  
+<!-- Combine langType -->
+
+
+<!-- hello -->
+<header>
+    <div id="preamble">
+	<div>
+	    <a aria-current="page" class="font-effect-shadow-multiple header-title" href="/zh/"> Hello World </a>
+            <div class="nav">
+                <input type="checkbox" id="nav-active" class="nav-active-checkbox">
+                <div class="nav__toggle">
+                    <label for="nav-active">
+                        <span>Menu</span>
+                    </label>
+                </div>
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/"  class= "en-language">
+	                        <img width="24" height="24" src="/static/svg/languages.svg" alt="en-language">
+                            </a>
+                            <a href="/" class="image-text"> (英文)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/feed.xml"  class= "zh-rss">
+	                        <img width="24" height="24" src="/static/svg/rss.svg" alt="zh-rss">
+                            </a>
+                            <a href="/zh/feed.xml" class="image-text"> (RSS)  </a>
+                        </div>
+                    
+                
+                    
+                
+                    
+                        <div class="image-container">
+                            <a href= "/zh/thoughts/0"  class= "zh-thoughts">
+	                        <img width="24" height="24" src="/static/svg/thoughts.svg" alt="zh-thoughts">
+                            </a>
+                            <a href="/zh/thoughts/0" class="image-text"> (想法)  </a>
+                        </div>
+                    
+                
+            </div>
+            <div class="header-line">
+	    </div>
+	</div>
+    </div>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/static/css/thoughts.css" defer />
+<article><html><head><style>.bvideo a:link {
+    text-decoration: none !important;
+    ;
+}
+
+.bvideo-box {
+    width: 80%;
+    height: 96px;
+    margin: 0 auto;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #f4f4f5;
+    border: 0.0625rem solid #d1d1d1;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    /* background-color: hsla(240,5%,96%,.3); */
+}
+
+.bvideo-cover {
+    display: inline-block;
+    width: 150px;
+    height: 94px;
+    min-width: 150px;
+    min-height: 94px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bvideo-cover .video-cover-img {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.bvideo-cover .duration {
+    position: absolute;
+    right: 3px;
+    bottom: 0px;
+    padding: 0px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.bvideo-cover .bvideo-cover-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bvideo-info {
+    margin-left: 1rem;
+    padding-top: 10px;
+    min-height: 84px;
+    position: relative;
+    text-align: left;
+}
+
+.bvideo-info .title {
+    max-height: 40px;
+    min-height: 19px;
+    color: #222;
+    line-height: 1.4;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 25rem;
+    margin: 0;
+}
+
+.bvideo-info .up-name {
+    height: 19px;
+    margin-top: 1px;
+    margin-left: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px
+}
+
+.bvideo-info .card-status {
+    line-height: 13px;
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    /* position: absolute; */
+    bottom: 30px;
+}
+
+.bvideo-info .play-num {
+    margin-right: 13px;
+}
+
+.bvideo-info .partition {
+    font-size: 12px;
+    line-height: 13px;
+    color: #999;
+    position: absolute;
+    bottom: -1px;
+    padding-left: 35px;
+    top: 78px;
+}
+
+
+
+.icon-video {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA2CAMAAACsuQomAAAAclBMVEX///8AAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+As+VLAAAAJnRSTlOzAK8+F4OppBAmnTKsllOOb2dhOS0JBJqAWk0aB19FHgJ8dUAgC8ZU4VsAAAGPSURBVEjHpdbrcqowGIXhtbIxnEGOCmKt2n3/t1hSO6Y2qYwf779M5plkCJkJ+Fih85i+4lwX/NUvHAHQLd3SDED0HHcagGoc2ygA4eRidwV15WNvytmRDzPWmBv5sxFzYcxFzI8QcwVtw5c9kcuYhwRz9X1cYS4J+Cfu4+bfvUJhbvs9umBOFXY6PT3gqNJ4pWSY7rhx6DL/+MZXhdfTRoOnDJJ2ncEbyBpIxBCmJ+IIaSlRivGRCOGpbMdkEV8IBU8t2R3VAt4T3gLOBefnePMMk2m+ArMvtByT0VaAbXEpwLa3cAXm/0rJMXnaCLCtSVZgRvkKzOOalXcCbM9LiuMSEGLzjwqxuR1SnO4AIT7sASHuagUpNscjw+7xuDiDp9Q9HrczkcBTfq01ltoSe0gbiVGMD0SUCe2GBGshbg2ecpGtaDCDncBe+htmdH6VquHdPuLabZ4pdZ/yZSfDcgjc52MDk36nrz6DKeVXLu6S25fwV90eUA62l1eFdU9/Ux2q/YEOtjlbfjoLrugTV6YSSQ5kbxYAAAAASUVORK5CYII=);
+    position: absolute;
+    background-size: 100% 100%;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -13px;
+    height: 26px;
+}
+
+.card-label {
+    display: inline-block;
+    font-weight: 550;
+    width: 25px;
+    height: 13px;
+    border: 1.5px solid #ffc3d4;
+    color: #ffc3d4;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    padding-left: 1px;
+}
+
+.bvideo-cover .cover-default {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 44px;
+    background-color: #f0f1f4;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .bvideo-cover {
+        display: none;
+    }
+
+    .partition {
+        display: none;
+    }
+
+    .bvideo-info .title {
+        max-height: 40px;
+        min-height: 19px;
+        color: #222;
+        line-height: 1.4;
+        font-size: 14px;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: normal;
+        margin: 0;
+    }
+}
+</style></head><body>
   <div>
    <h1>
     3D2Y
@@ -9,10 +288,87 @@
    那一天我了解了世界，然后在那里立下誓言。
   </div>
   <div>
-   https://www.bilibili.com/video/av214099/
+   <div class="bvideo"><a href="//www.bilibili.com/video/av214099" target="_blank">
+        <div class="bvideo-box">
+            <div class="bvideo-cover">
+                <div class="cover-default"></div>
+                <div class="bvideo-cover-layer" style="background-image:url(https://images.weserv.nl/?url=http://i0.hdslb.com/bfs/archive/db47eb10e5430451daa3a96cd4b428a2ef5efc5c.jpg)">
+                    <i class="icon-video"></i>
+                </div>
+                <span class="duration">00:05:27</span>
+            </div>
+            <div class="bvideo-info">
+                <p class="title">【MAD】海贼王-梦无形，心相伴（夢に形はないけれど）</p>
+                <p class="card-status">
+                    <span class="play-num">
+                        <i class="fa fa-youtube-play"></i>
+                        <span>44.6万</span></span>
+                    <span>
+                        <i class="fa fa-list-alt"></i>
+                        <span>1.2万</span></span></p>
+                <div class="partition">
+                    <label class="card-label">视频</label>
+                    <label class="up-label"></label>
+                    <label class="up-name">炎日木</label>
+                </div>
+                <div class="actions hide"></div>
+            </div>
+        </div>
+    </a></div>
   </div>
   <div>
    #2016-11-19
   </div>
- </body>
+ 
+
+</body></html></article>
+
+<div class="pagination">
+  <div><a href="/zh/thoughts/"> Random </a></div>
+  <div><a href="/zh//thoughts/0/"> More </a></div>
+</div>
+<footer>
+    <div class="footer-line" ></div>
+        <div class="nav">
+            
+                
+                    <div class="image-container">
+                        <a href= "https://github.com/ginqi7"  class= "github">
+                            <img width="24" height="24" src="/static/svg/github.svg" alt="github">
+                        </a>
+                        <a href="https://github.com/ginqi7" class="image-text"> (Github)  </a>
+                    </div>
+                
+            
+                
+                    <div class="image-container">
+                        <a href= "mailto:ginqi7@gmail.com"  class= "email">
+                            <img width="24" height="24" src="/static/svg/mail.svg" alt="email">
+                        </a>
+                        <a href="mailto:ginqi7@gmail.com" class="image-text"> (Email)  </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+
+        <div>
+        <small>© Copyright 2025, Qiqi Jin
+        </small>
+        </div>
+</footer>
+
+
+  </body>
 </html>
