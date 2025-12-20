@@ -36,7 +36,7 @@ jobs:
       # 2. Build the project
       - name: Build the project
         run: |
-          docker run -v $(pwd)/metadata.json:/app/_data/metadata.json -v $(pwd)/../_site:/app/_site  ghcr.io/ginqi7/gin-page npm run build
+          docker run -v $(pwd)/metadata.json:/app/_data/metadata.json -v $(pwd)/CNAME:/app/CNAME -v $(pwd)/../_site:/app/_site  ghcr.io/ginqi7/gin-page npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
