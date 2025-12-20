@@ -1,0 +1,71 @@
+{
+  "title": "Emacser, Software engineer & open-source maintainer",
+  "desc": [
+    "A programmer interested in big data, distributed systems.",
+    "An emacser dedicated to enhancing the efficiency and enjoyment of editing.",
+    "An amateur enthusiast who enjoys reading and writing."
+  ],
+  "baseURL": "/",
+  "author": "qiqi jin",
+  "avatar": "./Avatar.png",
+  "links": [
+    {
+      "name": "github",
+      "icon": "./assets/icons/github.svg",
+      "value": "https://github.com/ginqi7"
+    },
+    {
+      "name": "gmail",
+      "icon": "./assets/icons/mail.svg",
+      "value": "ginqi7@gmail.com"
+    }
+  ],
+  "sections": [
+    {
+      "id": "section-articles",
+      "name": "Articles",
+      "url": "https://qiqijin.com/blog",
+      "more": "https://qiqijin.com/blog",
+      "match": ".post-card",
+      "properties": {
+        "title": [".card-title a", "text"],
+        "url": ["a", "url"],
+        "desc": [".card-summary", "text"]
+      }
+    },
+    {
+      "id": "section-books",
+      "name": "Books",
+      "url": "https://qiqijin.com/books/",
+      "more": "https://qiqijin.com/books/",
+      "match": ".library__book",
+      "properties": {
+        "title": [".book-title", "text"],
+        "url": ["a", "url"]
+      }
+    },
+    {
+      "id": "section-videos",
+      "name": "Videos",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGj1W9Z3iBsutpzH5dGQRiA",
+      "more": "https://www.youtube.com/channel/UCGj1W9Z3iBsutpzH5dGQRiA",
+      "match": "entry",
+      "properties": {
+        "title": ["title", "text"],
+        "url": ["link", "url"]
+      }
+    },
+    {
+      "id": "section-projects",
+      "name": "Projects",
+      "url": "https://github.com/ginqi7?tab=repositories&q=&type=&language=&sort=stargazers",
+      "more": "https://github.com/ginqi7",
+      "match": ".source",
+      "properties": {
+        "title": [".wb-break-all a", "text"],
+        "url": [".wb-break-all a", "url"],
+        "desc": ["[itemprop=\"description\"]", "text"]
+      }
+    }
+  ]
+}
